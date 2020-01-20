@@ -28,6 +28,7 @@ struct beacon tx_beacon = {
   .node_id = node_id;
 };
 /*---------------------------------------------------------------------------*/
+bool bursting;
 void
 nd_recv(void)
 {
@@ -41,9 +42,39 @@ void
 nd_start(uint8_t mode, const struct nd_callbacks *cb)
 {
   /* Start selected ND primitive and set nd_callbacks */
+  radio_driver radio;
+  if(mode==ND_BURST){
+
+  }else{
+
+  }
 }
 /*---------------------------------------------------------------------------*/
-void send_beacon(){
+
+void start_rx(rtimer_clock_t duration){
+  radio.on();
+  rtimer rx_task = RTIMER_TASK();
+  rtimer_set(&rx_task,RTIMER_NOW()+duration,NULL,stop_rx,NULL);
+}
+
+void start_burst(){
+  bursting=true;
+  rtimer burst_task = RTIMER_TASK();
+  rtimer_set(&burst_task,RTIMER_NOW()+SLOT_DURATION,NULL,stop_burst,NULL);
+}
+
+void stop_burst(void *ptr){
+  bursting=false;
   
-  send(&tx_beacon, unsigned short payload_len);
+}
+
+void stop_rx(void *ptr){
+  radio.off();
+}
+
+void send_beacon(){
+  radio.send(&tx_beacon, sizeof(tx_beacon));
+  if (bursting){ 
+    send_beacon();
+  }
 }
