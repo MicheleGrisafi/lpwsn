@@ -8,6 +8,13 @@
 /*---------------------------------------------------------------------------*/
 void nd_recv(void); /* Called by lower layers when a message is received */
 /*---------------------------------------------------------------------------*/
+#define SLOT_DURATION (50*(RTIMER_SECOND/10))
+#define EPOCH_DURATION 50*RTIMER_SECOND*20
+
+struct beacon {
+  unsigned short node_id;
+};
+
 /* ND callbacks:
  * 	nd_new_nbr: inform the application when a new neighbor is discovered
  *	nd_epoch_end: report to the application the number of neighbors discovered

@@ -24,6 +24,10 @@ struct nd_callbacks app_cb = {
   .nd_epoch_end = NULL
   };
 /*---------------------------------------------------------------------------*/
+struct beacon tx_beacon = {
+  .node_id = node_id;
+};
+/*---------------------------------------------------------------------------*/
 void
 nd_recv(void)
 {
@@ -39,3 +43,7 @@ nd_start(uint8_t mode, const struct nd_callbacks *cb)
   /* Start selected ND primitive and set nd_callbacks */
 }
 /*---------------------------------------------------------------------------*/
+void send_beacon(){
+  
+  send(&tx_beacon, unsigned short payload_len);
+}
