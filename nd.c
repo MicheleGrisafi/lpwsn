@@ -49,6 +49,7 @@ nd_recv(void)
    */
   uint8_t* payload = packetbuf_dataptr();
   unsigned short neighbour = *payload;
+  
   printf("found a new neighbour %d",neighbour);
 }
 /*---------------------------------------------------------------------------*/
@@ -63,7 +64,7 @@ nd_start(uint8_t mode, const struct nd_callbacks *cb)
   if(mode==ND_BURST){
     start_tx_slot();
   }else{
-
+    
   }
 }
 /*---------------------------------------------------------------------------*/
