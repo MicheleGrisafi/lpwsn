@@ -24,9 +24,7 @@ struct nd_callbacks app_cb = {
   .nd_epoch_end = end_epoch
   };
 /*---------------------------------------------------------------------------*/
-struct beacon tx_beacon = {
-  .node_id = node_id
-};
+
 /*---------------------------------------------------------------------------*/
 bool bursting;
 /*---------------------------------------------------------------------------*/
@@ -123,7 +121,8 @@ void stop_listen(){
 }
 
 void send_beacon(){
-  radio.send(&tx_beacon, sizeof(tx_beacon));
+  uint8_t payload = node_id;
+  radio.send(&payload, sizeof(payload));
   if (bursting){ 
     send_beacon();
   }
