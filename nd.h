@@ -29,3 +29,31 @@ struct nd_callbacks {
 /* Start selected ND primitive (ND_BURST or ND_SCATTER) */
 void nd_start(uint8_t mode, const struct nd_callbacks *cb);
 /*---------------------------------------------------------------------------*/
+/* End the current epoch */
+void end_epoch(uint16_t epoch, uint8_t num_nbr);
+/*---------------------------------------------------------------------------*/
+/* Start the burst of TX */
+void start_burst();
+/*---------------------------------------------------------------------------*/
+/* Start the TX slot for the BURST mode */
+void start_tx_slot(uint8_t mode);
+/*---------------------------------------------------------------------------*/
+/* End the TX slot for the BURST mode */
+void end_tx_slot(uint8_t mode);
+/*---------------------------------------------------------------------------*/
+/* Start the RX slot for the BURST mode */
+void start_rx_slot(uint8_t mode);
+/*---------------------------------------------------------------------------*/
+/* End the RX slot for the BURST mode */
+void start_rx_slot(uint8_t mode);
+/*---------------------------------------------------------------------------*/
+/* turn off the radio */
+void stop_listen();
+/*---------------------------------------------------------------------------*/
+/* Send a discovery beacon */
+void send_beacon();
+/*---------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------*/

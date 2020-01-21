@@ -59,7 +59,7 @@ nd_start(uint8_t mode, const struct nd_callbacks *cb)
 
   if(mode==ND_BURST){
     
-    burst_start_tx_slot();
+    start_tx_slot();
   }else{
 
   }
@@ -69,7 +69,7 @@ nd_start(uint8_t mode, const struct nd_callbacks *cb)
 void end_epoch(uint16_t epoch, uint8_t num_nbr){
   printf("The epoch %d has ended with a total of %d neighbours discovered",epoch,num_nbr);
   if(mode==ND_BURST){
-    burst_start_tx_slot();   
+    start_tx_slot(mode);   
   }
 }
 
@@ -81,39 +81,47 @@ void start_burst(){
   // (Re)set the total number of slots to end the epoch at the right time
   slots=TOTAL_SLOTS;
   // Set a timer for the end of the TX slot
-  rtimer_set(&timer_end_tx_slot,RTIMER_NOW()+SLOT_DURATION,NULL,burst_end_rx_slot,NULL);
+  rtimer_set(&timer_end_tx_slot,RTIMER_NOW()+SLOT_DURATION,NULL,end_rx_slot,ND_BURST);
 }
 
-void burst_start_tx_slot(){
-  start_burst();
-}
-
-void burst_end_tx_slot(){
-  bursting=false;
-  slots--;
-  // Enter the RX slot
-  burst_start_rx_slot();
-}
-
-void burst_start_rx_slot(){
-  radio.on();
-  //Set the end of the RX window
-  rtimer_set(&timer_end_rx_slot,RTIMER_NOW()+SLOT_DURATION,NULL,burst_end_rx_slot,NULL);
-  //Set the end of the reception
-  rtimer_set(&timer_end_listen,RTIMER_NOW()+duration,NULL,burst_stop_listen,NULL);
-}
-
-void burst_end_rx_slot(){
-  slots--;
-  if(slots>0){
-    start_rx_slot();
-  }else{
-    //The epoch has ended
-    end_epoch();
+void start_tx_slot(uint8_t mode){
+  if(mode==ND_BURST){
+    start_burst();
   }
 }
 
-void burst_stop_listen(){
+void end_tx_slot(uint8_t mode){
+  slots--;
+  if(mode==ND_BURST){
+    bursting=false;
+    // Enter the RX slot
+    start_rx_slot();
+  }
+}
+
+void start_rx_slot(uint8_t mode){
+  radio.on();
+  if(mode==ND_BURST){
+    //Set the end of the RX window
+    rtimer_set(&timer_end_rx_slot,RTIMER_NOW()+SLOT_DURATION,NULL,end_rx_slot,mode);
+    //Set the end of the reception
+    rtimer_set(&timer_end_listen,RTIMER_NOW()+____,NULL,stop_listen,NULL);  
+  }
+}
+
+void end_rx_slot(uint8_t mode){
+  slots--;
+  if(mode==ND_BURST){
+    if(slots>0){
+      start_rx_slot(mode);
+    }else{
+      //The epoch has ended
+      end_epoch();
+    }
+  }
+}
+
+void stop_listen(){
   radio.off();
 }
 
