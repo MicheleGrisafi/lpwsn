@@ -30,9 +30,9 @@ struct beacon tx_beacon = {
 /*---------------------------------------------------------------------------*/
 bool bursting;
 /*---------------------------------------------------------------------------*/
-rtimer timer_end_rx_slot;
-rtimer timer_end_tx_slot;
-rtimer timer_end_epoch;
+static struct rtimer timer_end_rx_slot;
+static struct rtimer timer_end_tx_slot;
+static struct rtimer timer_end_epoch;
 /*---------------------------------------------------------------------------*/
 uint8_t unsigned slots;
 /*---------------------------------------------------------------------------*/
@@ -53,9 +53,6 @@ nd_start(uint8_t mode, const struct nd_callbacks *cb)
 {
   /* Start selected ND primitive and set nd_callbacks */
   radio_driver radio;
-  timer_end_rx_slot = RTIMER_TASK();
-  timer_end_tx_slot = RTIMER_TASK();
-  timer_end_epoch = RTIMER_TASK();
 
   if(mode==ND_BURST){
     
