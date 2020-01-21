@@ -54,7 +54,7 @@ void stop_listen();
 void send_beacon();
 /*---------------------------------------------------------------------------*/
 /* Check array for duplicates */
-bool contains(unsigned short *array,unsigned short * toBeSearched);
+int contains(unsigned short *array,unsigned short * toBeSearched);
 /*---------------------------------------------------------------------------*/
 
 /*---------------------------------------------------------------------------*/

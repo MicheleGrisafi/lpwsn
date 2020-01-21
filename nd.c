@@ -49,7 +49,7 @@ nd_recv(void)
    */
   uint8_t* payload = packetbuf_dataptr();
   unsigned short neighbour = *payload;
-  
+
   printf("found a new neighbour %d",neighbour);
 }
 /*---------------------------------------------------------------------------*/
@@ -170,11 +170,11 @@ void send_beacon(){
 
 
 
-bool contains(unsigned short *array,unsigned short * toBeSearched){
-  bool found = false;
+int contains(unsigned short *array,unsigned short * toBeSearched){
+  int found = 0;
   for(i = 0; i < sizeof(*array) / sizeof(unsigned short); i++){
     if(*array[i] == *toBeSearched){
-      found = true
+      found = 1
       break;
     }
   }
