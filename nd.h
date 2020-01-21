@@ -8,8 +8,9 @@
 /*---------------------------------------------------------------------------*/
 void nd_recv(void); /* Called by lower layers when a message is received */
 /*---------------------------------------------------------------------------*/
-#define SLOT_DURATION (50*(RTIMER_SECOND/10))
-#define EPOCH_DURATION 50*RTIMER_SECOND*20
+#define TOTAL_SLOTS 10
+#define EPOCH_DURATION RTIMER_SECOND*20
+#define SLOT_DURATION EPOCH_DURATION/TOTAL_SLOTS
 
 struct beacon {
   unsigned short node_id;
