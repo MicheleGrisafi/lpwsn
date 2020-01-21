@@ -11,5 +11,5 @@ all: $(CONTIKI_PROJECT)
 
 CONTIKI_WITH_RIME=0
 CONTIKI_WITH_IPV6=0
-CONTIKI ?= ../../contiki
+CONTIKI ?= ../contiki
 include $(CONTIKI)/Makefile.include
