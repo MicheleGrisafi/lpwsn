@@ -29,6 +29,9 @@ void nd_start(uint8_t mode, const struct nd_callbacks *cb);
 /* End the current epoch */
 void end_epoch(uint16_t epoch, uint8_t num_nbr);
 /*---------------------------------------------------------------------------*/
+/* notify application of the new neighbour discovery */
+void new_discovery(uint16_t epoch, uint8_t nbr_id);
+/*---------------------------------------------------------------------------*/
 /* Start the burst of TX */
 void start_burst();
 /*---------------------------------------------------------------------------*/
@@ -50,7 +53,8 @@ void stop_listen();
 /* Send a discovery beacon */
 void send_beacon();
 /*---------------------------------------------------------------------------*/
-
+/* Check array for duplicates */
+bool contains(unsigned short *array,unsigned short * toBeSearched);
 /*---------------------------------------------------------------------------*/
 
 /*---------------------------------------------------------------------------*/
