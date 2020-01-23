@@ -1,0 +1,42 @@
+[16:32:26 - main] [Cooja.java:3174] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[16:32:26 - AWT-EventQueue-0] [Cooja.java:2858] [INFO] - External tools default settings: /external_tools_linux_64.config
+[16:32:27 - AWT-EventQueue-0] [Cooja.java:2888] [INFO] - External tools user settings: /home/michele/.cooja.user.properties
+[16:32:27 - AWT-EventQueue-0] [Cooja.java:4263] [WARN] - Replaced [APPS_DIR]/mrm with /home/michele/Documents/LowPoweredProject/apps/mrm (default: ../apps), but could not find it. This does not have to be an error, as the file might be created later.
+[16:32:27 - AWT-EventQueue-0] [ProjectConfig.java:240] [WARN] - Trying to import non-existant project configuration: /home/michele/Documents/LowPoweredProject/apps/mrm/cooja.config
+[16:32:27 - AWT-EventQueue-0] [Cooja.java:4263] [WARN] - Replaced [APPS_DIR]/mspsim with /home/michele/Documents/LowPoweredProject/apps/mspsim (default: ../apps), but could not find it. This does not have to be an error, as the file might be created later.
+[16:32:27 - AWT-EventQueue-0] [ProjectConfig.java:240] [WARN] - Trying to import non-existant project configuration: /home/michele/Documents/LowPoweredProject/apps/mspsim/cooja.config
+[16:32:27 - AWT-EventQueue-0] [Cooja.java:4263] [WARN] - Replaced [APPS_DIR]/avrora with /home/michele/Documents/LowPoweredProject/apps/avrora (default: ../apps), but could not find it. This does not have to be an error, as the file might be created later.
+[16:32:27 - AWT-EventQueue-0] [ProjectConfig.java:240] [WARN] - Trying to import non-existant project configuration: /home/michele/Documents/LowPoweredProject/apps/avrora/cooja.config
+[16:32:27 - AWT-EventQueue-0] [Cooja.java:4263] [WARN] - Replaced [APPS_DIR]/serial_socket with /home/michele/Documents/LowPoweredProject/apps/serial_socket (default: ../apps), but could not find it. This does not have to be an error, as the file might be created later.
+[16:32:27 - AWT-EventQueue-0] [ProjectConfig.java:240] [WARN] - Trying to import non-existant project configuration: /home/michele/Documents/LowPoweredProject/apps/serial_socket/cooja.config
+[16:32:27 - AWT-EventQueue-0] [Cooja.java:4263] [WARN] - Replaced [APPS_DIR]/powertracker with /home/michele/Documents/LowPoweredProject/apps/powertracker (default: ../apps), but could not find it. This does not have to be an error, as the file might be created later.
+[16:32:27 - AWT-EventQueue-0] [ProjectConfig.java:240] [WARN] - Trying to import non-existant project configuration: /home/michele/Documents/LowPoweredProject/apps/powertracker/cooja.config
+[16:32:27 - AWT-EventQueue-0] [Cooja.java:438] [FATAL] - Error when loading extensions: Error when loading extension: Project directory does not exist: /home/michele/Documents/LowPoweredProject/apps/mrm
+org.contikios.cooja.Cooja$ParseProjectsException: Error when loading extension: Project directory does not exist: /home/michele/Documents/LowPoweredProject/apps/mrm
+	at org.contikios.cooja.Cooja.reparseProjectConfig(Cooja.java:1530)
+	at org.contikios.cooja.Cooja.<init>(Cooja.java:436)
+	at org.contikios.cooja.Cooja$30.run(Cooja.java:3324)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Caused by: java.io.FileNotFoundException: Project directory does not exist: /home/michele/Documents/LowPoweredProject/apps/mrm
+	at org.contikios.cooja.ProjectConfig.appendProjectDir(ProjectConfig.java:142)
+	at org.contikios.cooja.Cooja.reparseProjectConfig(Cooja.java:1527)
+	... 16 more
+[16:32:51 - Thread-1] [Cooja.java:4263] [WARN] - Replaced [APPS_DIR]/mrm with /home/michele/Documents/LowPoweredProject/apps/mrm (default: ../apps), but could not find it. This does not have to be an error, as the file might be created later.
+[16:32:51 - Thread-1] [Cooja.java:4263] [WARN] - Replaced [APPS_DIR]/mspsim with /home/michele/Documents/LowPoweredProject/apps/mspsim (default: ../apps), but could not find it. This does not have to be an error, as the file might be created later.
+[16:32:51 - Thread-1] [Cooja.java:4263] [WARN] - Replaced [APPS_DIR]/avrora with /home/michele/Documents/LowPoweredProject/apps/avrora (default: ../apps), but could not find it. This does not have to be an error, as the file might be created later.
+[16:32:51 - Thread-1] [Cooja.java:4263] [WARN] - Replaced [APPS_DIR]/serial_socket with /home/michele/Documents/LowPoweredProject/apps/serial_socket (default: ../apps), but could not find it. This does not have to be an error, as the file might be created later.
+[16:32:51 - Thread-1] [Cooja.java:4263] [WARN] - Replaced [APPS_DIR]/powertracker with /home/michele/Documents/LowPoweredProject/apps/powertracker (default: ../apps), but could not find it. This does not have to be an error, as the file might be created later.
+[16:32:51 - Thread-1] [Simulation.java:422] [INFO] - Simulation random seed: -2343303315989407741

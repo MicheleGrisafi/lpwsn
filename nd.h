@@ -1,3 +1,5 @@
+#include <stdbool.h>
+#include "sys/rtimer.h"
 /*---------------------------------------------------------------------------*/
 #define ND_BURST 1
 #define ND_SCATTER 2
@@ -11,6 +13,7 @@ void nd_recv(void); /* Called by lower layers when a message is received */
 #define TOTAL_SLOTS 10
 #define EPOCH_DURATION RTIMER_SECOND*20
 #define SLOT_DURATION EPOCH_DURATION/TOTAL_SLOTS
+#define RX_DURATION SLOT_DURATION/5
 
 
 /* ND callbacks:
@@ -32,20 +35,17 @@ void end_epoch(uint16_t epoch, uint8_t num_nbr);
 /* notify application of the new neighbour discovery */
 void new_discovery(uint16_t epoch, uint8_t nbr_id);
 /*---------------------------------------------------------------------------*/
-/* Start the burst of TX */
-void start_burst();
-/*---------------------------------------------------------------------------*/
 /* Start the TX slot for the BURST mode */
-void start_tx_slot(uint8_t mode);
+void start_tx_slot(struct rtimer *t, uint8_t *mode);
 /*---------------------------------------------------------------------------*/
 /* End the TX slot for the BURST mode */
-void end_tx_slot(uint8_t mode);
+void end_tx_slot(struct rtimer *t, uint8_t *mode);
 /*---------------------------------------------------------------------------*/
 /* Start the RX slot for the BURST mode */
-void start_rx_slot(uint8_t mode);
+void start_rx_slot(struct rtimer *t, uint8_t *mode);
 /*---------------------------------------------------------------------------*/
 /* End the RX slot for the BURST mode */
-void start_rx_slot(uint8_t mode);
+void end_rx_slot(struct rtimer *t, uint8_t *mode);
 /*---------------------------------------------------------------------------*/
 /* turn off the radio */
 void stop_listen();
@@ -54,7 +54,5 @@ void stop_listen();
 void send_beacon();
 /*---------------------------------------------------------------------------*/
 /* Check array for duplicates */
-int contains(unsigned short *array,unsigned short * toBeSearched);
-/*---------------------------------------------------------------------------*/
-
+bool contains(unsigned short array[],uint8_t * toBeSearched);
 /*---------------------------------------------------------------------------*/

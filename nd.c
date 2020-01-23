@@ -31,7 +31,6 @@ bool bursting;
 static struct rtimer timer_end_rx_slot;
 static struct rtimer timer_end_tx_slot;
 static struct rtimer timer_turn_off_radio;
-static struct rtimer timer_end_epoch;
 /*---------------------------------------------------------------------------*/
 uint8_t slots;
 uint16_t epoch_number;
@@ -49,7 +48,9 @@ nd_recv(void)
   uint8_t* payload = packetbuf_dataptr();
   unsigned short neighbour = *payload;
 
+  app_cb.nd_new_nbr(epoch,neighbor);
   printf("found a new neighbour %d",neighbour);
+  
 }
 /*---------------------------------------------------------------------------*/
 void
@@ -61,10 +62,10 @@ nd_start(uint8_t mode, const struct nd_callbacks *cb)
   tot_neigh=0;
 
   if(mode==ND_BURST){
-    start_tx_slot();
+    start_tx_slot(NULL,&mode);
   }else{
     bursting=false;
-    start_rx_slot();
+    start_rx_slot(NULL,&mode);
   }
 }
 /*---------------------------------------------------------------------------*/
@@ -78,8 +79,9 @@ void end_epoch(uint16_t epoch, uint8_t num_nbr){
 }
 
 void new_discovery(uint16_t epoch, uint8_t nbr_id){
-  if(!contains(&discovered_nodes,&nbr_id)){
+  if(!contains(discovered_nodes,&nbr_id)){
     printf("New node %d was discovered\n", nbr_id);
+    tot_neigh++;
   }
 }
 
@@ -87,16 +89,16 @@ void new_discovery(uint16_t epoch, uint8_t nbr_id){
  * \brief      Initialize a TX slot
  * \param mode The mode in which the protocol is operating: either ND_BURST or ND_SCATTER
  */
-void start_tx_slot(uint8_t mode){
-  if(mode==ND_BURST){
+void start_tx_slot(struct rtimer *t, uint8_t *mode){
+  if(*mode==ND_BURST){
     // Set the bursting boolean to true. As long as it is true the node will transmit repeatedly
     bursting=true;
     // Set a timer for the end of the TX slot
-    rtimer_set(&timer_end_tx_slot,RTIMER_NOW()+SLOT_DURATION,NULL,end_tx_slot,ND_BURST);
+    rtimer_set(&timer_end_tx_slot,RTIMER_NOW()+SLOT_DURATION,NULL,end_tx_slot,mode);
   }else{
     //Send a single beacon and schedule the end of the slot
     send_beacon();
-    rtimer_set(&timer_end_tx_slot,RTIMER_NOW()+SLOT_DURATION,NULL,end_tx_slot,ND_SCATTER);
+    rtimer_set(&timer_end_tx_slot,RTIMER_NOW()+SLOT_DURATION,NULL,end_tx_slot,mode);
   }
 }
 
@@ -104,23 +106,23 @@ void start_tx_slot(uint8_t mode){
  * \brief      Terminate a TX slot
  * \param mode The mode in which the protocol is operating: either ND_BURST or ND_SCATTER
  */
-void end_tx_slot(uint8_t mode){
+void end_tx_slot(struct rtimer *t, uint8_t *mode){
   //Decrease the slot counter to keep track of the epoch
   slots--;
-  if(mode==ND_BURST){
+  if(*mode==ND_BURST){
     // terminate the burst of beacons
     bursting=false;
     // Enter the first RX slot
-    start_rx_slot(mode);
+    start_rx_slot(NULL,mode);
   }else{
     if(slots>0){
       // It's not the last slot, so a new one needs to be initiated
-      start_tx_slot(mode);
+      start_tx_slot(NULL,mode);
     }else{
       // It is the last slot, the epoch needs to end
       end_epoch(epoch_number,tot_neigh);
       //Begin new epoch by entering RX again
-      start_rx_slot(mode);
+      start_rx_slot(NULL,mode);
     }
   }
 }
@@ -129,15 +131,15 @@ void end_tx_slot(uint8_t mode){
  * \brief      Initiate a RX slot
  * \param mode The mode in which the protocol is operating: either ND_BURST or ND_SCATTER
  */
-void start_rx_slot(uint8_t mode){
+void start_rx_slot(struct rtimer *t, uint8_t *mode){
   // Turn the radio on so that packets can be received
   NETSTACK_RADIO.on();
-  if(mode==ND_BURST){
+  if(*mode==ND_BURST){
     //Since the reception is shorter than the actual RX slot, two different timers need to be initiated
     //Set the end of the RX window
     rtimer_set(&timer_end_rx_slot,RTIMER_NOW()+SLOT_DURATION,NULL,end_rx_slot,mode);
     //Set the end of the reception
-    rtimer_set(&timer_turn_off_radio,RTIMER_NOW()+____,NULL,stop_listen,NULL);  
+    rtimer_set(&timer_turn_off_radio,RTIMER_NOW()+RX_DURATION,NULL,stop_listen,NULL);  
   }else{
     //Set the end of the RX window
     rtimer_set(&timer_end_rx_slot,RTIMER_NOW()+SLOT_DURATION,NULL,end_rx_slot,mode);
@@ -148,23 +150,23 @@ void start_rx_slot(uint8_t mode){
  * \brief      Terminate a RX slot
  * \param mode The mode in which the protocol is operating: either ND_BURST or ND_SCATTER
  */
-void end_rx_slot(uint8_t mode){
+void end_rx_slot(struct rtimer *t, uint8_t *mode){
   //Decrease the slot counter to keep track of the epoch
   slots--;
-  if(mode==ND_BURST){
+  if(*mode==ND_BURST){
     if(slots>0){
       //The epoch is not terminated yet, thus a new RX slot is initiated
-      start_rx_slot(mode);
+      start_rx_slot(NULL,mode);
     }else{
       //The epoch has ended
       end_epoch(epoch_number,tot_neigh);
       //Start new epoch by entering TX again
-      start_tx_slot(mode);
+      start_tx_slot(NULL,mode);
     }
   }else{
     //Turn off the radio and start the TX slots
     NETSTACK_RADIO.off();
-    start_tx_slot(mode);
+    start_tx_slot(NULL,mode);
   }
 }
 
@@ -195,13 +197,15 @@ void send_beacon(){
  * \param toBeSearched  Element to be searched
  * \return     Boolean value depending on the outcome of the search.
  */
-bool contains(unsigned short *array,unsigned short * toBeSearched){
+bool contains(unsigned short array[],uint8_t * toBeSearched){
   bool found = false;
-  for(i = 0; i < sizeof(*array) / sizeof(unsigned short); i++){
-    if(*array[i] == *toBeSearched){
+  short i = 0;
+  while(i < sizeof(*array) / sizeof(unsigned short)){
+    if(array[i] == *toBeSearched){
       found = true;
       break;
     }
+    i++;
   }
   return found;
 }
