@@ -6,6 +6,7 @@
 #include "net/netstack.h"
 #include "net/packetbuf.h"
 #include "node-id.h"
+#include "utils.h"
 /*---------------------------------------------------------------------------*/
 #include <stdbool.h>
 #include <stdio.h>
@@ -47,10 +48,11 @@ nd_recv(void)
    */
   uint8_t* payload = packetbuf_dataptr();
   unsigned short neighbour = *payload;
-
-  app_cb.nd_new_nbr(epoch,neighbor);
-  printf("found a new neighbour %d",neighbour);
+  printf("Received a new beacon from %d",neighbour);
   
+  if(!contains(discovered_nodes,&nbr_id)){
+    new_discovery(uint16_t epoch, uint8_t nbr_id)
+  }
 }
 /*---------------------------------------------------------------------------*/
 void
@@ -69,7 +71,11 @@ nd_start(uint8_t mode, const struct nd_callbacks *cb)
   }
 }
 /*---------------------------------------------------------------------------*/
-
+/**
+ * \brief      End the epoch by signaling the application of the discovered nodes
+ * \param epoch The number of the epoch that jsut ended
+ * \param num_nbr The number of neighbours discovered
+ */
 void end_epoch(uint16_t epoch, uint8_t num_nbr){
   printf("The epoch %d has ended with a total of %d neighbours discovered",epoch,num_nbr);
   // (Re)set the total number of slots to end the epoch at the right time
@@ -78,11 +84,14 @@ void end_epoch(uint16_t epoch, uint8_t num_nbr){
   tot_neigh = 0;
 }
 
+/**
+ * \brief      Notify the application of a new discovery
+ * \param epoch The current epoch number 
+ * \param nbr_id The ID of the discovered node
+ */
 void new_discovery(uint16_t epoch, uint8_t nbr_id){
-  if(!contains(discovered_nodes,&nbr_id)){
-    printf("New node %d was discovered\n", nbr_id);
-    tot_neigh++;
-  }
+  printf("New node %d was discovered\n", nbr_id);
+  tot_neigh++;
 }
 
 /**
@@ -173,7 +182,7 @@ void end_rx_slot(struct rtimer *t, uint8_t *mode){
 /**
  * \brief      Switch off the radio
  */
-void stop_listen(){
+void stop_listen(struct rtimer *t, void *ptr){
   NETSTACK_RADIO.off();
 }
 
@@ -191,21 +200,3 @@ void send_beacon(){
   }
 }
 
-/**
- * \brief       Check wheter the neighbour array has already the selected entry
- * \param array         Array in which the element should be looked for. It should contain all of the discovered neighbours
- * \param toBeSearched  Element to be searched
- * \return     Boolean value depending on the outcome of the search.
- */
-bool contains(unsigned short array[],uint8_t * toBeSearched){
-  bool found = false;
-  short i = 0;
-  while(i < sizeof(*array) / sizeof(unsigned short)){
-    if(array[i] == *toBeSearched){
-      found = true;
-      break;
-    }
-    i++;
-  }
-  return found;
-}

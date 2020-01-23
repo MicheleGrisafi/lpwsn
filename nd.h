@@ -35,20 +35,20 @@ void end_epoch(uint16_t epoch, uint8_t num_nbr);
 /* notify application of the new neighbour discovery */
 void new_discovery(uint16_t epoch, uint8_t nbr_id);
 /*---------------------------------------------------------------------------*/
-/* Start the TX slot for the BURST mode */
+/* Start the TX slot */
 void start_tx_slot(struct rtimer *t, uint8_t *mode);
 /*---------------------------------------------------------------------------*/
-/* End the TX slot for the BURST mode */
+/* End the TX slot  */
 void end_tx_slot(struct rtimer *t, uint8_t *mode);
 /*---------------------------------------------------------------------------*/
-/* Start the RX slot for the BURST mode */
+/* Start the RX slot */
 void start_rx_slot(struct rtimer *t, uint8_t *mode);
 /*---------------------------------------------------------------------------*/
-/* End the RX slot for the BURST mode */
+/* End the RX slot */
 void end_rx_slot(struct rtimer *t, uint8_t *mode);
 /*---------------------------------------------------------------------------*/
 /* turn off the radio */
-void stop_listen();
+void stop_listen(struct rtimer *t, void *ptr);
 /*---------------------------------------------------------------------------*/
 /* Send a discovery beacon */
 void send_beacon();
