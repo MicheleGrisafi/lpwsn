@@ -3,7 +3,7 @@
 import matplotlib.pyplot as plt 
 import numpy as np
 import sys
-from statistics import mean
+from statistics import mean,variance
 
 
 
@@ -28,4 +28,4 @@ with open(discoveryLog) as f:
                 discRates[epoch] = []
             discRates[epoch].insert(node,nbr)
 for epoch in discRates.items():
-	print("{}/{}".format(mean(epoch[1]),len(epoch[1])))
+	print("{}/{} and {}".format(mean(epoch[1]),len(epoch[1]),variance(epoch[1])))
