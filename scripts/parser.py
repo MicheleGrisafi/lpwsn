@@ -3,6 +3,9 @@
 import matplotlib.pyplot as plt 
 import numpy as np
 import sys
+from statistics import mean
+
+
 
 if len(sys.argv) < 2:
     print("Syntax error: ./{} discoveryLog dutyCycleLog".format(sys.argv[0]))
@@ -13,16 +16,16 @@ discoveryLog = sys.argv[1]
 dutyLog = sys.argv[2]
 
 #Load the data
+discRates = dict()
 with open(discoveryLog) as f: 
-    lines = [line.rstrip('\n') for line in f]
-
-for i in enumerate(lines):
-    if(.find(sub,start,end) != -1)
-
-#data[0,0] = 0
-
-#plt.plot(data[:,0],data[:,1])
-#plt.axvline(x=int(start), color='r', linestyle='--')
-#plt.axvline(x=int(stop), color='r', linestyle='--')
-
-#plt.savefig(sys.argv[2])
+    for line in f:
+        pos = line.find("finished Num NBR")
+        if(pos != -1):
+            epoch = int(line[line.find("Epoch")+5:line.find(" finished")])
+            nbr = int(line[pos+17:len(line)])
+            node = int(line[line.find("ID:")+3:line.find("App:")-1])
+            if not discRates.get(epoch,0):
+                discRates[epoch] = []
+            discRates[epoch].insert(node,nbr)
+for epoch in discRates.items():
+	print("{}/{}".format(mean(epoch[1]),len(epoch[1])))
