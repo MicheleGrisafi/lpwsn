@@ -1,3 +1,4 @@
+#include "utils.h"
 #include <stdbool.h>
 
 /**
@@ -6,11 +7,11 @@
  * \param toBeSearched  Element to be searched
  * \return     Boolean value depending on the outcome of the search.
  */
-bool contains(unsigned short array[],uint8_t * toBeSearched){
+bool contains(uint8_t array[],uint8_t lenght, uint8_t toBeSearched){
   bool found = false;
-  short i = 0;
-  while(i < sizeof(*array) / sizeof(unsigned short)){
-    if(array[i] == *toBeSearched){
+  uint8_t i = 0;
+  while(i < lenght){
+    if(array[i] == toBeSearched){
       found = true;
       break;
     }

@@ -5,15 +5,17 @@
 #define ND_SCATTER 2
 /*---------------------------------------------------------------------------*/
 #define EPOCH_INTERVAL_RT (RTIMER_SECOND)
+#define TOTAL_SLOTS 10
 /*---------------------------------------------------------------------------*/
 #define MAX_NBR 64 /* Maximum number of neighbors */
 /*---------------------------------------------------------------------------*/
 void nd_recv(void); /* Called by lower layers when a message is received */
 /*---------------------------------------------------------------------------*/
-#define TOTAL_SLOTS 10
-#define EPOCH_DURATION RTIMER_SECOND*20
-#define SLOT_DURATION EPOCH_DURATION/TOTAL_SLOTS
-#define RX_DURATION SLOT_DURATION/5
+
+/*
+#define SLOT_DURATION (EPOCH_INTERVAL_RT/TOTAL_SLOTS)
+#define BEACON_INTERVAL (SLOT_DURATION/20.0)
+#define RX_DURATION (BEACON_INTERVAL*3.0)*/
 
 
 /* ND callbacks:
@@ -48,11 +50,8 @@ void start_rx_slot(struct rtimer *t, uint8_t *mode);
 void end_rx_slot(struct rtimer *t, uint8_t *mode);
 /*---------------------------------------------------------------------------*/
 /* turn off the radio */
-void stop_listen(struct rtimer *t, void *ptr);
+void stop_listen(struct rtimer *t, uint8_t *mode);
 /*---------------------------------------------------------------------------*/
 /* Send a discovery beacon */
-void send_beacon();
-/*---------------------------------------------------------------------------*/
-/* Check array for duplicates */
-bool contains(unsigned short array[],uint8_t * toBeSearched);
+void send_beacon(struct rtimer *t, uint8_t *mode);
 /*---------------------------------------------------------------------------*/

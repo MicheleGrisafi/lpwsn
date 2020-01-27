@@ -13,7 +13,7 @@
 /*---------------------------------------------------------------------------*/
 #include "nd.h"
 /*---------------------------------------------------------------------------*/
-#define DEBUG 0
+#define DEBUG 1
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)
 #else
@@ -21,53 +21,80 @@
 #endif
 /*---------------------------------------------------------------------------*/
 struct nd_callbacks app_cb = {
-  .nd_new_nbr = new_discovery,
-  .nd_epoch_end = end_epoch
+  .nd_new_nbr = NULL,
+  .nd_epoch_end = NULL
   };
 /*---------------------------------------------------------------------------*/
 
+static unsigned long SLOT_DURATION; 
+static unsigned long RX_DURATION; 
+static unsigned long BEACON_INTERVAL; 
+
+unsigned long end_tx_window;
 /*---------------------------------------------------------------------------*/
-bool bursting;
+bool transmitting;
+uint8_t protocol_mode;
 /*---------------------------------------------------------------------------*/
 static struct rtimer timer_end_rx_slot;
 static struct rtimer timer_end_tx_slot;
 static struct rtimer timer_turn_off_radio;
+static struct rtimer timer_next_beacon;
 /*---------------------------------------------------------------------------*/
 uint8_t slots;
 uint16_t epoch_number;
 uint8_t tot_neigh;
 /*---------------------------------------------------------------------------*/
-unsigned short discovered_nodes[MAX_NBR];
+uint8_t discovered_nodes[MAX_NBR];
+/*---------------------------------------------------------------------------*/
+uint8_t payload;
+/*---------------------------------------------------------------------------*/
+unsigned long remaining_tx_slot;
+
+
 /*---------------------------------------------------------------------------*/
 void
-nd_recv(void)
-{
+nd_recv(void){
   /* New packet received
    * 1. Read packet from packetbuf---packetbuf_dataptr()
    * 2. If a new neighbor is discovered within the epoch, notify the application
    */
   uint8_t* payload = packetbuf_dataptr();
-  unsigned short neighbour = *payload;
-  printf("Received a new beacon from %d",neighbour);
+  //PRINTF("DEBUG: Received a new beacon from %d\n",*payload);
   
-  if(!contains(discovered_nodes,&nbr_id)){
-    new_discovery(uint16_t epoch, uint8_t nbr_id)
+  if(!contains(discovered_nodes,tot_neigh,*payload)){
+    PRINTF("DEBUG: discobery in %d of %d\n",epoch_number,*payload);
+    new_discovery(epoch_number, *payload);
+  }else{
+    PRINTF("DEBUG: Neighbour already discovered\n");
   }
 }
 /*---------------------------------------------------------------------------*/
 void
-nd_start(uint8_t mode, const struct nd_callbacks *cb)
-{
+nd_start(uint8_t mode, const struct nd_callbacks *cb){
   /* Start selected ND primitive and set nd_callbacks */
   epoch_number = 0;
   slots=TOTAL_SLOTS;
   tot_neigh=0;
+  app_cb.nd_new_nbr = cb->nd_new_nbr;
+  app_cb.nd_epoch_end = cb->nd_epoch_end;
+  protocol_mode=mode;
+  //app_cb.nd_new_nbr = *cb->nd_new_nbr;
+  //app_cb.nd_epoch_end = *cb->nd_epoch_end;
 
-  if(mode==ND_BURST){
-    start_tx_slot(NULL,&mode);
+  payload=(uint8_t)node_id;
+  
+  SLOT_DURATION = EPOCH_INTERVAL_RT/TOTAL_SLOTS;
+  BEACON_INTERVAL = SLOT_DURATION/20.0;
+  RX_DURATION = BEACON_INTERVAL*3.0;
+  
+  PRINTF("DEBUG: the following duration will be used:\n  Beacon Interval: %ld\n  RX duration: %ld\n",BEACON_INTERVAL,RX_DURATION);
+  
+  if(protocol_mode==ND_BURST){
+    //PRINTF("DEBUG: Starting BURST mode\n");
+    start_tx_slot(NULL,&protocol_mode);
   }else{
-    bursting=false;
-    start_rx_slot(NULL,&mode);
+    //PRINTF("DEBUG: Starting SCATTER mode\n");
+    start_rx_slot(NULL,&protocol_mode);
   }
 }
 /*---------------------------------------------------------------------------*/
@@ -77,11 +104,11 @@ nd_start(uint8_t mode, const struct nd_callbacks *cb)
  * \param num_nbr The number of neighbours discovered
  */
 void end_epoch(uint16_t epoch, uint8_t num_nbr){
-  printf("The epoch %d has ended with a total of %d neighbours discovered",epoch,num_nbr);
   // (Re)set the total number of slots to end the epoch at the right time
   slots=TOTAL_SLOTS;
   epoch_number++;
   tot_neigh = 0;
+  app_cb.nd_epoch_end(epoch,num_nbr);
 }
 
 /**
@@ -90,8 +117,10 @@ void end_epoch(uint16_t epoch, uint8_t num_nbr){
  * \param nbr_id The ID of the discovered node
  */
 void new_discovery(uint16_t epoch, uint8_t nbr_id){
-  printf("New node %d was discovered\n", nbr_id);
+  //PRINTF("DEBUG: New node %d was discovered in epoch %d\n", nbr_id,epoch);
+  discovered_nodes[tot_neigh]=nbr_id;
   tot_neigh++;
+  app_cb.nd_new_nbr(epoch,nbr_id);
 }
 
 /**
@@ -99,16 +128,9 @@ void new_discovery(uint16_t epoch, uint8_t nbr_id){
  * \param mode The mode in which the protocol is operating: either ND_BURST or ND_SCATTER
  */
 void start_tx_slot(struct rtimer *t, uint8_t *mode){
-  if(*mode==ND_BURST){
-    // Set the bursting boolean to true. As long as it is true the node will transmit repeatedly
-    bursting=true;
-    // Set a timer for the end of the TX slot
-    rtimer_set(&timer_end_tx_slot,RTIMER_NOW()+SLOT_DURATION,NULL,end_tx_slot,mode);
-  }else{
-    //Send a single beacon and schedule the end of the slot
-    send_beacon();
-    rtimer_set(&timer_end_tx_slot,RTIMER_NOW()+SLOT_DURATION,NULL,end_tx_slot,mode);
-  }
+  //PRINTF("DEBUG: Starting the TX slot and scheduling end in %ld secondsa\n",SLOT_DURATION/RTIMER_SECOND);
+  remaining_tx_slot = SLOT_DURATION;
+  send_beacon(NULL,mode);
 }
 
 /**
@@ -116,11 +138,11 @@ void start_tx_slot(struct rtimer *t, uint8_t *mode){
  * \param mode The mode in which the protocol is operating: either ND_BURST or ND_SCATTER
  */
 void end_tx_slot(struct rtimer *t, uint8_t *mode){
+  //PRINTF("DEBUG: End TX slot\n");
   //Decrease the slot counter to keep track of the epoch
   slots--;
+  //Notify the APIs that no further transmission should be taken care of
   if(*mode==ND_BURST){
-    // terminate the burst of beacons
-    bursting=false;
     // Enter the first RX slot
     start_rx_slot(NULL,mode);
   }else{
@@ -141,18 +163,25 @@ void end_tx_slot(struct rtimer *t, uint8_t *mode){
  * \param mode The mode in which the protocol is operating: either ND_BURST or ND_SCATTER
  */
 void start_rx_slot(struct rtimer *t, uint8_t *mode){
-  // Turn the radio on so that packets can be received
-  NETSTACK_RADIO.on();
+  //PRINTF("DEBUG: Starting the RX slot\n");
   if(*mode==ND_BURST){
-    //Since the reception is shorter than the actual RX slot, two different timers need to be initiated
-    //Set the end of the RX window
-    rtimer_set(&timer_end_rx_slot,RTIMER_NOW()+SLOT_DURATION,NULL,end_rx_slot,mode);
-    //Set the end of the reception
-    rtimer_set(&timer_turn_off_radio,RTIMER_NOW()+RX_DURATION,NULL,stop_listen,NULL);  
+    rtimer_set(&timer_turn_off_radio,RTIMER_NOW()+RX_DURATION,NULL,stop_listen,mode);  
   }else{
     //Set the end of the RX window
     rtimer_set(&timer_end_rx_slot,RTIMER_NOW()+SLOT_DURATION,NULL,end_rx_slot,mode);
   }
+  // Turn the radio on so that packets can be received
+  NETSTACK_RADIO.on();
+}
+
+/**
+ * \brief      Switch off the radio
+ */
+void stop_listen(struct rtimer *t, uint8_t *mode){
+  //Schedule the end of the RX slot
+  rtimer_set(&timer_end_rx_slot,RTIMER_NOW()+(SLOT_DURATION-RX_DURATION),NULL,end_rx_slot,mode);
+  //Turn off the radio
+  NETSTACK_RADIO.off();
 }
 
 /**
@@ -160,6 +189,7 @@ void start_rx_slot(struct rtimer *t, uint8_t *mode){
  * \param mode The mode in which the protocol is operating: either ND_BURST or ND_SCATTER
  */
 void end_rx_slot(struct rtimer *t, uint8_t *mode){
+  //PRINTF("DEBUG: Ending the RX slot\n");
   //Decrease the slot counter to keep track of the epoch
   slots--;
   if(*mode==ND_BURST){
@@ -179,24 +209,51 @@ void end_rx_slot(struct rtimer *t, uint8_t *mode){
   }
 }
 
-/**
- * \brief      Switch off the radio
- */
-void stop_listen(struct rtimer *t, void *ptr){
-  NETSTACK_RADIO.off();
-}
+
 
 /**
  * \brief      Send a beacon for Neighbour Discovery with the node_id
  */
-void send_beacon(){
-  //Retrieve the node_id
-  unsigned short payload = node_id;
-  //Broadcast the packet
-  NETSTACK_RADIO.send(&payload, sizeof(payload));
-  if (bursting){
-    //Since it's bursting then another beacon should be sent right away 
-    send_beacon();
+void send_beacon(struct rtimer *t, uint8_t *mode){
+  if (*mode==ND_BURST){
+    if(t!=NULL){
+      //It means that it is at least the second beacon call
+      remaining_tx_slot-=BEACON_INTERVAL;
+    }
+    if(remaining_tx_slot>=BEACON_INTERVAL){
+      //Still need to send beacon,
+      rtimer_set(&timer_next_beacon,RTIMER_NOW()+BEACON_INTERVAL,NULL,send_beacon,mode);
+    }else{
+      //Schedule the end of the TX slot
+      rtimer_set(&timer_end_tx_slot,RTIMER_NOW()+remaining_tx_slot,NULL,end_tx_slot,mode);
+    }
+  }else{
+    //Schedule the end of the TX slot
+    rtimer_set(&timer_end_tx_slot,RTIMER_NOW()+remaining_tx_slot,NULL,end_tx_slot,mode);
   }
+  //Send the beacon
+  NETSTACK_RADIO.send(&payload, sizeof(payload));
 }
 
+
+void test_beacon(struct rtimer *t, uint8_t *mode){
+  //TODO: RANDOM interval for better collision avoidance!
+  if (*mode==ND_BURST){
+    if(t!=NULL){
+      //It means that it is at least the second beacon call
+      remaining_tx_slot-=BEACON_INTERVAL;
+    }
+    if(remaining_tx_slot>=BEACON_INTERVAL){
+      //Still need to send beacon,
+      rtimer_set(&timer_next_beacon,RTIMER_NOW()+BEACON_INTERVAL,NULL,send_beacon,mode);
+    }else{
+      //Schedule the end of the TX slot
+      rtimer_set(&timer_end_tx_slot,RTIMER_NOW()+remaining_tx_slot,NULL,end_tx_slot,mode);
+    }
+  }else{
+    //Schedule the end of the TX slot
+    rtimer_set(&timer_end_tx_slot,RTIMER_NOW()+remaining_tx_slot,NULL,end_tx_slot,mode);
+  }
+  //Send the beacon
+  NETSTACK_RADIO.send(&payload, sizeof(payload));
+}

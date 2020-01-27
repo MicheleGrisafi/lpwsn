@@ -4,7 +4,7 @@ TARGET ?= sky
 DEFINES=PROJECT_CONF_H=\"project-conf.h\"
 CONTIKI_PROJECT = app
 
-PROJECT_SOURCEFILES += nd.c
+PROJECT_SOURCEFILES += nd.c utils.c
 PROJECT_SOURCEFILES += nd-rdc.c netstack.c nd-netstack.c
 
 all: $(CONTIKI_PROJECT)
