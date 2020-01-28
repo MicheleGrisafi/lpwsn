@@ -13,7 +13,7 @@
 /*---------------------------------------------------------------------------*/
 #include "nd.h"
 /*---------------------------------------------------------------------------*/
-#define DEBUG 0
+#define DEBUG 1
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)
 #else
@@ -44,7 +44,7 @@ uint8_t slots;
 uint16_t epoch_number;
 uint8_t tot_neigh;
 /*---------------------------------------------------------------------------*/
-uint8_t discovered_nodes[MAX_NBR];
+uint8_t discovered_nodes[MAX_NBR] = {0};
 /*---------------------------------------------------------------------------*/
 uint8_t payload;
 /*---------------------------------------------------------------------------*/
@@ -56,13 +56,16 @@ nd_recv(void){
    * 1. Read packet from packetbuf---packetbuf_dataptr()
    * 2. If a new neighbor is discovered within the epoch, notify the application
    */
-  uint8_t* payload = packetbuf_dataptr();
-  
-  if(!contains(discovered_nodes,tot_neigh,*payload)){
-    PRINTF("DEBUG: discobery in %d of %d\n",epoch_number,*payload);
-    new_discovery(epoch_number, *payload);
+
+  uint8_t node;
+  memcpy(&node, packetbuf_dataptr(), sizeof(node));
+  PRINTF("DEBUG: NODE: %d\n",node);
+
+  if(node != 0 && !discovered_nodes[node]){
+    PRINTF("DEBUG: discobery in %d of %d\n",epoch_number,node);
+    new_discovery(epoch_number, node);
   }else{
-    PRINTF("DEBUG: Neighbour already discovered\n");
+    PRINTF("DEBUG: Neighbour already discovered or collision\n");
   }
 }
 /*---------------------------------------------------------------------------*/
@@ -101,6 +104,7 @@ void end_epoch(uint16_t epoch, uint8_t num_nbr){
   slots=TOTAL_SLOTS;
   epoch_number++;
   tot_neigh = 0;
+  memset(discovered_nodes, 0, sizeof(discovered_nodes));
   app_cb.nd_epoch_end(epoch,num_nbr);
 }
 
@@ -111,9 +115,11 @@ void end_epoch(uint16_t epoch, uint8_t num_nbr){
  */
 void new_discovery(uint16_t epoch, uint8_t nbr_id){
   //PRINTF("DEBUG: New node %d was discovered in epoch %d\n", nbr_id,epoch);
-  discovered_nodes[tot_neigh]=nbr_id;
+  printf("App: Epoch %u New NBR %u\n",
+    epoch, nbr_id);
+  discovered_nodes[tot_neigh]=1;
   tot_neigh++;
-  app_cb.nd_new_nbr(epoch,nbr_id);
+  //app_cb.nd_new_nbr(epoch,nbr_id);
 }
 
 /**
