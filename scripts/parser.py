@@ -5,8 +5,6 @@ import numpy as np
 import sys
 from statistics import mean,variance
 
-
-
 if len(sys.argv) < 2:
     print("Syntax error: ./{} discoveryLog dutyCycleLog".format(sys.argv[0]))
     sys.exit(1)
@@ -17,7 +15,7 @@ dutyLog = sys.argv[2]
 
 #Load the data
 discRates = dict()
-with open(discoveryLog) as f: 
+with open(discoveryLog) as f:
     for line in f:
         pos = line.find("finished Num NBR")
         if(pos != -1):

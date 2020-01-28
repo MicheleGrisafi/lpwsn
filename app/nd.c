@@ -13,7 +13,7 @@
 /*---------------------------------------------------------------------------*/
 #include "nd.h"
 /*---------------------------------------------------------------------------*/
-#define DEBUG 1
+#define DEBUG 0
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)
 #else
@@ -29,10 +29,10 @@ struct nd_callbacks app_cb = {
 static unsigned long SLOT_DURATION; 
 static unsigned long RX_DURATION; 
 static unsigned long BEACON_INTERVAL; 
-
-unsigned long end_tx_window;
 /*---------------------------------------------------------------------------*/
-bool transmitting;
+unsigned long end_tx_window;
+unsigned long remaining_tx_slot;
+/*---------------------------------------------------------------------------*/
 uint8_t protocol_mode;
 /*---------------------------------------------------------------------------*/
 static struct rtimer timer_end_rx_slot;
@@ -48,10 +48,8 @@ uint8_t discovered_nodes[MAX_NBR];
 /*---------------------------------------------------------------------------*/
 uint8_t payload;
 /*---------------------------------------------------------------------------*/
-unsigned long remaining_tx_slot;
 
 
-/*---------------------------------------------------------------------------*/
 void
 nd_recv(void){
   /* New packet received
@@ -59,7 +57,6 @@ nd_recv(void){
    * 2. If a new neighbor is discovered within the epoch, notify the application
    */
   uint8_t* payload = packetbuf_dataptr();
-  //PRINTF("DEBUG: Received a new beacon from %d\n",*payload);
   
   if(!contains(discovered_nodes,tot_neigh,*payload)){
     PRINTF("DEBUG: discobery in %d of %d\n",epoch_number,*payload);
@@ -72,14 +69,12 @@ nd_recv(void){
 void
 nd_start(uint8_t mode, const struct nd_callbacks *cb){
   /* Start selected ND primitive and set nd_callbacks */
-  epoch_number = 0;
+  epoch_number = 1;
   slots=TOTAL_SLOTS;
   tot_neigh=0;
   app_cb.nd_new_nbr = cb->nd_new_nbr;
   app_cb.nd_epoch_end = cb->nd_epoch_end;
   protocol_mode=mode;
-  //app_cb.nd_new_nbr = *cb->nd_new_nbr;
-  //app_cb.nd_epoch_end = *cb->nd_epoch_end;
 
   payload=(uint8_t)node_id;
   
@@ -90,10 +85,8 @@ nd_start(uint8_t mode, const struct nd_callbacks *cb){
   PRINTF("DEBUG: the following duration will be used:\n  Beacon Interval: %ld\n  RX duration: %ld\n",BEACON_INTERVAL,RX_DURATION);
   
   if(protocol_mode==ND_BURST){
-    //PRINTF("DEBUG: Starting BURST mode\n");
     start_tx_slot(NULL,&protocol_mode);
   }else{
-    //PRINTF("DEBUG: Starting SCATTER mode\n");
     start_rx_slot(NULL,&protocol_mode);
   }
 }
