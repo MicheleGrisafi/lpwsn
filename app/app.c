@@ -37,7 +37,7 @@ PROCESS_THREAD(app_process, ev, data)
   /* Initialization */
   printf("Node ID: %u\n", node_id);
   printf("RTIMER_SECOND: %u\n", RTIMER_SECOND);
-
+  //printf("\nDEBUG: initial app %d  %d\n",&rcb,rcb.nd_new_nbr);
   /* Begin with radio off */
   NETSTACK_RADIO.off();
 
@@ -50,7 +50,7 @@ PROCESS_THREAD(app_process, ev, data)
 
   /* Start ND Primitive */
   nd_start(ND_BURST, &rcb);
-  /* nd_start(ND_SCATTER, &rcb); */
+  //nd_start(ND_SCATTER, &rcb); 
 
   /* Do nothing else */
   while (1) {

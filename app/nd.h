@@ -5,12 +5,18 @@
 #define ND_SCATTER 2
 /*---------------------------------------------------------------------------*/
 #define EPOCH_INTERVAL_RT (RTIMER_SECOND)
-#define TOTAL_SLOTS 10
+#define TOTAL_SLOTS 8
 /*---------------------------------------------------------------------------*/
 #define MAX_NBR 64 /* Maximum number of neighbors */
 /*---------------------------------------------------------------------------*/
 void nd_recv(void); /* Called by lower layers when a message is received */
 /*---------------------------------------------------------------------------*/
+/*** COLLISION AVOIDANCE ***/
+struct beacon_info{
+  uint8_t * mode;
+  int16_t random;
+};
+typedef struct beacon_info bcin;
 
 /*
 #define SLOT_DURATION (EPOCH_INTERVAL_RT/TOTAL_SLOTS)
@@ -55,3 +61,4 @@ void stop_listen(struct rtimer *t, uint8_t *mode);
 /* Send a discovery beacon */
 void send_beacon(struct rtimer *t, uint8_t *mode);
 /*---------------------------------------------------------------------------*/
+void send_beacon_random(struct rtimer *t, bcin *data);
