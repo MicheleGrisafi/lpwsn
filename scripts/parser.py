@@ -3,27 +3,128 @@
 import matplotlib.pyplot as plt 
 import numpy as np
 import sys
-from statistics import mean,variance
+import os
+from statistics import mean,stdev
 
-if len(sys.argv) < 2:
-    print("Syntax error: ./{} discoveryLog dutyCycleLog".format(sys.argv[0]))
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+if len(sys.argv) < 3:
+    print(bcolors.FAIL + "Syntax error: ./{} logSet fast[0|1] [discoveryAvgWeight] [discoveryDevWeight] [dutycycleWeight] [preferredNodes] [preferredNodesWeight]".format(sys.argv[0]) + bcolors.ENDC)
     sys.exit(1)
 
 # Get beginning and end of snort
-discoveryLog = sys.argv[1]
-dutyLog = sys.argv[2]
+logSet=sys.argv[1]
+fast=int(sys.argv[2])
 
-#Load the data
-discRates = dict()
-with open(discoveryLog) as f:
-    for line in f:
-        pos = line.find("finished Num NBR")
-        if(pos != -1):
-            epoch = int(line[line.find("Epoch")+5:line.find(" finished")])
-            nbr = int(line[pos+17:len(line)])
-            node = int(line[line.find("ID:")+3:line.find("App:")-1])
-            if not discRates.get(epoch,0):
-                discRates[epoch] = []
-            discRates[epoch].insert(node,nbr)
-for epoch in discRates.items():
-	print("{}/{} and {}".format(mean(epoch[1]),len(epoch[1]),variance(epoch[1])))
+discoveryAvgWeight = 2
+discoveryDevWeight = 1
+dutycycleWeight = 1
+prefNod = None
+prefNodWeight = None
+
+if len(sys.argv) > 3:
+    discoveryAvgWeight = int(sys.argv[3])
+    discoveryDevWeight = int(sys.argv[4])
+    dutycycleWeight = int(sys.argv[5])
+
+if len(sys.argv) > 6:
+    prefNod = int(sys.argv[6])
+    prefNodWeight = int(sys.argv[7])
+
+
+def analyse(disLog, dutyLog):
+    discoveryLog = disLog
+    dutyLog = dutyLog
+    #Load the data
+    #It contains info on the single nodes discovery rates
+    detailedDiscovery = dict()
+
+    # Load discoveries log
+    with open(discoveryLog) as f:
+        for line in f:
+            pos = line.find("finished Num NBR")
+            if(pos != -1):
+                epoch = int(line[line.find("Epoch")+5:line.find(" finished")])
+                nbr = int(line[pos+17:len(line)])
+                node = int(line[line.find("ID:")+3:line.find("App:")-1])
+                if not detailedDiscovery.get(epoch,0):
+                    #Create a new dictionary
+                    detailedDiscovery[epoch] = dict()
+                    detailedDiscovery[epoch]["total"] = []
+
+                #Insert in the dictionary, at the position of the epoch, the number of nodes for the given node
+                detailedDiscovery[epoch][node] = nbr
+                detailedDiscovery[epoch]["total"].append(nbr) 
+    
+    
+    #compute general average and variance   
+    totMean=0
+    totDev=0
+    totalEpochs = len(detailedDiscovery)-5
+    for epoch,nodes in detailedDiscovery.items():
+        if epoch >= 5 and epoch < len(detailedDiscovery):
+            totMean+=mean(nodes["total"])
+            totDev+=stdev(nodes["total"])
+            #print("Array: {}\nVar:{}".format(nodes["total"],variance(nodes["total"])))
+    totMean/=totalEpochs
+    totDev/=totalEpochs
+    # Retrieving dury cycle info
+    #AVG ON 451388389 us 25.27 %
+    with open(dutyLog) as f:
+        line = f.readline().strip()
+        begin=line.find("us")+3
+        end=line.find("%")-1
+        percentage = line[begin:end]
+    sim=disLog[disLog.find("mrm")+4:len(disLog)]
+    #print("{}: \t mean={};\t var={}; duty={};".format(sim,totMean,totVar,percentage))
+    return totMean,totDev,percentage
+
+
+# [avg,var,percentage]
+finalRes = {"2":[0,0,0],"5":[0,0,0],"10":[0,0,0],"20":[0,0,0],"30":[0,0,0],"50":[0,0,0]}
+for file in os.listdir("logs/"+logSet):
+    if os.fsdecode(file).endswith(".dc.log"):
+        simName = os.fsdecode(file)[:-7]
+        #print("Analysing {} with {} and {}".format(filename,"logs/{}/{}.log".format(mode,filename),"logs/{}/{}.dc.log".format(mode,filename)))
+        if (fast and simName.endswith("-1.csc")) or not fast:
+            tmpAvg, tmpDev, tmpPer = analyse("logs/{}/{}.log".format(logSet,simName),"logs/{}/{}.dc.log".format(logSet,simName))
+            tmpName = simName[simName.find("mrm-")+4:simName.find("n-")]
+            finalRes[tmpName][0] += tmpAvg
+            finalRes[tmpName][1] += tmpDev
+            finalRes[tmpName][2] += float(tmpPer)
+
+
+### Compute final performance
+print(bcolors.OKGREEN + "LogSet: {}".format(logSet) + bcolors.ENDC)
+print("Nodes -> Avg % - Std Dev% - DutyCycle - Performance\n")
+finalPerf = 0
+for name,res in finalRes.items():
+    simNumber = 5
+    if fast:
+        simNumber = 1
+    
+    avgDiscRate = round((res[0]/simNumber  /int(name))*100 ,2)   # Avg discovery rate percentage for a certain topology
+    stdDevDiscRate = round((res[1]/simNumber  /int(name))*100,4)   # Std dev of discovery rate percentage for a certain topology
+    avgPower = round(res[2]/simNumber,2)  #Duty cycle for a certain topology
+    
+    perf =   (discoveryAvgWeight*avgDiscRate)  /  ((discoveryDevWeight*stdDevDiscRate)  +  (dutycycleWeight*avgPower))
+    
+    if str(prefNod) == name:
+        perf*=prefNodWeight
+
+    
+    finalPerf += perf
+    perf = round(perf,4)
+    print("{} ->\t{} -\t {} -\t {} -\t {}".format(name,avgDiscRate,stdDevDiscRate,avgPower,perf))
+
+finalPerf /=6
+finalPerf = round(finalPerf,4)
+print(bcolors.WARNING + "Avg Perf: {}\n\n".format(finalPerf)+bcolors.ENDC)
