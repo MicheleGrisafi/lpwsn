@@ -1,22 +1,32 @@
-#!/bin/bash
+#!/usr/local/bin/bash
 if [ $# -lt 1 ]; then
-    printf "Syntax Error: $0 fast[0|1] [discAvgWeight] [discDevWeight] [dutyWeight] [prefNode] [prefNodeWeight]\n"
+    printf "Syntax Error: $0 fast[0|1] [folder_pattern] [discAvgWeight] [discDevWeight] [dutyWeight] [prefNode] [prefNodeWeight]\n"
     exit 1
 fi
 fast=$1
-avgW=$2
-devW=$3
-dutW=$4
-prefNode=$5
-prefNodeW=$6
+pattern=$2
+avgW=$3
+devW=$4
+dutW=$5
+prefNode=$6
+prefNodeW=$7
 
-declare -A results=()
+if [ $pattern == "" ]; then
+    pattern="*"
+fi
 
-for d in logs/*/; do
+echo $pattern
+
+declare -A results
+
+
+echo "" > results.txt
+for d in logs/${pattern}/; do
     set=$(basename $d)
-    #echo "LogSet: $set"
-    python parser.py $set $fast $avgW $devW $dutW $prefNode $prefNodeW
-    results[$set]=$(python parser.py $set $fast $avgW $devW $dutW $prefNode $prefNodeW | grep 'Avg Perf' | cut -d " " -f 3)
+    echo "LogSet: $set"
+    python3 parser.py $set $fast $avgW $devW $dutW $prefNode $prefNodeW >> results.txt
+    #results[$set]=$(python3 parser.py $set $fast $avgW $devW $dutW $prefNode $prefNodeW | grep 'Avg Perf' | cut -d " " -f 3)
+    results[$set]=$(cat results.txt | grep 'Avg Perf' | tail -1 | cut -d " " -f 3)
 done
 
 max=0
@@ -29,3 +39,4 @@ for K in "${!results[@]}"; do
     fi
 done
 printf "\n\033[95m\033[91mMax is $maxK with an avg performance of ${results[$maxK]}\033[0m\n\n"
+printf "\n\033[95m\033[91mMax is $maxK with an avg performance of ${results[$maxK]}\033[0m\n\n" >> results.txt
