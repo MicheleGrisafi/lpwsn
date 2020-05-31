@@ -23,9 +23,9 @@ if len(sys.argv) < 3:
 logSet=sys.argv[1]
 fast=int(sys.argv[2])
 
-discoveryAvgWeight = 2
+discoveryAvgWeight = 3
 discoveryDevWeight = 1
-dutycycleWeight = 1
+dutycycleWeight = 3
 prefNod = None
 prefNodWeight = None
 
