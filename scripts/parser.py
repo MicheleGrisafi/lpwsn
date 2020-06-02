@@ -67,9 +67,12 @@ def analyse(disLog, dutyLog):
     #compute general average and variance   
     totMean=0
     totDev=0
-    totalEpochs = len(detailedDiscovery)-5
+    #Discard first 5 and last 5 epochs
+    totalEpochs = len(detailedDiscovery) - 10
     for epoch,nodes in detailedDiscovery.items():
-        if epoch >= 5 and epoch < len(detailedDiscovery):
+        if epoch > 5 and epoch < len(detailedDiscovery) - 5:
+            print("Epoch: " + str(epoch) + "nodes: ")
+            print(nodes["total"])
             totMean+=mean(nodes["total"])
             totDev+=stdev(nodes["total"])
             #print("Array: {}\nVar:{}".format(nodes["total"],variance(nodes["total"])))
@@ -82,7 +85,7 @@ def analyse(disLog, dutyLog):
         begin=line.find("us")+3
         end=line.find("%")-1
         percentage = line[begin:end]
-    sim=disLog[disLog.find("mrm")+4:len(disLog)]
+    #sim=disLog[disLog.find("mrm")+4:len(disLog)]
     #print("{}: \t mean={};\t var={}; duty={};".format(sim,totMean,totVar,percentage))
     return totMean,totDev,percentage
 

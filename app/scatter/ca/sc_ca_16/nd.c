@@ -106,7 +106,7 @@ nd_start(uint8_t mode, const struct nd_callbacks *cb){
     if(protocol_mode == ND_BURST){
       rnd_list[rnd_counter] = (random_rand() % (2*MAX_SLACK))-(MAX_SLACK);
     }else{
-      rnd_list[rnd_counter] = (random_rand() % (SLOT_DURATION/2));
+      rnd_list[rnd_counter] = (random_rand() % (MAX_SLACK));
     }
     PRINTF("%d-",rnd_list[rnd_counter]);
   }

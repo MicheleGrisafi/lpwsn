@@ -11,11 +11,12 @@ dutW=$5
 prefNode=$6
 prefNodeW=$7
 
-if [ $pattern == "" ]; then
+if [ -z "$pattern" ]; then
     pattern="*"
+    echo "All modes"
 fi
 
-echo $pattern
+echo "Folder Patter: ${pattern}"
 
 declare -A results
 
