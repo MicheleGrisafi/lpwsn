@@ -1,722 +1,1302 @@
-1020149	ID:2	Rime started with address 2.0
-1028425	ID:2	MAC 02:00:00:00:00:00:00:00 Contiki 3.x started. Node id is set to 2.
-1034329	ID:2	nullsec CSMA nd-rdc, channel check rate 128 Hz, radio channel 26
-1036577	ID:2	Starting 'Application process'
-1037394	ID:2	Node ID: 2
-1039256	ID:2	RTIMER_SECOND: 32768
-1190220	ID:1	Rime started with address 1.0
-1198499	ID:1	MAC 01:00:00:00:00:00:00:00 Contiki 3.x started. Node id is set to 1.
-1204403	ID:1	nullsec CSMA nd-rdc, channel check rate 128 Hz, radio channel 26
-1206651	ID:1	Starting 'Application process'
-1207468	ID:1	Node ID: 1
-1209329	ID:1	RTIMER_SECOND: 32768
-2189706	ID:2	App: Epoch 1 finished Num NBR 0
-2208141	ID:2	App: Epoch 2 New NBR 1
-2507973	ID:1	App: Epoch 1 finished Num NBR 0
-2542612	ID:1	App: Epoch 2 New NBR 2
-3192576	ID:2	App: Epoch 2 finished Num NBR 1
-3211006	ID:2	App: Epoch 3 New NBR 1
-3510843	ID:1	App: Epoch 2 finished Num NBR 1
-3545482	ID:1	App: Epoch 3 New NBR 2
-4195444	ID:2	App: Epoch 3 finished Num NBR 1
-4213935	ID:2	App: Epoch 4 New NBR 1
-4513773	ID:1	App: Epoch 3 finished Num NBR 1
-4548350	ID:1	App: Epoch 4 New NBR 2
-5198313	ID:2	App: Epoch 4 finished Num NBR 1
-5216807	ID:2	App: Epoch 5 New NBR 1
-5516641	ID:1	App: Epoch 4 finished Num NBR 1
-5551219	ID:1	App: Epoch 5 New NBR 2
-6201182	ID:2	App: Epoch 5 finished Num NBR 1
-6219768	ID:2	App: Epoch 6 New NBR 1
-6519510	ID:1	App: Epoch 5 finished Num NBR 1
-6554085	ID:1	App: Epoch 6 New NBR 2
-7204050	ID:2	App: Epoch 6 finished Num NBR 1
-7222541	ID:2	App: Epoch 7 New NBR 1
-7522379	ID:1	App: Epoch 6 finished Num NBR 1
-7556953	ID:1	App: Epoch 7 New NBR 2
-8206919	ID:2	App: Epoch 7 finished Num NBR 1
-8225441	ID:2	App: Epoch 8 New NBR 1
-8525278	ID:1	App: Epoch 7 finished Num NBR 1
-8559915	ID:1	App: Epoch 8 New NBR 2
-9209788	ID:2	App: Epoch 8 finished Num NBR 1
-9228370	ID:2	App: Epoch 9 New NBR 1
-9528238	ID:1	App: Epoch 8 finished Num NBR 1
-9562693	ID:1	App: Epoch 9 New NBR 2
-10212656	ID:2	App: Epoch 9 finished Num NBR 1
-10231421	ID:2	App: Epoch 10 New NBR 1
-10531106	ID:1	App: Epoch 9 finished Num NBR 1
-10565714	ID:1	App: Epoch 10 New NBR 2
-11215708	ID:2	App: Epoch 10 finished Num NBR 1
-11234381	ID:2	App: Epoch 11 New NBR 1
-11534128	ID:1	App: Epoch 10 finished Num NBR 1
-11568782	ID:1	App: Epoch 11 New NBR 2
-12218760	ID:2	App: Epoch 11 finished Num NBR 1
-12237311	ID:2	App: Epoch 12 New NBR 1
-12537149	ID:1	App: Epoch 11 finished Num NBR 1
-12571816	ID:1	App: Epoch 12 New NBR 2
-13221781	ID:2	App: Epoch 12 finished Num NBR 1
-13240337	ID:2	App: Epoch 13 New NBR 1
-13540170	ID:1	App: Epoch 12 finished Num NBR 1
-13574836	ID:1	App: Epoch 13 New NBR 2
-14224802	ID:2	App: Epoch 13 finished Num NBR 1
-14243358	ID:2	App: Epoch 14 New NBR 1
-14543192	ID:1	App: Epoch 13 finished Num NBR 1
-14577865	ID:1	App: Epoch 14 New NBR 2
-15227824	ID:2	App: Epoch 14 finished Num NBR 1
-15246375	ID:2	App: Epoch 15 New NBR 1
-15546213	ID:1	App: Epoch 14 finished Num NBR 1
-15580880	ID:1	App: Epoch 15 New NBR 2
-16230845	ID:2	App: Epoch 15 finished Num NBR 1
-16249398	ID:2	App: Epoch 16 New NBR 1
-16549234	ID:1	App: Epoch 15 finished Num NBR 1
-16583980	ID:1	App: Epoch 16 New NBR 2
-17233866	ID:2	App: Epoch 16 finished Num NBR 1
-17252422	ID:2	App: Epoch 17 New NBR 1
-17552255	ID:1	App: Epoch 16 finished Num NBR 1
-17586924	ID:1	App: Epoch 17 New NBR 2
-18236887	ID:2	App: Epoch 17 finished Num NBR 1
-18255441	ID:2	App: Epoch 18 New NBR 1
-18555277	ID:1	App: Epoch 17 finished Num NBR 1
-18589943	ID:1	App: Epoch 18 New NBR 2
-19239909	ID:2	App: Epoch 18 finished Num NBR 1
-19258497	ID:2	App: Epoch 19 New NBR 1
-19558298	ID:1	App: Epoch 18 finished Num NBR 1
-19593056	ID:1	App: Epoch 19 New NBR 2
-20242930	ID:2	App: Epoch 19 finished Num NBR 1
-20261481	ID:2	App: Epoch 20 New NBR 1
-20561319	ID:1	App: Epoch 19 finished Num NBR 1
-20596015	ID:1	App: Epoch 20 New NBR 2
-21245982	ID:2	App: Epoch 20 finished Num NBR 1
-21264504	ID:2	App: Epoch 21 New NBR 1
-21564340	ID:1	App: Epoch 20 finished Num NBR 1
-21599041	ID:1	App: Epoch 21 New NBR 2
-22249033	ID:2	App: Epoch 21 finished Num NBR 1
-22267585	ID:2	App: Epoch 22 New NBR 1
-22567423	ID:1	App: Epoch 21 finished Num NBR 1
-22602089	ID:1	App: Epoch 22 New NBR 2
-23252085	ID:2	App: Epoch 22 finished Num NBR 1
-23270606	ID:2	App: Epoch 23 New NBR 1
-23570444	ID:1	App: Epoch 22 finished Num NBR 1
-23605143	ID:1	App: Epoch 23 New NBR 2
-24255137	ID:2	App: Epoch 23 finished Num NBR 1
-24273640	ID:2	App: Epoch 24 New NBR 1
-24573465	ID:1	App: Epoch 23 finished Num NBR 1
-24608197	ID:1	App: Epoch 24 New NBR 2
-25258158	ID:2	App: Epoch 24 finished Num NBR 1
-25276681	ID:2	App: Epoch 25 New NBR 1
-25576517	ID:1	App: Epoch 24 finished Num NBR 1
-25611274	ID:1	App: Epoch 25 New NBR 2
-26261240	ID:2	App: Epoch 25 finished Num NBR 1
-26279793	ID:2	App: Epoch 26 New NBR 1
-26579630	ID:1	App: Epoch 25 finished Num NBR 1
-26614373	ID:1	App: Epoch 26 New NBR 2
-27264292	ID:2	App: Epoch 26 finished Num NBR 1
-27282883	ID:2	App: Epoch 27 New NBR 1
-27582712	ID:1	App: Epoch 26 finished Num NBR 1
-27617347	ID:1	App: Epoch 27 New NBR 2
-28267342	ID:2	App: Epoch 27 finished Num NBR 1
-28285900	ID:2	App: Epoch 28 New NBR 1
-28585764	ID:1	App: Epoch 27 finished Num NBR 1
-28620401	ID:1	App: Epoch 28 New NBR 2
-29270396	ID:2	App: Epoch 28 finished Num NBR 1
-29289027	ID:2	App: Epoch 29 New NBR 1
-29588816	ID:1	App: Epoch 28 finished Num NBR 1
-29623478	ID:1	App: Epoch 29 New NBR 2
-30273447	ID:2	App: Epoch 29 finished Num NBR 1
-30292003	ID:2	App: Epoch 30 New NBR 1
-30591837	ID:1	App: Epoch 29 finished Num NBR 1
-30626503	ID:1	App: Epoch 30 New NBR 2
-31276470	ID:2	App: Epoch 30 finished Num NBR 1
-31295026	ID:2	App: Epoch 31 New NBR 1
-31594859	ID:1	App: Epoch 30 finished Num NBR 1
-31629526	ID:1	App: Epoch 31 New NBR 2
-32279491	ID:2	App: Epoch 31 finished Num NBR 1
-32298055	ID:2	App: Epoch 32 New NBR 1
-32597880	ID:1	App: Epoch 31 finished Num NBR 1
-32632546	ID:1	App: Epoch 32 New NBR 2
-33282512	ID:2	App: Epoch 32 finished Num NBR 1
-33301064	ID:2	App: Epoch 33 New NBR 1
-33600902	ID:1	App: Epoch 32 finished Num NBR 1
-33635568	ID:1	App: Epoch 33 New NBR 2
-34285533	ID:2	App: Epoch 33 finished Num NBR 1
-34304088	ID:2	App: Epoch 34 New NBR 1
-34603923	ID:1	App: Epoch 33 finished Num NBR 1
-34638682	ID:1	App: Epoch 34 New NBR 2
-35288555	ID:2	App: Epoch 34 finished Num NBR 1
-35307108	ID:2	App: Epoch 35 New NBR 1
-35606944	ID:1	App: Epoch 34 finished Num NBR 1
-35641610	ID:1	App: Epoch 35 New NBR 2
-36291576	ID:2	App: Epoch 35 finished Num NBR 1
-36310128	ID:2	App: Epoch 36 New NBR 1
-36609965	ID:1	App: Epoch 35 finished Num NBR 1
-36644634	ID:1	App: Epoch 36 New NBR 2
-37294597	ID:2	App: Epoch 36 finished Num NBR 1
-37313196	ID:2	App: Epoch 37 New NBR 1
-37612987	ID:1	App: Epoch 36 finished Num NBR 1
-37647731	ID:1	App: Epoch 37 New NBR 2
-38297618	ID:2	App: Epoch 37 finished Num NBR 1
-38316200	ID:2	App: Epoch 38 New NBR 1
-38616038	ID:1	App: Epoch 37 finished Num NBR 1
-38650677	ID:1	App: Epoch 38 New NBR 2
-39300639	ID:2	App: Epoch 38 finished Num NBR 1
-39319297	ID:2	App: Epoch 39 New NBR 1
-39619090	ID:1	App: Epoch 38 finished Num NBR 1
-39653713	ID:1	App: Epoch 39 New NBR 2
-40303661	ID:2	App: Epoch 39 finished Num NBR 1
-40322276	ID:2	App: Epoch 40 New NBR 1
-40622142	ID:1	App: Epoch 39 finished Num NBR 1
-40656716	ID:1	App: Epoch 40 New NBR 2
-41306681	ID:2	App: Epoch 40 finished Num NBR 1
-41325324	ID:2	App: Epoch 41 New NBR 1
-41625188	ID:1	App: Epoch 40 finished Num NBR 1
-41659736	ID:1	App: Epoch 41 New NBR 2
-42309702	ID:2	App: Epoch 41 finished Num NBR 1
-42328406	ID:2	App: Epoch 42 New NBR 1
-42628214	ID:1	App: Epoch 41 finished Num NBR 1
-42662821	ID:1	App: Epoch 42 New NBR 2
-43312784	ID:2	App: Epoch 42 finished Num NBR 1
-43331459	ID:2	App: Epoch 43 New NBR 1
-43631296	ID:1	App: Epoch 42 finished Num NBR 1
-43665864	ID:1	App: Epoch 43 New NBR 2
-44315836	ID:2	App: Epoch 43 finished Num NBR 1
-44334512	ID:2	App: Epoch 44 New NBR 1
-44634348	ID:1	App: Epoch 43 finished Num NBR 1
-44668893	ID:1	App: Epoch 44 New NBR 2
-45318888	ID:2	App: Epoch 44 finished Num NBR 1
-45337563	ID:2	App: Epoch 45 New NBR 1
-45637399	ID:1	App: Epoch 44 finished Num NBR 1
-45671944	ID:1	App: Epoch 45 New NBR 2
-46321940	ID:2	App: Epoch 45 finished Num NBR 1
-46340583	ID:2	App: Epoch 46 New NBR 1
-46640450	ID:1	App: Epoch 45 finished Num NBR 1
-46674997	ID:1	App: Epoch 46 New NBR 2
-47324992	ID:2	App: Epoch 46 finished Num NBR 1
-47343726	ID:2	App: Epoch 47 New NBR 1
-47643503	ID:1	App: Epoch 46 finished Num NBR 1
-47678050	ID:1	App: Epoch 47 New NBR 2
-48328013	ID:2	App: Epoch 47 finished Num NBR 1
-48346689	ID:2	App: Epoch 48 New NBR 1
-48646524	ID:1	App: Epoch 47 finished Num NBR 1
-48681068	ID:1	App: Epoch 48 New NBR 2
-49331034	ID:2	App: Epoch 48 finished Num NBR 1
-49349708	ID:2	App: Epoch 49 New NBR 1
-49649545	ID:1	App: Epoch 48 finished Num NBR 1
-49684090	ID:1	App: Epoch 49 New NBR 2
-50334055	ID:2	App: Epoch 49 finished Num NBR 1
-50352734	ID:2	App: Epoch 50 New NBR 1
-50652567	ID:1	App: Epoch 49 finished Num NBR 1
-50687148	ID:1	App: Epoch 50 New NBR 2
-51337078	ID:2	App: Epoch 50 finished Num NBR 1
-51355754	ID:2	App: Epoch 51 New NBR 1
-51655589	ID:1	App: Epoch 50 finished Num NBR 1
-51690133	ID:1	App: Epoch 51 New NBR 2
-52340099	ID:2	App: Epoch 51 finished Num NBR 1
-52358776	ID:2	App: Epoch 52 New NBR 1
-52658610	ID:1	App: Epoch 51 finished Num NBR 1
-52693157	ID:1	App: Epoch 52 New NBR 2
-53343120	ID:2	App: Epoch 52 finished Num NBR 1
-53361794	ID:2	App: Epoch 53 New NBR 1
-53661631	ID:1	App: Epoch 52 finished Num NBR 1
-53696176	ID:1	App: Epoch 53 New NBR 2
-54346141	ID:2	App: Epoch 53 finished Num NBR 1
-54364815	ID:2	App: Epoch 54 New NBR 1
-54664653	ID:1	App: Epoch 53 finished Num NBR 1
-54699196	ID:1	App: Epoch 54 New NBR 2
-55349162	ID:2	App: Epoch 54 finished Num NBR 1
-55367872	ID:2	App: Epoch 55 New NBR 1
-55667674	ID:1	App: Epoch 54 finished Num NBR 1
-55702308	ID:1	App: Epoch 55 New NBR 2
-56352214	ID:2	App: Epoch 55 finished Num NBR 1
-56370862	ID:2	App: Epoch 56 New NBR 1
-56670695	ID:1	App: Epoch 55 finished Num NBR 1
-56705271	ID:1	App: Epoch 56 New NBR 2
-57355266	ID:2	App: Epoch 56 finished Num NBR 1
-57373881	ID:2	App: Epoch 57 New NBR 1
-57673716	ID:1	App: Epoch 56 finished Num NBR 1
-57708366	ID:1	App: Epoch 57 New NBR 2
-58358318	ID:2	App: Epoch 57 finished Num NBR 1
-58376963	ID:2	App: Epoch 58 New NBR 1
-58676799	ID:1	App: Epoch 57 finished Num NBR 1
-58711375	ID:1	App: Epoch 58 New NBR 2
-59361365	ID:2	App: Epoch 58 finished Num NBR 1
-59379983	ID:2	App: Epoch 59 New NBR 1
-59679820	ID:1	App: Epoch 58 finished Num NBR 1
-59714428	ID:1	App: Epoch 59 New NBR 2
-60364391	ID:2	App: Epoch 59 finished Num NBR 1
-60383017	ID:2	App: Epoch 60 New NBR 1
-60682841	ID:1	App: Epoch 59 finished Num NBR 1
-60717508	ID:1	App: Epoch 60 New NBR 2
-61367473	ID:2	App: Epoch 60 finished Num NBR 1
-61386055	ID:2	App: Epoch 61 New NBR 1
-61685893	ID:1	App: Epoch 60 finished Num NBR 1
-61720560	ID:1	App: Epoch 61 New NBR 2
-62370525	ID:2	App: Epoch 61 finished Num NBR 1
-62389107	ID:2	App: Epoch 62 New NBR 1
-62688945	ID:1	App: Epoch 61 finished Num NBR 1
-62723580	ID:1	App: Epoch 62 New NBR 2
-63373577	ID:2	App: Epoch 62 finished Num NBR 1
-63392169	ID:2	App: Epoch 63 New NBR 1
-63691996	ID:1	App: Epoch 62 finished Num NBR 1
-63726635	ID:1	App: Epoch 63 New NBR 2
-64376627	ID:2	App: Epoch 63 finished Num NBR 1
-64395180	ID:2	App: Epoch 64 New NBR 1
-64695041	ID:1	App: Epoch 63 finished Num NBR 1
-64729684	ID:1	App: Epoch 64 New NBR 2
-65379680	ID:2	App: Epoch 64 finished Num NBR 1
-65398311	ID:2	App: Epoch 65 New NBR 1
-65698069	ID:1	App: Epoch 64 finished Num NBR 1
-65732743	ID:1	App: Epoch 65 New NBR 2
-66382701	ID:2	App: Epoch 65 finished Num NBR 1
-66401253	ID:2	App: Epoch 66 New NBR 1
-66701091	ID:1	App: Epoch 65 finished Num NBR 1
-66735757	ID:1	App: Epoch 66 New NBR 2
-67385723	ID:2	App: Epoch 66 finished Num NBR 1
-67404277	ID:2	App: Epoch 67 New NBR 1
-67704112	ID:1	App: Epoch 66 finished Num NBR 1
-67738780	ID:1	App: Epoch 67 New NBR 2
-68388744	ID:2	App: Epoch 67 finished Num NBR 1
-68407391	ID:2	App: Epoch 68 New NBR 1
-68707133	ID:1	App: Epoch 67 finished Num NBR 1
-68741802	ID:1	App: Epoch 68 New NBR 2
-69391765	ID:2	App: Epoch 68 finished Num NBR 1
-69410316	ID:2	App: Epoch 69 New NBR 1
-69710154	ID:1	App: Epoch 68 finished Num NBR 1
-69744820	ID:1	App: Epoch 69 New NBR 2
-70394786	ID:2	App: Epoch 69 finished Num NBR 1
-70413340	ID:2	App: Epoch 70 New NBR 1
-70713176	ID:1	App: Epoch 69 finished Num NBR 1
-70747851	ID:1	App: Epoch 70 New NBR 2
-71397809	ID:2	App: Epoch 70 finished Num NBR 1
-71416359	ID:2	App: Epoch 71 New NBR 1
-71716198	ID:1	App: Epoch 70 finished Num NBR 1
-71750867	ID:1	App: Epoch 71 New NBR 2
-72400830	ID:2	App: Epoch 71 finished Num NBR 1
-72419386	ID:2	App: Epoch 72 New NBR 1
-72719219	ID:1	App: Epoch 71 finished Num NBR 1
-72753888	ID:1	App: Epoch 72 New NBR 2
-73403851	ID:2	App: Epoch 72 finished Num NBR 1
-73422434	ID:2	App: Epoch 73 New NBR 1
-73722271	ID:1	App: Epoch 72 finished Num NBR 1
-73756986	ID:1	App: Epoch 73 New NBR 2
-74406872	ID:2	App: Epoch 73 finished Num NBR 1
-74425487	ID:2	App: Epoch 74 New NBR 1
-74725323	ID:1	App: Epoch 73 finished Num NBR 1
-74759931	ID:1	App: Epoch 74 New NBR 2
-75409894	ID:2	App: Epoch 74 finished Num NBR 1
-75428506	ID:2	App: Epoch 75 New NBR 1
-75728374	ID:1	App: Epoch 74 finished Num NBR 1
-75763064	ID:1	App: Epoch 75 New NBR 2
-76412976	ID:2	App: Epoch 75 finished Num NBR 1
-76431560	ID:2	App: Epoch 76 New NBR 1
-76731396	ID:1	App: Epoch 75 finished Num NBR 1
-76766033	ID:1	App: Epoch 76 New NBR 2
-77415997	ID:2	App: Epoch 76 finished Num NBR 1
-77434579	ID:2	App: Epoch 77 New NBR 1
-77734416	ID:1	App: Epoch 76 finished Num NBR 1
-77769052	ID:1	App: Epoch 77 New NBR 2
-78419018	ID:2	App: Epoch 77 finished Num NBR 1
-78437648	ID:2	App: Epoch 78 New NBR 1
-78737438	ID:1	App: Epoch 77 finished Num NBR 1
-78772073	ID:1	App: Epoch 78 New NBR 2
-79422070	ID:2	App: Epoch 78 finished Num NBR 1
-79440652	ID:2	App: Epoch 79 New NBR 1
-79740490	ID:1	App: Epoch 78 finished Num NBR 1
-79775128	ID:1	App: Epoch 79 New NBR 2
-80425122	ID:2	App: Epoch 79 finished Num NBR 1
-80443674	ID:2	App: Epoch 80 New NBR 1
-80743542	ID:1	App: Epoch 79 finished Num NBR 1
-80778174	ID:1	App: Epoch 80 New NBR 2
-81428171	ID:2	App: Epoch 80 finished Num NBR 1
-81446725	ID:2	App: Epoch 81 New NBR 1
-81746561	ID:1	App: Epoch 80 finished Num NBR 1
-81781226	ID:1	App: Epoch 81 New NBR 2
-82431216	ID:2	App: Epoch 81 finished Num NBR 1
-82449747	ID:2	App: Epoch 82 New NBR 1
-82749582	ID:1	App: Epoch 81 finished Num NBR 1
-82784278	ID:1	App: Epoch 82 New NBR 2
-83434244	ID:2	App: Epoch 82 finished Num NBR 1
-83452777	ID:2	App: Epoch 83 New NBR 1
-83752603	ID:1	App: Epoch 82 finished Num NBR 1
-83787382	ID:1	App: Epoch 83 New NBR 2
-84437266	ID:2	App: Epoch 83 finished Num NBR 1
-84455788	ID:2	App: Epoch 84 New NBR 1
-84755625	ID:1	App: Epoch 83 finished Num NBR 1
-84790324	ID:1	App: Epoch 84 New NBR 2
-85440287	ID:2	App: Epoch 84 finished Num NBR 1
-85458807	ID:2	App: Epoch 85 New NBR 1
-85758646	ID:1	App: Epoch 84 finished Num NBR 1
-85793344	ID:1	App: Epoch 85 New NBR 2
-86443308	ID:2	App: Epoch 85 finished Num NBR 1
-86461912	ID:2	App: Epoch 86 New NBR 1
-86761667	ID:1	App: Epoch 85 finished Num NBR 1
-86796524	ID:1	App: Epoch 86 New NBR 2
-87446329	ID:2	App: Epoch 86 finished Num NBR 1
-87464850	ID:2	App: Epoch 87 New NBR 1
-87764688	ID:1	App: Epoch 86 finished Num NBR 1
-87799384	ID:1	App: Epoch 87 New NBR 2
-88449351	ID:2	App: Epoch 87 finished Num NBR 1
-88467963	ID:2	App: Epoch 88 New NBR 1
-88767710	ID:1	App: Epoch 87 finished Num NBR 1
-88802410	ID:1	App: Epoch 88 New NBR 2
-89452372	ID:2	App: Epoch 88 finished Num NBR 1
-89470893	ID:2	App: Epoch 89 New NBR 1
-89770731	ID:1	App: Epoch 88 finished Num NBR 1
-89805429	ID:1	App: Epoch 89 New NBR 2
-90455393	ID:2	App: Epoch 89 finished Num NBR 1
-90473920	ID:2	App: Epoch 90 New NBR 1
-90773752	ID:1	App: Epoch 89 finished Num NBR 1
-90808453	ID:1	App: Epoch 90 New NBR 2
-91458446	ID:2	App: Epoch 90 finished Num NBR 1
-91476941	ID:2	App: Epoch 91 New NBR 1
-91776774	ID:1	App: Epoch 90 finished Num NBR 1
-91811589	ID:1	App: Epoch 91 New NBR 2
-92461498	ID:2	App: Epoch 91 finished Num NBR 1
-92479957	ID:2	App: Epoch 92 New NBR 1
-92779796	ID:1	App: Epoch 91 finished Num NBR 1
-92814552	ID:1	App: Epoch 92 New NBR 2
-93464549	ID:2	App: Epoch 92 finished Num NBR 1
-93483040	ID:2	App: Epoch 93 New NBR 1
-93782878	ID:1	App: Epoch 92 finished Num NBR 1
-93817686	ID:1	App: Epoch 93 New NBR 2
-94467571	ID:2	App: Epoch 93 finished Num NBR 1
-94486094	ID:2	App: Epoch 94 New NBR 1
-94785930	ID:1	App: Epoch 93 finished Num NBR 1
-94820629	ID:1	App: Epoch 94 New NBR 2
-95470591	ID:2	App: Epoch 94 finished Num NBR 1
-95489143	ID:2	App: Epoch 95 New NBR 1
-95788981	ID:1	App: Epoch 94 finished Num NBR 1
-95823647	ID:1	App: Epoch 95 New NBR 2
-96473613	ID:2	App: Epoch 95 finished Num NBR 1
-96492268	ID:2	App: Epoch 96 New NBR 1
-96792033	ID:1	App: Epoch 95 finished Num NBR 1
-96826675	ID:1	App: Epoch 96 New NBR 2
-97476665	ID:2	App: Epoch 96 finished Num NBR 1
-97495216	ID:2	App: Epoch 97 New NBR 1
-97795085	ID:1	App: Epoch 96 finished Num NBR 1
-97829722	ID:1	App: Epoch 97 New NBR 2
-98479717	ID:2	App: Epoch 97 finished Num NBR 1
-98498271	ID:2	App: Epoch 98 New NBR 1
-98798106	ID:1	App: Epoch 97 finished Num NBR 1
-98832771	ID:1	App: Epoch 98 New NBR 2
-99482738	ID:2	App: Epoch 98 finished Num NBR 1
-99501449	ID:2	App: Epoch 99 New NBR 1
-99801127	ID:1	App: Epoch 98 finished Num NBR 1
-99835795	ID:1	App: Epoch 99 New NBR 2
-100485759	ID:2	App: Epoch 99 finished Num NBR 1
-100504464	ID:2	App: Epoch 100 New NBR 1
-100804149	ID:1	App: Epoch 99 finished Num NBR 1
-100838970	ID:1	App: Epoch 100 New NBR 2
-101488933	ID:2	App: Epoch 100 finished Num NBR 1
-101507483	ID:2	App: Epoch 101 New NBR 1
-101807323	ID:1	App: Epoch 100 finished Num NBR 1
-101842232	ID:1	App: Epoch 101 New NBR 2
-102492107	ID:2	App: Epoch 101 finished Num NBR 1
-102510658	ID:2	App: Epoch 102 New NBR 1
-102810496	ID:1	App: Epoch 101 finished Num NBR 1
-102845316	ID:1	App: Epoch 102 New NBR 2
-103495281	ID:2	App: Epoch 102 finished Num NBR 1
-103513832	ID:2	App: Epoch 103 New NBR 1
-103813670	ID:1	App: Epoch 102 finished Num NBR 1
-103848490	ID:1	App: Epoch 103 New NBR 2
-104498454	ID:2	App: Epoch 103 finished Num NBR 1
-104517226	ID:2	App: Epoch 104 New NBR 1
-104816844	ID:1	App: Epoch 103 finished Num NBR 1
-104851662	ID:1	App: Epoch 104 New NBR 2
-105501690	ID:2	App: Epoch 104 finished Num NBR 1
-105520183	ID:2	App: Epoch 105 New NBR 1
-105820018	ID:1	App: Epoch 104 finished Num NBR 1
-105854897	ID:1	App: Epoch 105 New NBR 2
-106504924	ID:2	App: Epoch 105 finished Num NBR 1
-106523434	ID:2	App: Epoch 106 New NBR 1
-106823192	ID:1	App: Epoch 105 finished Num NBR 1
-106858147	ID:1	App: Epoch 106 New NBR 2
-107508159	ID:2	App: Epoch 106 finished Num NBR 1
-107526527	ID:2	App: Epoch 107 New NBR 1
-107826365	ID:1	App: Epoch 106 finished Num NBR 1
-107861426	ID:1	App: Epoch 107 New NBR 2
-108511394	ID:2	App: Epoch 107 finished Num NBR 1
-108529701	ID:2	App: Epoch 108 New NBR 1
-108829539	ID:1	App: Epoch 107 finished Num NBR 1
-108864641	ID:1	App: Epoch 108 New NBR 2
-109514568	ID:2	App: Epoch 108 finished Num NBR 1
-109532851	ID:2	App: Epoch 109 New NBR 1
-109832774	ID:1	App: Epoch 108 finished Num NBR 1
-109867778	ID:1	App: Epoch 109 New NBR 2
-110517768	ID:2	App: Epoch 109 finished Num NBR 1
-110536172	ID:2	App: Epoch 110 New NBR 1
-110836009	ID:1	App: Epoch 109 finished Num NBR 1
-110870980	ID:1	App: Epoch 110 New NBR 2
-111521008	ID:2	App: Epoch 110 finished Num NBR 1
-111539421	ID:2	App: Epoch 111 New NBR 1
-111839245	ID:1	App: Epoch 110 finished Num NBR 1
-111874309	ID:1	App: Epoch 111 New NBR 2
-112524243	ID:2	App: Epoch 111 finished Num NBR 1
-112542581	ID:2	App: Epoch 112 New NBR 1
-112842419	ID:1	App: Epoch 111 finished Num NBR 1
-112877512	ID:1	App: Epoch 112 New NBR 2
-113527478	ID:2	App: Epoch 112 finished Num NBR 1
-113545756	ID:2	App: Epoch 113 New NBR 1
-113845593	ID:1	App: Epoch 112 finished Num NBR 1
-113880685	ID:1	App: Epoch 113 New NBR 2
-114530652	ID:2	App: Epoch 113 finished Num NBR 1
-114548990	ID:2	App: Epoch 114 New NBR 1
-114848827	ID:1	App: Epoch 113 finished Num NBR 1
-114883862	ID:1	App: Epoch 114 New NBR 2
-115533826	ID:2	App: Epoch 114 finished Num NBR 1
-115552163	ID:2	App: Epoch 115 New NBR 1
-115852001	ID:1	App: Epoch 114 finished Num NBR 1
-115887036	ID:1	App: Epoch 115 New NBR 2
-116536999	ID:2	App: Epoch 115 finished Num NBR 1
-116555337	ID:2	App: Epoch 116 New NBR 1
-116855175	ID:1	App: Epoch 115 finished Num NBR 1
-116890160	ID:1	App: Epoch 116 New NBR 2
-117540173	ID:2	App: Epoch 116 finished Num NBR 1
-117558514	ID:2	App: Epoch 117 New NBR 1
-117858349	ID:1	App: Epoch 116 finished Num NBR 1
-117893381	ID:1	App: Epoch 117 New NBR 2
-118543347	ID:2	App: Epoch 117 finished Num NBR 1
-118561740	ID:2	App: Epoch 118 New NBR 1
-118861523	ID:1	App: Epoch 117 finished Num NBR 1
-118896638	ID:1	App: Epoch 118 New NBR 2
-119546521	ID:2	App: Epoch 118 finished Num NBR 1
-119564860	ID:2	App: Epoch 119 New NBR 1
-119864697	ID:1	App: Epoch 118 finished Num NBR 1
-119899731	ID:1	App: Epoch 119 New NBR 2
-120549695	ID:2	App: Epoch 119 finished Num NBR 1
-120568035	ID:2	App: Epoch 120 New NBR 1
-120867870	ID:1	App: Epoch 119 finished Num NBR 1
-120902901	ID:1	App: Epoch 120 New NBR 2
-121552868	ID:2	App: Epoch 120 finished Num NBR 1
-121571288	ID:2	App: Epoch 121 New NBR 1
-121871043	ID:1	App: Epoch 120 finished Num NBR 1
-121906050	ID:1	App: Epoch 121 New NBR 2
-122556041	ID:2	App: Epoch 121 finished Num NBR 1
-122574380	ID:2	App: Epoch 122 New NBR 1
-122874217	ID:1	App: Epoch 121 finished Num NBR 1
-122909252	ID:1	App: Epoch 122 New NBR 2
-123559215	ID:2	App: Epoch 122 finished Num NBR 1
-123577572	ID:2	App: Epoch 123 New NBR 1
-123877391	ID:1	App: Epoch 122 finished Num NBR 1
-123912503	ID:1	App: Epoch 123 New NBR 2
-124562389	ID:2	App: Epoch 123 finished Num NBR 1
-124580727	ID:2	App: Epoch 124 New NBR 1
-124880565	ID:1	App: Epoch 123 finished Num NBR 1
-124915598	ID:1	App: Epoch 124 New NBR 2
-125565563	ID:2	App: Epoch 124 finished Num NBR 1
-125583901	ID:2	App: Epoch 125 New NBR 1
-125883738	ID:1	App: Epoch 124 finished Num NBR 1
-125918772	ID:1	App: Epoch 125 New NBR 2
-126568736	ID:2	App: Epoch 125 finished Num NBR 1
-126587158	ID:2	App: Epoch 126 New NBR 1
-126886912	ID:1	App: Epoch 125 finished Num NBR 1
-126921947	ID:1	App: Epoch 126 New NBR 2
-127571910	ID:2	App: Epoch 126 finished Num NBR 1
-127590251	ID:2	App: Epoch 127 New NBR 1
-127890086	ID:1	App: Epoch 126 finished Num NBR 1
-127925121	ID:1	App: Epoch 127 New NBR 2
-128575145	ID:2	App: Epoch 127 finished Num NBR 1
-128593423	ID:2	App: Epoch 128 New NBR 1
-128893260	ID:1	App: Epoch 127 finished Num NBR 1
-128928356	ID:1	App: Epoch 128 New NBR 2
-129578380	ID:2	App: Epoch 128 finished Num NBR 1
-129596595	ID:2	App: Epoch 129 New NBR 1
-129896434	ID:1	App: Epoch 128 finished Num NBR 1
-129931643	ID:1	App: Epoch 129 New NBR 2
-130581615	ID:2	App: Epoch 129 finished Num NBR 1
-130599771	ID:2	App: Epoch 130 New NBR 1
-130899608	ID:1	App: Epoch 129 finished Num NBR 1
-130934914	ID:1	App: Epoch 130 New NBR 2
-131584790	ID:2	App: Epoch 130 finished Num NBR 1
-131602945	ID:2	App: Epoch 131 New NBR 1
-131902782	ID:1	App: Epoch 130 finished Num NBR 1
-131937998	ID:1	App: Epoch 131 New NBR 2
-132587964	ID:2	App: Epoch 131 finished Num NBR 1
-132606119	ID:2	App: Epoch 132 New NBR 1
-132905956	ID:1	App: Epoch 131 finished Num NBR 1
-132941174	ID:1	App: Epoch 132 New NBR 2
-133591138	ID:2	App: Epoch 132 finished Num NBR 1
-133609386	ID:2	App: Epoch 133 New NBR 1
-133909130	ID:1	App: Epoch 132 finished Num NBR 1
-133944428	ID:1	App: Epoch 133 New NBR 2
-134594311	ID:2	App: Epoch 133 finished Num NBR 1
-134612466	ID:2	App: Epoch 134 New NBR 1
-134912304	ID:1	App: Epoch 133 finished Num NBR 1
-134947519	ID:1	App: Epoch 134 New NBR 2
-135597485	ID:2	App: Epoch 134 finished Num NBR 1
-135615640	ID:2	App: Epoch 135 New NBR 1
-135915478	ID:1	App: Epoch 134 finished Num NBR 1
-135950703	ID:1	App: Epoch 135 New NBR 2
-136600659	ID:2	App: Epoch 135 finished Num NBR 1
-136618816	ID:2	App: Epoch 136 New NBR 1
-136918713	ID:1	App: Epoch 135 finished Num NBR 1
-136953870	ID:1	App: Epoch 136 New NBR 2
-137603833	ID:2	App: Epoch 136 finished Num NBR 1
-137622109	ID:2	App: Epoch 137 New NBR 1
-137921946	ID:1	App: Epoch 136 finished Num NBR 1
-137957043	ID:1	App: Epoch 137 New NBR 2
-138607007	ID:2	App: Epoch 137 finished Num NBR 1
-138625369	ID:2	App: Epoch 138 New NBR 1
-138925182	ID:1	App: Epoch 137 finished Num NBR 1
-138960294	ID:1	App: Epoch 138 New NBR 2
-139610181	ID:2	App: Epoch 138 finished Num NBR 1
-139628521	ID:2	App: Epoch 139 New NBR 1
-139928356	ID:1	App: Epoch 138 finished Num NBR 1
-139963391	ID:1	App: Epoch 139 New NBR 2
-140613354	ID:2	App: Epoch 139 finished Num NBR 1
-140631693	ID:2	App: Epoch 140 New NBR 1
-140931530	ID:1	App: Epoch 139 finished Num NBR 1
-140966563	ID:1	App: Epoch 140 New NBR 2
-141616528	ID:2	App: Epoch 140 finished Num NBR 1
-141634932	ID:2	App: Epoch 141 New NBR 1
-141934795	ID:1	App: Epoch 140 finished Num NBR 1
-141969736	ID:1	App: Epoch 141 New NBR 2
-142619702	ID:2	App: Epoch 141 finished Num NBR 1
-142638192	ID:2	App: Epoch 142 New NBR 1
-142938030	ID:1	App: Epoch 141 finished Num NBR 1
-142972911	ID:1	App: Epoch 142 New NBR 2
-143622876	ID:2	App: Epoch 142 finished Num NBR 1
-143641475	ID:2	App: Epoch 143 New NBR 1
-143941265	ID:1	App: Epoch 142 finished Num NBR 1
-143976085	ID:1	App: Epoch 143 New NBR 2
-144626049	ID:2	App: Epoch 143 finished Num NBR 1
-144644606	ID:2	App: Epoch 144 New NBR 1
-144944439	ID:1	App: Epoch 143 finished Num NBR 1
-144979260	ID:1	App: Epoch 144 New NBR 2
-145629224	ID:2	App: Epoch 144 finished Num NBR 1
-145647777	ID:2	App: Epoch 145 New NBR 1
-145947613	ID:1	App: Epoch 144 finished Num NBR 1
-145982525	ID:1	App: Epoch 145 New NBR 2
-146632397	ID:2	App: Epoch 145 finished Num NBR 1
-146651010	ID:2	App: Epoch 146 New NBR 1
-146950848	ID:1	App: Epoch 145 finished Num NBR 1
-146985605	ID:1	App: Epoch 146 New NBR 2
-147635571	ID:2	App: Epoch 146 finished Num NBR 1
-147654184	ID:2	App: Epoch 147 New NBR 1
-147954021	ID:1	App: Epoch 146 finished Num NBR 1
-147988779	ID:1	App: Epoch 147 New NBR 2
-148638745	ID:2	App: Epoch 147 finished Num NBR 1
-148657452	ID:2	App: Epoch 148 New NBR 1
-148957195	ID:1	App: Epoch 147 finished Num NBR 1
-148991953	ID:1	App: Epoch 148 New NBR 2
-149641919	ID:2	App: Epoch 148 finished Num NBR 1
-149660534	ID:2	App: Epoch 149 New NBR 1
-149960369	ID:1	App: Epoch 148 finished Num NBR 1
-149995128	ID:1	App: Epoch 149 New NBR 2
-150645092	ID:2	App: Epoch 149 finished Num NBR 1
-150663705	ID:2	App: Epoch 150 New NBR 1
-150963543	ID:1	App: Epoch 149 finished Num NBR 1
-150998394	ID:1	App: Epoch 150 New NBR 2
-151648267	ID:2	App: Epoch 150 finished Num NBR 1
-151666879	ID:2	App: Epoch 151 New NBR 1
-151966718	ID:1	App: Epoch 150 finished Num NBR 1
-152001475	ID:1	App: Epoch 151 New NBR 2
-152651441	ID:2	App: Epoch 151 finished Num NBR 1
-152670056	ID:2	App: Epoch 152 New NBR 1
-152969892	ID:1	App: Epoch 151 finished Num NBR 1
-153004648	ID:1	App: Epoch 152 New NBR 2
-153654615	ID:2	App: Epoch 152 finished Num NBR 1
-153673214	ID:2	App: Epoch 153 New NBR 1
-153973065	ID:1	App: Epoch 152 finished Num NBR 1
-154007825	ID:1	App: Epoch 153 New NBR 2
-154657789	ID:2	App: Epoch 153 finished Num NBR 1
-154676402	ID:2	App: Epoch 154 New NBR 1
-154976239	ID:1	App: Epoch 153 finished Num NBR 1
-155010997	ID:1	App: Epoch 154 New NBR 2
-155660963	ID:2	App: Epoch 154 finished Num NBR 1
-155679659	ID:2	App: Epoch 155 New NBR 1
-155979413	ID:1	App: Epoch 154 finished Num NBR 1
-156014194	ID:1	App: Epoch 155 New NBR 2
-156664137	ID:2	App: Epoch 155 finished Num NBR 1
-156682749	ID:2	App: Epoch 156 New NBR 1
-156982587	ID:1	App: Epoch 155 finished Num NBR 1
-157017347	ID:1	App: Epoch 156 New NBR 2
-157667371	ID:2	App: Epoch 156 finished Num NBR 1
-157685923	ID:2	App: Epoch 157 New NBR 1
-157985761	ID:1	App: Epoch 156 finished Num NBR 1
-158020624	ID:1	App: Epoch 157 New NBR 2
-158670606	ID:2	App: Epoch 157 finished Num NBR 1
-158689104	ID:2	App: Epoch 158 New NBR 1
-158988935	ID:1	App: Epoch 157 finished Num NBR 1
-159023875	ID:1	App: Epoch 158 New NBR 2
-159673840	ID:2	App: Epoch 158 finished Num NBR 1
-159692273	ID:2	App: Epoch 159 New NBR 1
-159992170	ID:1	App: Epoch 158 finished Num NBR 1
-160027049	ID:1	App: Epoch 159 New NBR 2
-160677015	ID:2	App: Epoch 159 finished Num NBR 1
-160695600	ID:2	App: Epoch 160 New NBR 1
-160995404	ID:1	App: Epoch 159 finished Num NBR 1
-161030226	ID:1	App: Epoch 160 New NBR 2
-161680186	ID:2	App: Epoch 160 finished Num NBR 1
-161698801	ID:2	App: Epoch 161 New NBR 1
-161998636	ID:1	App: Epoch 160 finished Num NBR 1
-162033395	ID:1	App: Epoch 161 New NBR 2
-162683359	ID:2	App: Epoch 161 finished Num NBR 1
-162701972	ID:2	App: Epoch 162 New NBR 1
-163001810	ID:1	App: Epoch 161 finished Num NBR 1
-163036597	ID:1	App: Epoch 162 New NBR 2
-163686594	ID:2	App: Epoch 162 finished Num NBR 1
-163705145	ID:2	App: Epoch 163 New NBR 1
-164004984	ID:1	App: Epoch 162 finished Num NBR 1
-164039802	ID:1	App: Epoch 163 New NBR 2
-164689829	ID:2	App: Epoch 163 finished Num NBR 1
-164708320	ID:2	App: Epoch 164 New NBR 1
-165008158	ID:1	App: Epoch 163 finished Num NBR 1
-165043098	ID:1	App: Epoch 164 New NBR 2
-165693064	ID:2	App: Epoch 164 finished Num NBR 1
-165711499	ID:2	App: Epoch 165 New NBR 1
-166011331	ID:1	App: Epoch 164 finished Num NBR 1
-166046366	ID:1	App: Epoch 165 New NBR 2
-166696238	ID:2	App: Epoch 165 finished Num NBR 1
-166714671	ID:2	App: Epoch 166 New NBR 1
-167014505	ID:1	App: Epoch 165 finished Num NBR 1
-167049448	ID:1	App: Epoch 166 New NBR 2
-167699412	ID:2	App: Epoch 166 finished Num NBR 1
-167717934	ID:2	App: Epoch 167 New NBR 1
-168017679	ID:1	App: Epoch 166 finished Num NBR 1
-168052682	ID:1	App: Epoch 167 New NBR 2
-168702647	ID:2	App: Epoch 167 finished Num NBR 1
-168721015	ID:2	App: Epoch 168 New NBR 1
-169020853	ID:1	App: Epoch 167 finished Num NBR 1
-169055857	ID:1	App: Epoch 168 New NBR 2
-169705821	ID:2	App: Epoch 168 finished Num NBR 1
-169724188	ID:2	App: Epoch 169 New NBR 1
-170024027	ID:1	App: Epoch 168 finished Num NBR 1
-170059028	ID:1	App: Epoch 169 New NBR 2
-170708994	ID:2	App: Epoch 169 finished Num NBR 1
-170727403	ID:2	App: Epoch 170 New NBR 1
-171027201	ID:1	App: Epoch 169 finished Num NBR 1
-171062300	ID:1	App: Epoch 170 New NBR 2
-171712169	ID:2	App: Epoch 170 finished Num NBR 1
-171730538	ID:2	App: Epoch 171 New NBR 1
-172030375	ID:1	App: Epoch 170 finished Num NBR 1
-172065377	ID:1	App: Epoch 171 New NBR 2
-172715343	ID:2	App: Epoch 171 finished Num NBR 1
-172733713	ID:2	App: Epoch 172 New NBR 1
-173033549	ID:1	App: Epoch 171 finished Num NBR 1
-173068631	ID:1	App: Epoch 172 New NBR 2
-173718517	ID:2	App: Epoch 172 finished Num NBR 1
-173736886	ID:2	App: Epoch 173 New NBR 1
-174036723	ID:1	App: Epoch 172 finished Num NBR 1
-174071726	ID:1	App: Epoch 173 New NBR 2
-174721691	ID:2	App: Epoch 173 finished Num NBR 1
-174740062	ID:2	App: Epoch 174 New NBR 1
-175039897	ID:1	App: Epoch 173 finished Num NBR 1
-175074898	ID:1	App: Epoch 174 New NBR 2
-175724865	ID:2	App: Epoch 174 finished Num NBR 1
-175743313	ID:2	App: Epoch 175 New NBR 1
-176043071	ID:1	App: Epoch 174 finished Num NBR 1
-176078111	ID:1	App: Epoch 175 New NBR 2
-176728038	ID:2	App: Epoch 175 finished Num NBR 1
-176746408	ID:2	App: Epoch 176 New NBR 1
-177046245	ID:1	App: Epoch 175 finished Num NBR 1
-177081248	ID:1	App: Epoch 176 New NBR 2
-177731212	ID:2	App: Epoch 176 finished Num NBR 1
-177749584	ID:2	App: Epoch 177 New NBR 1
-178049418	ID:1	App: Epoch 176 finished Num NBR 1
-178084446	ID:1	App: Epoch 177 New NBR 2
-178734386	ID:2	App: Epoch 177 finished Num NBR 1
-178752755	ID:2	App: Epoch 178 New NBR 1
-179052592	ID:1	App: Epoch 177 finished Num NBR 1
-179087594	ID:1	App: Epoch 178 New NBR 2
-179737560	ID:2	App: Epoch 178 finished Num NBR 1
-179755929	ID:2	App: Epoch 179 New NBR 1
+1020159	ID:2	Rime started with address 2.0
+1028435	ID:2	MAC 02:00:00:00:00:00:00:00 Contiki 3.x started. Node id is set to 2.
+1034339	ID:2	nullsec CSMA nd-rdc, channel check rate 128 Hz, radio channel 26
+1036587	ID:2	Starting 'Application process'
+1037404	ID:2	Node ID: 2
+1039266	ID:2	RTIMER_SECOND: 32768
+1190230	ID:1	Rime started with address 1.0
+1198509	ID:1	MAC 01:00:00:00:00:00:00:00 Contiki 3.x started. Node id is set to 1.
+1204413	ID:1	nullsec CSMA nd-rdc, channel check rate 128 Hz, radio channel 26
+1206661	ID:1	Starting 'Application process'
+1207478	ID:1	Node ID: 1
+1209339	ID:1	RTIMER_SECOND: 32768
+1689839	ID:2	App: Epoch 1 finished Num NBR 0
+1708091	ID:2	App: Epoch 2 New NBR 1
+2008106	ID:1	App: Epoch 1 finished Num NBR 0
+2017752	ID:1	App: Epoch 2 New NBR 2
+2242697	ID:2	App: Epoch 2 finished Num NBR 1
+2260946	ID:2	App: Epoch 3 New NBR 1
+2560964	ID:1	App: Epoch 2 finished Num NBR 1
+2570641	ID:1	App: Epoch 3 New NBR 2
+2795583	ID:2	App: Epoch 3 finished Num NBR 1
+2813806	ID:2	App: Epoch 4 New NBR 1
+3113851	ID:1	App: Epoch 3 finished Num NBR 1
+3123497	ID:1	App: Epoch 4 New NBR 2
+3348440	ID:2	App: Epoch 4 finished Num NBR 1
+3366703	ID:2	App: Epoch 5 New NBR 1
+3666707	ID:1	App: Epoch 4 finished Num NBR 1
+3676353	ID:1	App: Epoch 5 New NBR 2
+3901296	ID:2	App: Epoch 5 finished Num NBR 1
+3919547	ID:2	App: Epoch 6 New NBR 1
+4219564	ID:1	App: Epoch 5 finished Num NBR 1
+4229210	ID:1	App: Epoch 6 New NBR 2
+4454153	ID:2	App: Epoch 6 finished Num NBR 1
+4472404	ID:2	App: Epoch 7 New NBR 1
+4772420	ID:1	App: Epoch 6 finished Num NBR 1
+4782065	ID:1	App: Epoch 7 New NBR 2
+5007009	ID:2	App: Epoch 7 finished Num NBR 1
+5025260	ID:2	App: Epoch 8 New NBR 1
+5325277	ID:1	App: Epoch 7 finished Num NBR 1
+5335003	ID:1	App: Epoch 8 New NBR 2
+5559866	ID:2	App: Epoch 8 finished Num NBR 1
+5578149	ID:2	App: Epoch 9 New NBR 1
+5878133	ID:1	App: Epoch 8 finished Num NBR 1
+5887833	ID:1	App: Epoch 9 New NBR 2
+6112722	ID:2	App: Epoch 9 finished Num NBR 1
+6131125	ID:2	App: Epoch 10 New NBR 1
+6430990	ID:1	App: Epoch 9 finished Num NBR 1
+6440787	ID:1	App: Epoch 10 New NBR 2
+6665731	ID:2	App: Epoch 10 finished Num NBR 1
+6683982	ID:2	App: Epoch 11 New NBR 1
+6983999	ID:1	App: Epoch 10 finished Num NBR 1
+6993799	ID:1	App: Epoch 11 New NBR 2
+7218740	ID:2	App: Epoch 11 finished Num NBR 1
+7236996	ID:2	App: Epoch 12 New NBR 1
+7537008	ID:1	App: Epoch 11 finished Num NBR 1
+7546804	ID:1	App: Epoch 12 New NBR 2
+7771749	ID:2	App: Epoch 12 finished Num NBR 1
+7790084	ID:2	App: Epoch 13 New NBR 1
+8090017	ID:1	App: Epoch 12 finished Num NBR 1
+8099894	ID:1	App: Epoch 13 New NBR 2
+8324758	ID:2	App: Epoch 13 finished Num NBR 1
+8343024	ID:2	App: Epoch 14 New NBR 1
+8643026	ID:1	App: Epoch 13 finished Num NBR 1
+8652826	ID:1	App: Epoch 14 New NBR 2
+8877767	ID:2	App: Epoch 14 finished Num NBR 1
+8896019	ID:2	App: Epoch 15 New NBR 1
+9196035	ID:1	App: Epoch 14 finished Num NBR 1
+9205832	ID:1	App: Epoch 15 New NBR 2
+9430776	ID:2	App: Epoch 15 finished Num NBR 1
+9449028	ID:2	App: Epoch 16 New NBR 1
+9749044	ID:1	App: Epoch 15 finished Num NBR 1
+9758842	ID:1	App: Epoch 16 New NBR 2
+9983785	ID:2	App: Epoch 16 finished Num NBR 1
+10002036	ID:2	App: Epoch 17 New NBR 1
+10302053	ID:1	App: Epoch 16 finished Num NBR 1
+10311888	ID:1	App: Epoch 17 New NBR 2
+10536794	ID:2	App: Epoch 17 finished Num NBR 1
+10555044	ID:2	App: Epoch 18 New NBR 1
+10855062	ID:1	App: Epoch 17 finished Num NBR 1
+10864863	ID:1	App: Epoch 18 New NBR 2
+11089804	ID:2	App: Epoch 18 finished Num NBR 1
+11108053	ID:2	App: Epoch 19 New NBR 1
+11408071	ID:1	App: Epoch 18 finished Num NBR 1
+11417930	ID:1	App: Epoch 19 New NBR 2
+11642874	ID:2	App: Epoch 19 finished Num NBR 1
+11661062	ID:2	App: Epoch 20 New NBR 1
+11961080	ID:1	App: Epoch 19 finished Num NBR 1
+11970938	ID:1	App: Epoch 20 New NBR 2
+12195883	ID:2	App: Epoch 20 finished Num NBR 1
+12214135	ID:2	App: Epoch 21 New NBR 1
+12514150	ID:1	App: Epoch 20 finished Num NBR 1
+12523948	ID:1	App: Epoch 21 New NBR 2
+12748953	ID:2	App: Epoch 21 finished Num NBR 1
+12767176	ID:2	App: Epoch 22 New NBR 1
+13067159	ID:1	App: Epoch 21 finished Num NBR 1
+13077108	ID:1	App: Epoch 22 New NBR 2
+13301962	ID:2	App: Epoch 22 finished Num NBR 1
+13320231	ID:2	App: Epoch 23 New NBR 1
+13620229	ID:1	App: Epoch 22 finished Num NBR 1
+13630109	ID:1	App: Epoch 23 New NBR 2
+13854971	ID:2	App: Epoch 23 finished Num NBR 1
+13873222	ID:2	App: Epoch 24 New NBR 1
+14173238	ID:1	App: Epoch 23 finished Num NBR 1
+14183097	ID:1	App: Epoch 24 New NBR 2
+14408040	ID:2	App: Epoch 24 finished Num NBR 1
+14426232	ID:2	App: Epoch 25 New NBR 1
+14726302	ID:1	App: Epoch 24 finished Num NBR 1
+14736106	ID:1	App: Epoch 25 New NBR 2
+14961050	ID:2	App: Epoch 25 finished Num NBR 1
+14979302	ID:2	App: Epoch 26 New NBR 1
+15279317	ID:1	App: Epoch 25 finished Num NBR 1
+15289114	ID:1	App: Epoch 26 New NBR 2
+15514120	ID:2	App: Epoch 26 finished Num NBR 1
+15532404	ID:2	App: Epoch 27 New NBR 1
+15832326	ID:1	App: Epoch 26 finished Num NBR 1
+15842186	ID:1	App: Epoch 27 New NBR 2
+16067129	ID:2	App: Epoch 27 finished Num NBR 1
+16085317	ID:2	App: Epoch 28 New NBR 1
+16385335	ID:1	App: Epoch 27 finished Num NBR 1
+16395193	ID:1	App: Epoch 28 New NBR 2
+16620138	ID:2	App: Epoch 28 finished Num NBR 1
+16638329	ID:2	App: Epoch 29 New NBR 1
+16938344	ID:1	App: Epoch 28 finished Num NBR 1
+16948207	ID:1	App: Epoch 29 New NBR 2
+17173147	ID:2	App: Epoch 29 finished Num NBR 1
+17191339	ID:2	App: Epoch 30 New NBR 1
+17491353	ID:1	App: Epoch 29 finished Num NBR 1
+17501213	ID:1	App: Epoch 30 New NBR 2
+17726157	ID:2	App: Epoch 30 finished Num NBR 1
+17744378	ID:2	App: Epoch 31 New NBR 1
+18044394	ID:1	App: Epoch 30 finished Num NBR 1
+18054221	ID:1	App: Epoch 31 New NBR 2
+18279166	ID:2	App: Epoch 31 finished Num NBR 1
+18297388	ID:2	App: Epoch 32 New NBR 1
+18597403	ID:1	App: Epoch 31 finished Num NBR 1
+18607236	ID:1	App: Epoch 32 New NBR 2
+18832175	ID:2	App: Epoch 32 finished Num NBR 1
+18850395	ID:2	App: Epoch 33 New NBR 1
+19150473	ID:1	App: Epoch 32 finished Num NBR 1
+19160240	ID:1	App: Epoch 33 New NBR 2
+19385184	ID:2	App: Epoch 33 finished Num NBR 1
+19403465	ID:2	App: Epoch 34 New NBR 1
+19703482	ID:1	App: Epoch 33 finished Num NBR 1
+19713250	ID:1	App: Epoch 34 New NBR 2
+19938193	ID:2	App: Epoch 34 finished Num NBR 1
+19956473	ID:2	App: Epoch 35 New NBR 1
+20256552	ID:1	App: Epoch 34 finished Num NBR 1
+20266259	ID:1	App: Epoch 35 New NBR 2
+20491202	ID:2	App: Epoch 35 finished Num NBR 1
+20509545	ID:2	App: Epoch 36 New NBR 1
+20809561	ID:1	App: Epoch 35 finished Num NBR 1
+20819350	ID:1	App: Epoch 36 New NBR 2
+21044211	ID:2	App: Epoch 36 finished Num NBR 1
+21062644	ID:2	App: Epoch 37 New NBR 1
+21362570	ID:1	App: Epoch 36 finished Num NBR 1
+21372399	ID:1	App: Epoch 37 New NBR 2
+21597251	ID:2	App: Epoch 37 finished Num NBR 1
+21615564	ID:2	App: Epoch 38 New NBR 1
+21915640	ID:1	App: Epoch 37 finished Num NBR 1
+21925318	ID:1	App: Epoch 38 New NBR 2
+22150260	ID:2	App: Epoch 38 finished Num NBR 1
+22168632	ID:2	App: Epoch 39 New NBR 1
+22468648	ID:1	App: Epoch 38 finished Num NBR 1
+22478382	ID:1	App: Epoch 39 New NBR 2
+22703330	ID:2	App: Epoch 39 finished Num NBR 1
+22721641	ID:2	App: Epoch 40 New NBR 1
+23021719	ID:1	App: Epoch 39 finished Num NBR 1
+23031394	ID:1	App: Epoch 40 New NBR 2
+23256338	ID:2	App: Epoch 40 finished Num NBR 1
+23274709	ID:2	App: Epoch 41 New NBR 1
+23574727	ID:1	App: Epoch 40 finished Num NBR 1
+23584418	ID:1	App: Epoch 41 New NBR 2
+23809408	ID:2	App: Epoch 41 finished Num NBR 1
+23827719	ID:2	App: Epoch 42 New NBR 1
+24127736	ID:1	App: Epoch 41 finished Num NBR 1
+24137472	ID:1	App: Epoch 42 New NBR 2
+24362417	ID:2	App: Epoch 42 finished Num NBR 1
+24380730	ID:2	App: Epoch 43 New NBR 1
+24680745	ID:1	App: Epoch 42 finished Num NBR 1
+24690481	ID:1	App: Epoch 43 New NBR 2
+24915426	ID:2	App: Epoch 43 finished Num NBR 1
+24933737	ID:2	App: Epoch 44 New NBR 1
+25233754	ID:1	App: Epoch 43 finished Num NBR 1
+25243491	ID:1	App: Epoch 44 New NBR 2
+25468435	ID:2	App: Epoch 44 finished Num NBR 1
+25486747	ID:2	App: Epoch 45 New NBR 1
+25786763	ID:1	App: Epoch 44 finished Num NBR 1
+25796532	ID:1	App: Epoch 45 New NBR 2
+26021444	ID:2	App: Epoch 45 finished Num NBR 1
+26039840	ID:2	App: Epoch 46 New NBR 1
+26339773	ID:1	App: Epoch 45 finished Num NBR 1
+26349509	ID:1	App: Epoch 46 New NBR 2
+26574453	ID:2	App: Epoch 46 finished Num NBR 1
+26592860	ID:2	App: Epoch 47 New NBR 1
+26892782	ID:1	App: Epoch 46 finished Num NBR 1
+26902521	ID:1	App: Epoch 47 New NBR 2
+27127462	ID:2	App: Epoch 47 finished Num NBR 1
+27145773	ID:2	App: Epoch 48 New NBR 1
+27445791	ID:1	App: Epoch 47 finished Num NBR 1
+27455530	ID:1	App: Epoch 48 New NBR 2
+27680471	ID:2	App: Epoch 48 finished Num NBR 1
+27698782	ID:2	App: Epoch 49 New NBR 1
+27998800	ID:1	App: Epoch 48 finished Num NBR 1
+28008536	ID:1	App: Epoch 49 New NBR 2
+28233480	ID:2	App: Epoch 49 finished Num NBR 1
+28251794	ID:2	App: Epoch 50 New NBR 1
+28551809	ID:1	App: Epoch 49 finished Num NBR 1
+28561638	ID:1	App: Epoch 50 New NBR 2
+28786551	ID:2	App: Epoch 50 finished Num NBR 1
+28804854	ID:2	App: Epoch 51 New NBR 1
+29104849	ID:1	App: Epoch 50 finished Num NBR 1
+29114651	ID:1	App: Epoch 51 New NBR 2
+29339560	ID:2	App: Epoch 51 finished Num NBR 1
+29357843	ID:2	App: Epoch 52 New NBR 1
+29657858	ID:1	App: Epoch 51 finished Num NBR 1
+29667628	ID:1	App: Epoch 52 New NBR 2
+29892626	ID:2	App: Epoch 52 finished Num NBR 1
+29910852	ID:2	App: Epoch 53 New NBR 1
+30210928	ID:1	App: Epoch 52 finished Num NBR 1
+30220695	ID:1	App: Epoch 53 New NBR 2
+30445639	ID:2	App: Epoch 53 finished Num NBR 1
+30463922	ID:2	App: Epoch 54 New NBR 1
+30763937	ID:1	App: Epoch 53 finished Num NBR 1
+30773704	ID:1	App: Epoch 54 New NBR 2
+30998648	ID:2	App: Epoch 54 finished Num NBR 1
+31017085	ID:2	App: Epoch 55 New NBR 1
+31317007	ID:1	App: Epoch 54 finished Num NBR 1
+31326715	ID:1	App: Epoch 55 New NBR 2
+31551719	ID:2	App: Epoch 55 finished Num NBR 1
+31570001	ID:2	App: Epoch 56 New NBR 1
+31870016	ID:1	App: Epoch 55 finished Num NBR 1
+31879783	ID:1	App: Epoch 56 New NBR 2
+32104728	ID:2	App: Epoch 56 finished Num NBR 1
+32123009	ID:2	App: Epoch 57 New NBR 1
+32423026	ID:1	App: Epoch 56 finished Num NBR 1
+32432793	ID:1	App: Epoch 57 New NBR 2
+32657799	ID:2	App: Epoch 57 finished Num NBR 1
+32676022	ID:2	App: Epoch 58 New NBR 1
+32976035	ID:1	App: Epoch 57 finished Num NBR 1
+32985862	ID:1	App: Epoch 58 New NBR 2
+33210807	ID:2	App: Epoch 58 finished Num NBR 1
+33229031	ID:2	App: Epoch 59 New NBR 1
+33529044	ID:1	App: Epoch 58 finished Num NBR 1
+33538874	ID:1	App: Epoch 59 New NBR 2
+33763816	ID:2	App: Epoch 59 finished Num NBR 1
+33782126	ID:2	App: Epoch 60 New NBR 1
+34082053	ID:1	App: Epoch 59 finished Num NBR 1
+34091971	ID:1	App: Epoch 60 New NBR 2
+34316825	ID:2	App: Epoch 60 finished Num NBR 1
+34335126	ID:2	App: Epoch 61 New NBR 1
+34635062	ID:1	App: Epoch 60 finished Num NBR 1
+34644889	ID:1	App: Epoch 61 New NBR 2
+34869834	ID:2	App: Epoch 61 finished Num NBR 1
+34888059	ID:2	App: Epoch 62 New NBR 1
+35188071	ID:1	App: Epoch 61 finished Num NBR 1
+35197901	ID:1	App: Epoch 62 New NBR 2
+35422843	ID:2	App: Epoch 62 finished Num NBR 1
+35441063	ID:2	App: Epoch 63 New NBR 1
+35741080	ID:1	App: Epoch 62 finished Num NBR 1
+35750908	ID:1	App: Epoch 63 New NBR 2
+35975852	ID:2	App: Epoch 63 finished Num NBR 1
+35994072	ID:2	App: Epoch 64 New NBR 1
+36294150	ID:1	App: Epoch 63 finished Num NBR 1
+36303998	ID:1	App: Epoch 64 New NBR 2
+36528861	ID:2	App: Epoch 64 finished Num NBR 1
+36547167	ID:2	App: Epoch 65 New NBR 1
+36847159	ID:1	App: Epoch 64 finished Num NBR 1
+36856928	ID:1	App: Epoch 65 New NBR 2
+37081870	ID:2	App: Epoch 65 finished Num NBR 1
+37100152	ID:2	App: Epoch 66 New NBR 1
+37400229	ID:1	App: Epoch 65 finished Num NBR 1
+37409940	ID:1	App: Epoch 66 New NBR 2
+37634879	ID:2	App: Epoch 66 finished Num NBR 1
+37653226	ID:2	App: Epoch 67 New NBR 1
+37953236	ID:1	App: Epoch 66 finished Num NBR 1
+37962975	ID:1	App: Epoch 67 New NBR 2
+38187919	ID:2	App: Epoch 67 finished Num NBR 1
+38206235	ID:2	App: Epoch 68 New NBR 1
+38506247	ID:1	App: Epoch 67 finished Num NBR 1
+38515986	ID:1	App: Epoch 68 New NBR 2
+38740928	ID:2	App: Epoch 68 finished Num NBR 1
+38759239	ID:2	App: Epoch 69 New NBR 1
+39059317	ID:1	App: Epoch 68 finished Num NBR 1
+39068998	ID:1	App: Epoch 69 New NBR 2
+39293937	ID:2	App: Epoch 69 finished Num NBR 1
+39312402	ID:2	App: Epoch 70 New NBR 1
+39612326	ID:1	App: Epoch 69 finished Num NBR 1
+39622003	ID:1	App: Epoch 70 New NBR 2
+39847008	ID:2	App: Epoch 70 finished Num NBR 1
+39865320	ID:2	App: Epoch 71 New NBR 1
+40165397	ID:1	App: Epoch 70 finished Num NBR 1
+40175073	ID:1	App: Epoch 71 New NBR 2
+40400017	ID:2	App: Epoch 71 finished Num NBR 1
+40418389	ID:2	App: Epoch 72 New NBR 1
+40718406	ID:1	App: Epoch 71 finished Num NBR 1
+40728084	ID:1	App: Epoch 72 New NBR 2
+40953026	ID:2	App: Epoch 72 finished Num NBR 1
+40971398	ID:2	App: Epoch 73 New NBR 1
+41271415	ID:1	App: Epoch 72 finished Num NBR 1
+41281093	ID:1	App: Epoch 73 New NBR 2
+41506035	ID:2	App: Epoch 73 finished Num NBR 1
+41524487	ID:2	App: Epoch 74 New NBR 1
+41824424	ID:1	App: Epoch 73 finished Num NBR 1
+41834180	ID:1	App: Epoch 74 New NBR 2
+42059044	ID:2	App: Epoch 74 finished Num NBR 1
+42077445	ID:2	App: Epoch 75 New NBR 1
+42377433	ID:1	App: Epoch 74 finished Num NBR 1
+42387108	ID:1	App: Epoch 75 New NBR 2
+42612053	ID:2	App: Epoch 75 finished Num NBR 1
+42630427	ID:2	App: Epoch 76 New NBR 1
+42930442	ID:1	App: Epoch 75 finished Num NBR 1
+42940119	ID:1	App: Epoch 76 New NBR 2
+43165062	ID:2	App: Epoch 76 finished Num NBR 1
+43183436	ID:2	App: Epoch 77 New NBR 1
+43483451	ID:1	App: Epoch 76 finished Num NBR 1
+43493127	ID:1	App: Epoch 77 New NBR 2
+43718071	ID:2	App: Epoch 77 finished Num NBR 1
+43736443	ID:2	App: Epoch 78 New NBR 1
+44036460	ID:1	App: Epoch 77 finished Num NBR 1
+44046232	ID:1	App: Epoch 78 New NBR 2
+44271080	ID:2	App: Epoch 78 finished Num NBR 1
+44289455	ID:2	App: Epoch 79 New NBR 1
+44589469	ID:1	App: Epoch 78 finished Num NBR 1
+44599209	ID:1	App: Epoch 79 New NBR 2
+44824150	ID:2	App: Epoch 79 finished Num NBR 1
+44842461	ID:2	App: Epoch 80 New NBR 1
+45142479	ID:1	App: Epoch 79 finished Num NBR 1
+45152218	ID:1	App: Epoch 80 New NBR 2
+45377157	ID:2	App: Epoch 80 finished Num NBR 1
+45395498	ID:2	App: Epoch 81 New NBR 1
+45695516	ID:1	App: Epoch 80 finished Num NBR 1
+45705223	ID:1	App: Epoch 81 New NBR 2
+45930227	ID:2	App: Epoch 81 finished Num NBR 1
+45948509	ID:2	App: Epoch 82 New NBR 1
+46248525	ID:1	App: Epoch 81 finished Num NBR 1
+46258296	ID:1	App: Epoch 82 New NBR 2
+46483236	ID:2	App: Epoch 82 finished Num NBR 1
+46501551	ID:2	App: Epoch 83 New NBR 1
+46801534	ID:1	App: Epoch 82 finished Num NBR 1
+46811302	ID:1	App: Epoch 83 New NBR 2
+47036245	ID:2	App: Epoch 83 finished Num NBR 1
+47054606	ID:2	App: Epoch 84 New NBR 1
+47354665	ID:1	App: Epoch 83 finished Num NBR 1
+47364451	ID:1	App: Epoch 84 New NBR 2
+47589315	ID:2	App: Epoch 84 finished Num NBR 1
+47607657	ID:2	App: Epoch 85 New NBR 1
+47907705	ID:1	App: Epoch 84 finished Num NBR 1
+47917381	ID:1	App: Epoch 85 New NBR 2
+48142323	ID:2	App: Epoch 85 finished Num NBR 1
+48160696	ID:2	App: Epoch 86 New NBR 1
+48460714	ID:1	App: Epoch 85 finished Num NBR 1
+48470392	ID:1	App: Epoch 86 New NBR 2
+48695394	ID:2	App: Epoch 86 finished Num NBR 1
+48713705	ID:2	App: Epoch 87 New NBR 1
+49013723	ID:1	App: Epoch 86 finished Num NBR 1
+49023462	ID:1	App: Epoch 87 New NBR 2
+49248403	ID:2	App: Epoch 87 finished Num NBR 1
+49266808	ID:2	App: Epoch 88 New NBR 1
+49566732	ID:1	App: Epoch 87 finished Num NBR 1
+49576500	ID:1	App: Epoch 88 New NBR 2
+49801412	ID:2	App: Epoch 88 finished Num NBR 1
+49819724	ID:2	App: Epoch 89 New NBR 1
+50119741	ID:1	App: Epoch 88 finished Num NBR 1
+50129478	ID:1	App: Epoch 89 New NBR 2
+50354421	ID:2	App: Epoch 89 finished Num NBR 1
+50372738	ID:2	App: Epoch 90 New NBR 1
+50672750	ID:1	App: Epoch 89 finished Num NBR 1
+50682488	ID:1	App: Epoch 90 New NBR 2
+50907431	ID:2	App: Epoch 90 finished Num NBR 1
+50925748	ID:2	App: Epoch 91 New NBR 1
+51225760	ID:1	App: Epoch 90 finished Num NBR 1
+51235499	ID:1	App: Epoch 91 New NBR 2
+51460441	ID:2	App: Epoch 91 finished Num NBR 1
+51478752	ID:2	App: Epoch 92 New NBR 1
+51778769	ID:1	App: Epoch 91 finished Num NBR 1
+51788508	ID:1	App: Epoch 92 New NBR 2
+52013450	ID:2	App: Epoch 92 finished Num NBR 1
+52031763	ID:2	App: Epoch 93 New NBR 1
+52331778	ID:1	App: Epoch 92 finished Num NBR 1
+52341515	ID:1	App: Epoch 93 New NBR 2
+52566459	ID:2	App: Epoch 93 finished Num NBR 1
+52584772	ID:2	App: Epoch 94 New NBR 1
+52884848	ID:1	App: Epoch 93 finished Num NBR 1
+52894525	ID:1	App: Epoch 94 New NBR 2
+53119468	ID:2	App: Epoch 94 finished Num NBR 1
+53137842	ID:2	App: Epoch 95 New NBR 1
+53437857	ID:1	App: Epoch 94 finished Num NBR 1
+53447535	ID:1	App: Epoch 95 New NBR 2
+53672477	ID:2	App: Epoch 95 finished Num NBR 1
+53690849	ID:2	App: Epoch 96 New NBR 1
+53990927	ID:1	App: Epoch 95 finished Num NBR 1
+54000542	ID:1	App: Epoch 96 New NBR 2
+54225486	ID:2	App: Epoch 96 finished Num NBR 1
+54243919	ID:2	App: Epoch 97 New NBR 1
+54543936	ID:1	App: Epoch 96 finished Num NBR 1
+54553665	ID:1	App: Epoch 97 New NBR 2
+54778525	ID:2	App: Epoch 97 finished Num NBR 1
+54797018	ID:2	App: Epoch 98 New NBR 1
+55096945	ID:1	App: Epoch 97 finished Num NBR 1
+55106681	ID:1	App: Epoch 98 New NBR 2
+55331534	ID:2	App: Epoch 98 finished Num NBR 1
+55349939	ID:2	App: Epoch 99 New NBR 1
+55650015	ID:1	App: Epoch 98 finished Num NBR 1
+55659660	ID:1	App: Epoch 99 New NBR 2
+55884604	ID:2	App: Epoch 99 finished Num NBR 1
+55903162	ID:2	App: Epoch 100 New NBR 1
+56203023	ID:1	App: Epoch 99 finished Num NBR 1
+56212822	ID:1	App: Epoch 100 New NBR 2
+56437766	ID:2	App: Epoch 100 finished Num NBR 1
+56456169	ID:2	App: Epoch 101 New NBR 1
+56756247	ID:1	App: Epoch 100 finished Num NBR 1
+56765983	ID:1	App: Epoch 101 New NBR 2
+56990958	ID:2	App: Epoch 101 finished Num NBR 1
+57009392	ID:2	App: Epoch 102 New NBR 1
+57309470	ID:1	App: Epoch 101 finished Num NBR 1
+57319238	ID:1	App: Epoch 102 New NBR 2
+57544181	ID:2	App: Epoch 102 finished Num NBR 1
+57562769	ID:2	App: Epoch 103 New NBR 1
+57862692	ID:1	App: Epoch 102 finished Num NBR 1
+57872473	ID:1	App: Epoch 103 New NBR 2
+58097403	ID:2	App: Epoch 103 finished Num NBR 1
+58115897	ID:2	App: Epoch 104 New NBR 1
+58415915	ID:1	App: Epoch 103 finished Num NBR 1
+58425652	ID:1	App: Epoch 104 New NBR 2
+58650596	ID:2	App: Epoch 104 finished Num NBR 1
+58669120	ID:2	App: Epoch 105 New NBR 1
+58969138	ID:1	App: Epoch 104 finished Num NBR 1
+58978814	ID:1	App: Epoch 105 New NBR 2
+59203757	ID:2	App: Epoch 105 finished Num NBR 1
+59222287	ID:2	App: Epoch 106 New NBR 1
+59522330	ID:1	App: Epoch 105 finished Num NBR 1
+59531978	ID:1	App: Epoch 106 New NBR 2
+59756919	ID:2	App: Epoch 106 finished Num NBR 1
+59775476	ID:2	App: Epoch 107 New NBR 1
+60075552	ID:1	App: Epoch 106 finished Num NBR 1
+60085217	ID:1	App: Epoch 107 New NBR 2
+60310080	ID:2	App: Epoch 107 finished Num NBR 1
+60328774	ID:2	App: Epoch 108 New NBR 1
+60628775	ID:1	App: Epoch 107 finished Num NBR 1
+60638298	ID:1	App: Epoch 108 New NBR 2
+60863242	ID:2	App: Epoch 108 finished Num NBR 1
+60882052	ID:2	App: Epoch 109 New NBR 1
+61181998	ID:1	App: Epoch 108 finished Num NBR 1
+61191464	ID:1	App: Epoch 109 New NBR 2
+61416404	ID:2	App: Epoch 109 finished Num NBR 1
+61435176	ID:2	App: Epoch 110 New NBR 1
+61735190	ID:1	App: Epoch 109 finished Num NBR 1
+61744623	ID:1	App: Epoch 110 New NBR 2
+61969566	ID:2	App: Epoch 110 finished Num NBR 1
+61988340	ID:2	App: Epoch 111 New NBR 1
+62288352	ID:1	App: Epoch 110 finished Num NBR 1
+62297785	ID:1	App: Epoch 111 New NBR 2
+62522728	ID:2	App: Epoch 111 finished Num NBR 1
+62541498	ID:2	App: Epoch 112 New NBR 1
+62841514	ID:1	App: Epoch 111 finished Num NBR 1
+62851026	ID:1	App: Epoch 112 New NBR 2
+63075890	ID:2	App: Epoch 112 finished Num NBR 1
+63094750	ID:2	App: Epoch 113 New NBR 1
+63394676	ID:1	App: Epoch 112 finished Num NBR 1
+63404111	ID:1	App: Epoch 113 New NBR 2
+63629051	ID:2	App: Epoch 113 finished Num NBR 1
+63647824	ID:2	App: Epoch 114 New NBR 1
+63947837	ID:1	App: Epoch 113 finished Num NBR 1
+63957270	ID:1	App: Epoch 114 New NBR 2
+64182213	ID:2	App: Epoch 114 finished Num NBR 1
+64200983	ID:2	App: Epoch 115 New NBR 1
+64500999	ID:1	App: Epoch 114 finished Num NBR 1
+64510431	ID:1	App: Epoch 115 New NBR 2
+64735375	ID:2	App: Epoch 115 finished Num NBR 1
+64754145	ID:2	App: Epoch 116 New NBR 1
+65054161	ID:1	App: Epoch 115 finished Num NBR 1
+65063592	ID:1	App: Epoch 116 New NBR 2
+65288536	ID:2	App: Epoch 116 finished Num NBR 1
+65307310	ID:2	App: Epoch 117 New NBR 1
+65607322	ID:1	App: Epoch 116 finished Num NBR 1
+65616755	ID:1	App: Epoch 117 New NBR 2
+65841698	ID:2	App: Epoch 117 finished Num NBR 1
+65860558	ID:2	App: Epoch 118 New NBR 1
+66160484	ID:1	App: Epoch 117 finished Num NBR 1
+66169956	ID:1	App: Epoch 118 New NBR 2
+66394859	ID:2	App: Epoch 118 finished Num NBR 1
+66413645	ID:2	App: Epoch 119 New NBR 1
+66713646	ID:1	App: Epoch 118 finished Num NBR 1
+66723077	ID:1	App: Epoch 119 New NBR 2
+66948021	ID:2	App: Epoch 119 finished Num NBR 1
+66966794	ID:2	App: Epoch 120 New NBR 1
+67266807	ID:1	App: Epoch 119 finished Num NBR 1
+67276239	ID:1	App: Epoch 120 New NBR 2
+67501182	ID:2	App: Epoch 120 finished Num NBR 1
+67519952	ID:2	App: Epoch 121 New NBR 1
+67819968	ID:1	App: Epoch 120 finished Num NBR 1
+67829400	ID:1	App: Epoch 121 New NBR 2
+68054343	ID:2	App: Epoch 121 finished Num NBR 1
+68073114	ID:2	App: Epoch 122 New NBR 1
+68373129	ID:1	App: Epoch 121 finished Num NBR 1
+68382561	ID:1	App: Epoch 122 New NBR 2
+68607505	ID:2	App: Epoch 122 finished Num NBR 1
+68626343	ID:2	App: Epoch 123 New NBR 1
+68926291	ID:1	App: Epoch 122 finished Num NBR 1
+68935814	ID:1	App: Epoch 123 New NBR 2
+69160666	ID:2	App: Epoch 123 finished Num NBR 1
+69179435	ID:2	App: Epoch 124 New NBR 1
+69479453	ID:1	App: Epoch 123 finished Num NBR 1
+69488884	ID:1	App: Epoch 124 New NBR 2
+69713828	ID:2	App: Epoch 124 finished Num NBR 1
+69732599	ID:2	App: Epoch 125 New NBR 1
+70032614	ID:1	App: Epoch 124 finished Num NBR 1
+70042046	ID:1	App: Epoch 125 New NBR 2
+70266990	ID:2	App: Epoch 125 finished Num NBR 1
+70285761	ID:2	App: Epoch 126 New NBR 1
+70585830	ID:1	App: Epoch 125 finished Num NBR 1
+70595210	ID:1	App: Epoch 126 New NBR 2
+70820151	ID:2	App: Epoch 126 finished Num NBR 1
+70838981	ID:2	App: Epoch 127 New NBR 1
+71139059	ID:1	App: Epoch 126 finished Num NBR 1
+71148369	ID:1	App: Epoch 127 New NBR 2
+71373313	ID:2	App: Epoch 127 finished Num NBR 1
+71392237	ID:2	App: Epoch 128 New NBR 1
+71692282	ID:1	App: Epoch 127 finished Num NBR 1
+71701621	ID:1	App: Epoch 128 New NBR 2
+71926474	ID:2	App: Epoch 128 finished Num NBR 1
+71945561	ID:2	App: Epoch 129 New NBR 1
+72245505	ID:1	App: Epoch 128 finished Num NBR 1
+72254695	ID:1	App: Epoch 129 New NBR 2
+72479636	ID:2	App: Epoch 129 finished Num NBR 1
+72498711	ID:2	App: Epoch 130 New NBR 1
+72798727	ID:1	App: Epoch 129 finished Num NBR 1
+72807855	ID:1	App: Epoch 130 New NBR 2
+73032799	ID:2	App: Epoch 130 finished Num NBR 1
+73051904	ID:2	App: Epoch 131 New NBR 1
+73351921	ID:1	App: Epoch 130 finished Num NBR 1
+73361017	ID:1	App: Epoch 131 New NBR 2
+73585960	ID:2	App: Epoch 131 finished Num NBR 1
+73605070	ID:2	App: Epoch 132 New NBR 1
+73905082	ID:1	App: Epoch 131 finished Num NBR 1
+73914181	ID:1	App: Epoch 132 New NBR 2
+74139122	ID:2	App: Epoch 132 finished Num NBR 1
+74158227	ID:2	App: Epoch 133 New NBR 1
+74458244	ID:1	App: Epoch 132 finished Num NBR 1
+74467341	ID:1	App: Epoch 133 New NBR 2
+74692284	ID:2	App: Epoch 133 finished Num NBR 1
+74711389	ID:2	App: Epoch 134 New NBR 1
+75011405	ID:1	App: Epoch 133 finished Num NBR 1
+75020500	ID:1	App: Epoch 134 New NBR 2
+75245476	ID:2	App: Epoch 134 finished Num NBR 1
+75264610	ID:2	App: Epoch 135 New NBR 1
+75564567	ID:1	App: Epoch 134 finished Num NBR 1
+75573694	ID:1	App: Epoch 135 New NBR 2
+75798698	ID:2	App: Epoch 135 finished Num NBR 1
+75817712	ID:2	App: Epoch 136 New NBR 1
+76117729	ID:1	App: Epoch 135 finished Num NBR 1
+76126983	ID:1	App: Epoch 136 New NBR 2
+76351921	ID:2	App: Epoch 136 finished Num NBR 1
+76370873	ID:2	App: Epoch 137 New NBR 1
+76670890	ID:1	App: Epoch 136 finished Num NBR 1
+76680200	ID:1	App: Epoch 137 New NBR 2
+76905144	ID:2	App: Epoch 137 finished Num NBR 1
+76924037	ID:2	App: Epoch 138 New NBR 1
+77224052	ID:1	App: Epoch 137 finished Num NBR 1
+77233512	ID:1	App: Epoch 138 New NBR 2
+77458366	ID:2	App: Epoch 138 finished Num NBR 1
+77477203	ID:2	App: Epoch 139 New NBR 1
+77777213	ID:1	App: Epoch 138 finished Num NBR 1
+77786586	ID:1	App: Epoch 139 New NBR 2
+78011559	ID:2	App: Epoch 139 finished Num NBR 1
+78030447	ID:2	App: Epoch 140 New NBR 1
+78330375	ID:1	App: Epoch 139 finished Num NBR 1
+78339780	ID:1	App: Epoch 140 New NBR 2
+78564781	ID:2	App: Epoch 140 finished Num NBR 1
+78583522	ID:2	App: Epoch 141 New NBR 1
+78883537	ID:1	App: Epoch 140 finished Num NBR 1
+78893056	ID:1	App: Epoch 141 New NBR 2
+79118004	ID:2	App: Epoch 141 finished Num NBR 1
+79136682	ID:2	App: Epoch 142 New NBR 1
+79436698	ID:1	App: Epoch 141 finished Num NBR 1
+79446285	ID:1	App: Epoch 142 New NBR 2
+79671227	ID:2	App: Epoch 142 finished Num NBR 1
+79689842	ID:2	App: Epoch 143 New NBR 1
+79989860	ID:1	App: Epoch 142 finished Num NBR 1
+79999543	ID:1	App: Epoch 143 New NBR 2
+80224449	ID:2	App: Epoch 143 finished Num NBR 1
+80243044	ID:2	App: Epoch 144 New NBR 1
+80543022	ID:1	App: Epoch 143 finished Num NBR 1
+80552675	ID:1	App: Epoch 144 New NBR 2
+80777611	ID:2	App: Epoch 144 finished Num NBR 1
+80796168	ID:2	App: Epoch 145 New NBR 1
+81096183	ID:1	App: Epoch 144 finished Num NBR 1
+81105828	ID:1	App: Epoch 145 New NBR 2
+81330772	ID:2	App: Epoch 145 finished Num NBR 1
+81349327	ID:2	App: Epoch 146 New NBR 1
+81649345	ID:1	App: Epoch 145 finished Num NBR 1
+81658993	ID:1	App: Epoch 146 New NBR 2
+81883934	ID:2	App: Epoch 146 finished Num NBR 1
+81902494	ID:2	App: Epoch 147 New NBR 1
+82202507	ID:1	App: Epoch 146 finished Num NBR 1
+82212152	ID:1	App: Epoch 147 New NBR 2
+82437096	ID:2	App: Epoch 147 finished Num NBR 1
+82455651	ID:2	App: Epoch 148 New NBR 1
+82755668	ID:1	App: Epoch 147 finished Num NBR 1
+82765437	ID:1	App: Epoch 148 New NBR 2
+82990257	ID:2	App: Epoch 148 finished Num NBR 1
+83008972	ID:2	App: Epoch 149 New NBR 1
+83308830	ID:1	App: Epoch 148 finished Num NBR 1
+83318558	ID:1	App: Epoch 149 New NBR 2
+83543419	ID:2	App: Epoch 149 finished Num NBR 1
+83561981	ID:2	App: Epoch 150 New NBR 1
+83861991	ID:1	App: Epoch 149 finished Num NBR 1
+83871638	ID:1	App: Epoch 150 New NBR 2
+84096582	ID:2	App: Epoch 150 finished Num NBR 1
+84115137	ID:2	App: Epoch 151 New NBR 1
+84415154	ID:1	App: Epoch 150 finished Num NBR 1
+84424799	ID:1	App: Epoch 151 New NBR 2
+84649743	ID:2	App: Epoch 151 finished Num NBR 1
+84668298	ID:2	App: Epoch 152 New NBR 1
+84968316	ID:1	App: Epoch 151 finished Num NBR 1
+84977965	ID:1	App: Epoch 152 New NBR 2
+85202905	ID:2	App: Epoch 152 finished Num NBR 1
+85221465	ID:2	App: Epoch 153 New NBR 1
+85521477	ID:1	App: Epoch 152 finished Num NBR 1
+85531156	ID:1	App: Epoch 153 New NBR 2
+85756066	ID:2	App: Epoch 153 finished Num NBR 1
+85774702	ID:2	App: Epoch 154 New NBR 1
+86074639	ID:1	App: Epoch 153 finished Num NBR 1
+86084363	ID:1	App: Epoch 154 New NBR 2
+86309228	ID:2	App: Epoch 154 finished Num NBR 1
+86327787	ID:2	App: Epoch 155 New NBR 1
+86627801	ID:1	App: Epoch 154 finished Num NBR 1
+86637450	ID:1	App: Epoch 155 New NBR 2
+86862390	ID:2	App: Epoch 155 finished Num NBR 1
+86880950	ID:2	App: Epoch 156 New NBR 1
+87180962	ID:1	App: Epoch 155 finished Num NBR 1
+87190608	ID:1	App: Epoch 156 New NBR 2
+87415551	ID:2	App: Epoch 156 finished Num NBR 1
+87434107	ID:2	App: Epoch 157 New NBR 1
+87734124	ID:1	App: Epoch 156 finished Num NBR 1
+87743768	ID:1	App: Epoch 157 New NBR 2
+87968713	ID:2	App: Epoch 157 finished Num NBR 1
+87987268	ID:2	App: Epoch 158 New NBR 1
+88287285	ID:1	App: Epoch 157 finished Num NBR 1
+88296933	ID:1	App: Epoch 158 New NBR 2
+88521875	ID:2	App: Epoch 158 finished Num NBR 1
+88540432	ID:2	App: Epoch 159 New NBR 1
+88840447	ID:1	App: Epoch 158 finished Num NBR 1
+88850094	ID:1	App: Epoch 159 New NBR 2
+89075036	ID:2	App: Epoch 159 finished Num NBR 1
+89093629	ID:2	App: Epoch 160 New NBR 1
+89393609	ID:1	App: Epoch 159 finished Num NBR 1
+89403250	ID:1	App: Epoch 160 New NBR 2
+89628195	ID:2	App: Epoch 160 finished Num NBR 1
+89646750	ID:2	App: Epoch 161 New NBR 1
+89946798	ID:1	App: Epoch 160 finished Num NBR 1
+89956415	ID:1	App: Epoch 161 New NBR 2
+90181380	ID:2	App: Epoch 161 finished Num NBR 1
+90199942	ID:2	App: Epoch 162 New NBR 1
+90500020	ID:1	App: Epoch 161 finished Num NBR 1
+90509606	ID:1	App: Epoch 162 New NBR 2
+90734609	ID:2	App: Epoch 162 finished Num NBR 1
+90753166	ID:2	App: Epoch 163 New NBR 1
+91053243	ID:1	App: Epoch 162 finished Num NBR 1
+91062830	ID:1	App: Epoch 163 New NBR 2
+91287832	ID:2	App: Epoch 163 finished Num NBR 1
+91306448	ID:2	App: Epoch 164 New NBR 1
+91606466	ID:1	App: Epoch 163 finished Num NBR 1
+91616116	ID:1	App: Epoch 164 New NBR 2
+91841055	ID:2	App: Epoch 164 finished Num NBR 1
+91859704	ID:2	App: Epoch 165 New NBR 1
+92159688	ID:1	App: Epoch 164 finished Num NBR 1
+92169347	ID:1	App: Epoch 165 New NBR 2
+92394277	ID:2	App: Epoch 165 finished Num NBR 1
+92412835	ID:2	App: Epoch 166 New NBR 1
+92712880	ID:1	App: Epoch 165 finished Num NBR 1
+92722530	ID:1	App: Epoch 166 New NBR 2
+92947470	ID:2	App: Epoch 166 finished Num NBR 1
+92966027	ID:2	App: Epoch 167 New NBR 1
+93266103	ID:1	App: Epoch 166 finished Num NBR 1
+93275688	ID:1	App: Epoch 167 New NBR 2
+93500631	ID:2	App: Epoch 167 finished Num NBR 1
+93519250	ID:2	App: Epoch 168 New NBR 1
+93819326	ID:1	App: Epoch 167 finished Num NBR 1
+93828850	ID:1	App: Epoch 168 New NBR 2
+94053793	ID:2	App: Epoch 168 finished Num NBR 1
+94072536	ID:2	App: Epoch 169 New NBR 1
+94372549	ID:1	App: Epoch 168 finished Num NBR 1
+94382092	ID:1	App: Epoch 169 New NBR 2
+94606955	ID:2	App: Epoch 169 finished Num NBR 1
+94625786	ID:2	App: Epoch 170 New NBR 1
+94925771	ID:1	App: Epoch 169 finished Num NBR 1
+94935172	ID:1	App: Epoch 170 New NBR 2
+95160117	ID:2	App: Epoch 170 finished Num NBR 1
+95178952	ID:2	App: Epoch 171 New NBR 1
+95478934	ID:1	App: Epoch 170 finished Num NBR 1
+95488336	ID:1	App: Epoch 171 New NBR 2
+95713279	ID:2	App: Epoch 171 finished Num NBR 1
+95732078	ID:2	App: Epoch 172 New NBR 1
+96032095	ID:1	App: Epoch 171 finished Num NBR 1
+96041498	ID:1	App: Epoch 172 New NBR 2
+96266440	ID:2	App: Epoch 172 finished Num NBR 1
+96285242	ID:2	App: Epoch 173 New NBR 1
+96585257	ID:1	App: Epoch 172 finished Num NBR 1
+96594658	ID:1	App: Epoch 173 New NBR 2
+96819602	ID:2	App: Epoch 173 finished Num NBR 1
+96838402	ID:2	App: Epoch 174 New NBR 1
+97138419	ID:1	App: Epoch 173 finished Num NBR 1
+97147901	ID:1	App: Epoch 174 New NBR 2
+97372764	ID:2	App: Epoch 174 finished Num NBR 1
+97391653	ID:2	App: Epoch 175 New NBR 1
+97691580	ID:1	App: Epoch 174 finished Num NBR 1
+97700987	ID:1	App: Epoch 175 New NBR 2
+97925925	ID:2	App: Epoch 175 finished Num NBR 1
+97944726	ID:2	App: Epoch 176 New NBR 1
+98244742	ID:1	App: Epoch 175 finished Num NBR 1
+98254143	ID:1	App: Epoch 176 New NBR 2
+98479087	ID:2	App: Epoch 176 finished Num NBR 1
+98497887	ID:2	App: Epoch 177 New NBR 1
+98797903	ID:1	App: Epoch 176 finished Num NBR 1
+98807306	ID:1	App: Epoch 177 New NBR 2
+99032248	ID:2	App: Epoch 177 finished Num NBR 1
+99051047	ID:2	App: Epoch 178 New NBR 1
+99351065	ID:1	App: Epoch 177 finished Num NBR 1
+99360469	ID:1	App: Epoch 178 New NBR 2
+99585410	ID:2	App: Epoch 178 finished Num NBR 1
+99604212	ID:2	App: Epoch 179 New NBR 1
+99904227	ID:1	App: Epoch 178 finished Num NBR 1
+99913628	ID:1	App: Epoch 179 New NBR 2
+100138572	ID:2	App: Epoch 179 finished Num NBR 1
+100157462	ID:2	App: Epoch 180 New NBR 1
+100457388	ID:1	App: Epoch 179 finished Num NBR 1
+100466830	ID:1	App: Epoch 180 New NBR 2
+100691733	ID:2	App: Epoch 180 finished Num NBR 1
+100710531	ID:2	App: Epoch 181 New NBR 1
+101010550	ID:1	App: Epoch 180 finished Num NBR 1
+101019954	ID:1	App: Epoch 181 New NBR 2
+101244895	ID:2	App: Epoch 181 finished Num NBR 1
+101263699	ID:2	App: Epoch 182 New NBR 1
+101563712	ID:1	App: Epoch 181 finished Num NBR 1
+101573113	ID:1	App: Epoch 182 New NBR 2
+101798056	ID:2	App: Epoch 182 finished Num NBR 1
+101816856	ID:2	App: Epoch 183 New NBR 1
+102116873	ID:1	App: Epoch 182 finished Num NBR 1
+102126275	ID:1	App: Epoch 183 New NBR 2
+102351218	ID:2	App: Epoch 183 finished Num NBR 1
+102370017	ID:2	App: Epoch 184 New NBR 1
+102670035	ID:1	App: Epoch 183 finished Num NBR 1
+102679439	ID:1	App: Epoch 184 New NBR 2
+102904380	ID:2	App: Epoch 184 finished Num NBR 1
+102923218	ID:2	App: Epoch 185 New NBR 1
+103223197	ID:1	App: Epoch 184 finished Num NBR 1
+103232688	ID:1	App: Epoch 185 New NBR 2
+103457541	ID:2	App: Epoch 185 finished Num NBR 1
+103476351	ID:2	App: Epoch 186 New NBR 1
+103776358	ID:1	App: Epoch 185 finished Num NBR 1
+103785760	ID:1	App: Epoch 186 New NBR 2
+104010703	ID:2	App: Epoch 186 finished Num NBR 1
+104029502	ID:2	App: Epoch 187 New NBR 1
+104329520	ID:1	App: Epoch 186 finished Num NBR 1
+104338925	ID:1	App: Epoch 187 New NBR 2
+104563865	ID:2	App: Epoch 187 finished Num NBR 1
+104582669	ID:2	App: Epoch 188 New NBR 1
+104882705	ID:1	App: Epoch 187 finished Num NBR 1
+104892083	ID:1	App: Epoch 188 New NBR 2
+105117026	ID:2	App: Epoch 188 finished Num NBR 1
+105135858	ID:2	App: Epoch 189 New NBR 1
+105435935	ID:1	App: Epoch 188 finished Num NBR 1
+105445245	ID:1	App: Epoch 189 New NBR 2
+105670188	ID:2	App: Epoch 189 finished Num NBR 1
+105689113	ID:2	App: Epoch 190 New NBR 1
+105989157	ID:1	App: Epoch 189 finished Num NBR 1
+105998502	ID:1	App: Epoch 190 New NBR 2
+106223351	ID:2	App: Epoch 190 finished Num NBR 1
+106242439	ID:2	App: Epoch 191 New NBR 1
+106542381	ID:1	App: Epoch 190 finished Num NBR 1
+106551568	ID:1	App: Epoch 191 New NBR 2
+106776512	ID:2	App: Epoch 191 finished Num NBR 1
+106795587	ID:2	App: Epoch 192 New NBR 1
+107095604	ID:1	App: Epoch 191 finished Num NBR 1
+107104731	ID:1	App: Epoch 192 New NBR 2
+107329674	ID:2	App: Epoch 192 finished Num NBR 1
+107348781	ID:2	App: Epoch 193 New NBR 1
+107648796	ID:1	App: Epoch 192 finished Num NBR 1
+107657894	ID:1	App: Epoch 193 New NBR 2
+107882835	ID:2	App: Epoch 193 finished Num NBR 1
+107901940	ID:2	App: Epoch 194 New NBR 1
+108201957	ID:1	App: Epoch 193 finished Num NBR 1
+108211053	ID:1	App: Epoch 194 New NBR 2
+108435997	ID:2	App: Epoch 194 finished Num NBR 1
+108455103	ID:2	App: Epoch 195 New NBR 1
+108755119	ID:1	App: Epoch 194 finished Num NBR 1
+108764217	ID:1	App: Epoch 195 New NBR 2
+108989159	ID:2	App: Epoch 195 finished Num NBR 1
+109008328	ID:2	App: Epoch 196 New NBR 1
+109308281	ID:1	App: Epoch 195 finished Num NBR 1
+109317378	ID:1	App: Epoch 196 New NBR 2
+109542351	ID:2	App: Epoch 196 finished Num NBR 1
+109561480	ID:2	App: Epoch 197 New NBR 1
+109861442	ID:1	App: Epoch 196 finished Num NBR 1
+109870568	ID:1	App: Epoch 197 New NBR 2
+110095572	ID:2	App: Epoch 197 finished Num NBR 1
+110114588	ID:2	App: Epoch 198 New NBR 1
+110414604	ID:1	App: Epoch 197 finished Num NBR 1
+110423856	ID:1	App: Epoch 198 New NBR 2
+110648796	ID:2	App: Epoch 198 finished Num NBR 1
+110667753	ID:2	App: Epoch 199 New NBR 1
+110967765	ID:1	App: Epoch 198 finished Num NBR 1
+110977079	ID:1	App: Epoch 199 New NBR 2
+111202019	ID:2	App: Epoch 199 finished Num NBR 1
+111220909	ID:2	App: Epoch 200 New NBR 1
+111520927	ID:1	App: Epoch 199 finished Num NBR 1
+111530387	ID:1	App: Epoch 200 New NBR 2
+111755240	ID:2	App: Epoch 200 finished Num NBR 1
+111774077	ID:2	App: Epoch 201 New NBR 1
+112074088	ID:1	App: Epoch 200 finished Num NBR 1
+112083457	ID:1	App: Epoch 201 New NBR 2
+112308432	ID:2	App: Epoch 201 finished Num NBR 1
+112327328	ID:2	App: Epoch 202 New NBR 1
+112627249	ID:1	App: Epoch 201 finished Num NBR 1
+112636650	ID:1	App: Epoch 202 New NBR 2
+112861655	ID:2	App: Epoch 202 finished Num NBR 1
+112880394	ID:2	App: Epoch 203 New NBR 1
+113180411	ID:1	App: Epoch 202 finished Num NBR 1
+113189932	ID:1	App: Epoch 203 New NBR 2
+113414878	ID:2	App: Epoch 203 finished Num NBR 1
+113433556	ID:2	App: Epoch 204 New NBR 1
+113733572	ID:1	App: Epoch 203 finished Num NBR 1
+113743157	ID:1	App: Epoch 204 New NBR 2
+113968100	ID:2	App: Epoch 204 finished Num NBR 1
+113986722	ID:2	App: Epoch 205 New NBR 1
+114286734	ID:1	App: Epoch 204 finished Num NBR 1
+114296417	ID:1	App: Epoch 205 New NBR 2
+114521323	ID:2	App: Epoch 205 finished Num NBR 1
+114539916	ID:2	App: Epoch 206 New NBR 1
+114839896	ID:1	App: Epoch 205 finished Num NBR 1
+114849550	ID:1	App: Epoch 206 New NBR 2
+115074485	ID:2	App: Epoch 206 finished Num NBR 1
+115093043	ID:2	App: Epoch 207 New NBR 1
+115393057	ID:1	App: Epoch 206 finished Num NBR 1
+115402703	ID:1	App: Epoch 207 New NBR 2
+115627646	ID:2	App: Epoch 207 finished Num NBR 1
+115646202	ID:2	App: Epoch 208 New NBR 1
+115946219	ID:1	App: Epoch 207 finished Num NBR 1
+115955864	ID:1	App: Epoch 208 New NBR 2
+116180808	ID:2	App: Epoch 208 finished Num NBR 1
+116199364	ID:2	App: Epoch 209 New NBR 1
+116499380	ID:1	App: Epoch 208 finished Num NBR 1
+116509030	ID:1	App: Epoch 209 New NBR 2
+116733970	ID:2	App: Epoch 209 finished Num NBR 1
+116752527	ID:2	App: Epoch 210 New NBR 1
+117052542	ID:1	App: Epoch 209 finished Num NBR 1
+117062312	ID:1	App: Epoch 210 New NBR 2
+117287132	ID:2	App: Epoch 210 finished Num NBR 1
+117305768	ID:2	App: Epoch 211 New NBR 1
+117605705	ID:1	App: Epoch 210 finished Num NBR 1
+117615429	ID:1	App: Epoch 211 New NBR 2
+117840294	ID:2	App: Epoch 211 finished Num NBR 1
+117858848	ID:2	App: Epoch 212 New NBR 1
+118158866	ID:1	App: Epoch 211 finished Num NBR 1
+118168514	ID:1	App: Epoch 212 New NBR 2
+118393456	ID:2	App: Epoch 212 finished Num NBR 1
+118412012	ID:2	App: Epoch 213 New NBR 1
+118712028	ID:1	App: Epoch 212 finished Num NBR 1
+118721674	ID:1	App: Epoch 213 New NBR 2
+118946617	ID:2	App: Epoch 213 finished Num NBR 1
+118965173	ID:2	App: Epoch 214 New NBR 1
+119265190	ID:1	App: Epoch 213 finished Num NBR 1
+119274834	ID:1	App: Epoch 214 New NBR 2
+119499779	ID:2	App: Epoch 214 finished Num NBR 1
+119518334	ID:2	App: Epoch 215 New NBR 1
+119818351	ID:1	App: Epoch 214 finished Num NBR 1
+119828032	ID:1	App: Epoch 215 New NBR 2
+120052940	ID:2	App: Epoch 215 finished Num NBR 1
+120071577	ID:2	App: Epoch 216 New NBR 1
+120371513	ID:1	App: Epoch 215 finished Num NBR 1
+120381238	ID:1	App: Epoch 216 New NBR 2
+120606102	ID:2	App: Epoch 216 finished Num NBR 1
+120624662	ID:2	App: Epoch 217 New NBR 1
+120924674	ID:1	App: Epoch 216 finished Num NBR 1
+120934319	ID:1	App: Epoch 217 New NBR 2
+121159264	ID:2	App: Epoch 217 finished Num NBR 1
+121177819	ID:2	App: Epoch 218 New NBR 1
+121477836	ID:1	App: Epoch 217 finished Num NBR 1
+121487484	ID:1	App: Epoch 218 New NBR 2
+121712425	ID:2	App: Epoch 218 finished Num NBR 1
+121730982	ID:2	App: Epoch 219 New NBR 1
+122030998	ID:1	App: Epoch 218 finished Num NBR 1
+122040643	ID:1	App: Epoch 219 New NBR 2
+122265587	ID:2	App: Epoch 219 finished Num NBR 1
+122284143	ID:2	App: Epoch 220 New NBR 1
+122584159	ID:1	App: Epoch 219 finished Num NBR 1
+122593804	ID:1	App: Epoch 220 New NBR 2
+122818748	ID:2	App: Epoch 220 finished Num NBR 1
+122837304	ID:2	App: Epoch 221 New NBR 1
+123137321	ID:1	App: Epoch 220 finished Num NBR 1
+123146970	ID:1	App: Epoch 221 New NBR 2
+123371910	ID:2	App: Epoch 221 finished Num NBR 1
+123390561	ID:2	App: Epoch 222 New NBR 1
+123690483	ID:1	App: Epoch 221 finished Num NBR 1
+123700128	ID:1	App: Epoch 222 New NBR 2
+123925072	ID:2	App: Epoch 222 finished Num NBR 1
+123943627	ID:2	App: Epoch 223 New NBR 1
+124243675	ID:1	App: Epoch 222 finished Num NBR 1
+124253289	ID:1	App: Epoch 223 New NBR 2
+124478257	ID:2	App: Epoch 223 finished Num NBR 1
+124496819	ID:2	App: Epoch 224 New NBR 1
+124796896	ID:1	App: Epoch 223 finished Num NBR 1
+124806482	ID:1	App: Epoch 224 New NBR 2
+125031486	ID:2	App: Epoch 224 finished Num NBR 1
+125050042	ID:2	App: Epoch 225 New NBR 1
+125350120	ID:1	App: Epoch 224 finished Num NBR 1
+125359705	ID:1	App: Epoch 225 New NBR 2
+125584709	ID:2	App: Epoch 225 finished Num NBR 1
+125603328	ID:2	App: Epoch 226 New NBR 1
+125903343	ID:1	App: Epoch 225 finished Num NBR 1
+125912986	ID:1	App: Epoch 226 New NBR 2
+126137932	ID:2	App: Epoch 226 finished Num NBR 1
+126156581	ID:2	App: Epoch 227 New NBR 1
+126456565	ID:1	App: Epoch 226 finished Num NBR 1
+126466223	ID:1	App: Epoch 227 New NBR 2
+126691154	ID:2	App: Epoch 227 finished Num NBR 1
+126709709	ID:2	App: Epoch 228 New NBR 1
+127009757	ID:1	App: Epoch 227 finished Num NBR 1
+127019404	ID:1	App: Epoch 228 New NBR 2
+127244347	ID:2	App: Epoch 228 finished Num NBR 1
+127262902	ID:2	App: Epoch 229 New NBR 1
+127562980	ID:1	App: Epoch 228 finished Num NBR 1
+127572568	ID:1	App: Epoch 229 New NBR 2
+127797508	ID:2	App: Epoch 229 finished Num NBR 1
+127816127	ID:2	App: Epoch 230 New NBR 1
+128116203	ID:1	App: Epoch 229 finished Num NBR 1
+128125730	ID:1	App: Epoch 230 New NBR 2
+128350671	ID:2	App: Epoch 230 finished Num NBR 1
+128369409	ID:2	App: Epoch 231 New NBR 1
+128669426	ID:1	App: Epoch 230 finished Num NBR 1
+128678970	ID:1	App: Epoch 231 New NBR 2
+128903833	ID:2	App: Epoch 231 finished Num NBR 1
+128922632	ID:2	App: Epoch 232 New NBR 1
+129222649	ID:1	App: Epoch 231 finished Num NBR 1
+129232055	ID:1	App: Epoch 232 New NBR 2
+129456994	ID:2	App: Epoch 232 finished Num NBR 1
+129475826	ID:2	App: Epoch 233 New NBR 1
+129775811	ID:1	App: Epoch 232 finished Num NBR 1
+129785215	ID:1	App: Epoch 233 New NBR 2
+130010156	ID:2	App: Epoch 233 finished Num NBR 1
+130028956	ID:2	App: Epoch 234 New NBR 1
+130328972	ID:1	App: Epoch 233 finished Num NBR 1
+130338374	ID:1	App: Epoch 234 New NBR 2
+130563317	ID:2	App: Epoch 234 finished Num NBR 1
+130582116	ID:2	App: Epoch 235 New NBR 1
+130882134	ID:1	App: Epoch 234 finished Num NBR 1
+130891539	ID:1	App: Epoch 235 New NBR 2
+131116479	ID:2	App: Epoch 235 finished Num NBR 1
+131135283	ID:2	App: Epoch 236 New NBR 1
+131435296	ID:1	App: Epoch 235 finished Num NBR 1
+131444779	ID:1	App: Epoch 236 New NBR 2
+131669641	ID:2	App: Epoch 236 finished Num NBR 1
+131688530	ID:2	App: Epoch 237 New NBR 1
+131988457	ID:1	App: Epoch 236 finished Num NBR 1
+131997861	ID:1	App: Epoch 237 New NBR 2
+132222802	ID:2	App: Epoch 237 finished Num NBR 1
+132241600	ID:2	App: Epoch 238 New NBR 1
+132541619	ID:1	App: Epoch 237 finished Num NBR 1
+132551024	ID:1	App: Epoch 238 New NBR 2
+132775964	ID:2	App: Epoch 238 finished Num NBR 1
+132794768	ID:2	App: Epoch 239 New NBR 1
+133094781	ID:1	App: Epoch 238 finished Num NBR 1
+133104184	ID:1	App: Epoch 239 New NBR 2
+133329125	ID:2	App: Epoch 239 finished Num NBR 1
+133347923	ID:2	App: Epoch 240 New NBR 1
+133647942	ID:1	App: Epoch 239 finished Num NBR 1
+133657342	ID:1	App: Epoch 240 New NBR 2
+133882285	ID:2	App: Epoch 240 finished Num NBR 1
+133901084	ID:2	App: Epoch 241 New NBR 1
+134201102	ID:1	App: Epoch 240 finished Num NBR 1
+134210507	ID:1	App: Epoch 241 New NBR 2
+134435447	ID:2	App: Epoch 241 finished Num NBR 1
+134454342	ID:2	App: Epoch 242 New NBR 1
+134754263	ID:1	App: Epoch 241 finished Num NBR 1
+134763757	ID:1	App: Epoch 242 New NBR 2
+134988608	ID:2	App: Epoch 242 finished Num NBR 1
+135007476	ID:2	App: Epoch 243 New NBR 1
+135307425	ID:1	App: Epoch 242 finished Num NBR 1
+135316827	ID:1	App: Epoch 243 New NBR 2
+135541770	ID:2	App: Epoch 243 finished Num NBR 1
+135560569	ID:2	App: Epoch 244 New NBR 1
+135860587	ID:1	App: Epoch 243 finished Num NBR 1
+135869992	ID:1	App: Epoch 244 New NBR 2
+136094932	ID:2	App: Epoch 244 finished Num NBR 1
+136113736	ID:2	App: Epoch 245 New NBR 1
+136413748	ID:1	App: Epoch 244 finished Num NBR 1
+136423152	ID:1	App: Epoch 245 New NBR 2
+136648093	ID:2	App: Epoch 245 finished Num NBR 1
+136666893	ID:2	App: Epoch 246 New NBR 1
+136966910	ID:1	App: Epoch 245 finished Num NBR 1
+136976312	ID:1	App: Epoch 246 New NBR 2
+137201255	ID:2	App: Epoch 246 finished Num NBR 1
+137220093	ID:2	App: Epoch 247 New NBR 1
+137520071	ID:1	App: Epoch 246 finished Num NBR 1
+137529564	ID:1	App: Epoch 247 New NBR 2
+137754416	ID:2	App: Epoch 247 finished Num NBR 1
+137773226	ID:2	App: Epoch 248 New NBR 1
+138073233	ID:1	App: Epoch 247 finished Num NBR 1
+138082637	ID:1	App: Epoch 248 New NBR 2
+138307578	ID:2	App: Epoch 248 finished Num NBR 1
+138326378	ID:2	App: Epoch 249 New NBR 1
+138626395	ID:1	App: Epoch 248 finished Num NBR 1
+138635797	ID:1	App: Epoch 249 New NBR 2
+138860740	ID:2	App: Epoch 249 finished Num NBR 1
+138879540	ID:2	App: Epoch 250 New NBR 1
+139179649	ID:1	App: Epoch 249 finished Num NBR 1
+139188960	ID:1	App: Epoch 250 New NBR 2
+139413902	ID:2	App: Epoch 250 finished Num NBR 1
+139432794	ID:2	App: Epoch 251 New NBR 1
+139732810	ID:1	App: Epoch 250 finished Num NBR 1
+139742120	ID:1	App: Epoch 251 New NBR 2
+139967064	ID:2	App: Epoch 251 finished Num NBR 1
+139985988	ID:2	App: Epoch 252 New NBR 1
+140286033	ID:1	App: Epoch 251 finished Num NBR 1
+140295373	ID:1	App: Epoch 252 New NBR 2
+140520226	ID:2	App: Epoch 252 finished Num NBR 1
+140539313	ID:2	App: Epoch 253 New NBR 1
+140839256	ID:1	App: Epoch 252 finished Num NBR 1
+140848447	ID:1	App: Epoch 253 New NBR 2
+141073387	ID:2	App: Epoch 253 finished Num NBR 1
+141092461	ID:2	App: Epoch 254 New NBR 1
+141392478	ID:1	App: Epoch 253 finished Num NBR 1
+141401605	ID:1	App: Epoch 254 New NBR 2
+141626549	ID:2	App: Epoch 254 finished Num NBR 1
+141645654	ID:2	App: Epoch 255 New NBR 1
+141945671	ID:1	App: Epoch 254 finished Num NBR 1
+141954767	ID:1	App: Epoch 255 New NBR 2
+142179710	ID:2	App: Epoch 255 finished Num NBR 1
+142198817	ID:2	App: Epoch 256 New NBR 1
+142498832	ID:1	App: Epoch 255 finished Num NBR 1
+142507932	ID:1	App: Epoch 256 New NBR 2
+142732872	ID:2	App: Epoch 256 finished Num NBR 1
+142751977	ID:2	App: Epoch 257 New NBR 1
+143051994	ID:1	App: Epoch 256 finished Num NBR 1
+143061091	ID:1	App: Epoch 257 New NBR 2
+143286034	ID:2	App: Epoch 257 finished Num NBR 1
+143305140	ID:2	App: Epoch 258 New NBR 1
+143605156	ID:1	App: Epoch 257 finished Num NBR 1
+143614251	ID:1	App: Epoch 258 New NBR 2
+143839226	ID:2	App: Epoch 258 finished Num NBR 1
+143858357	ID:2	App: Epoch 259 New NBR 1
+144158317	ID:1	App: Epoch 258 finished Num NBR 1
+144167444	ID:1	App: Epoch 259 New NBR 2
+144392448	ID:2	App: Epoch 259 finished Num NBR 1
+144411462	ID:2	App: Epoch 260 New NBR 1
+144711479	ID:1	App: Epoch 259 finished Num NBR 1
+144720731	ID:1	App: Epoch 260 New NBR 2
+144945671	ID:2	App: Epoch 260 finished Num NBR 1
+144964624	ID:2	App: Epoch 261 New NBR 1
+145264640	ID:1	App: Epoch 260 finished Num NBR 1
+145273951	ID:1	App: Epoch 261 New NBR 2
+145498894	ID:2	App: Epoch 261 finished Num NBR 1
+145517787	ID:2	App: Epoch 262 New NBR 1
+145817802	ID:1	App: Epoch 261 finished Num NBR 1
+145827263	ID:1	App: Epoch 262 New NBR 2
+146052116	ID:2	App: Epoch 262 finished Num NBR 1
+146070953	ID:2	App: Epoch 263 New NBR 1
+146370964	ID:1	App: Epoch 262 finished Num NBR 1
+146380336	ID:1	App: Epoch 263 New NBR 2
+146605309	ID:2	App: Epoch 263 finished Num NBR 1
+146624199	ID:2	App: Epoch 264 New NBR 1
+146924125	ID:1	App: Epoch 263 finished Num NBR 1
+146933526	ID:1	App: Epoch 264 New NBR 2
+147158531	ID:2	App: Epoch 264 finished Num NBR 1
+147177272	ID:2	App: Epoch 265 New NBR 1
+147477287	ID:1	App: Epoch 264 finished Num NBR 1
+147486806	ID:1	App: Epoch 265 New NBR 2
+147711754	ID:2	App: Epoch 265 finished Num NBR 1
+147730431	ID:2	App: Epoch 266 New NBR 1
+148030448	ID:1	App: Epoch 265 finished Num NBR 1
+148040037	ID:1	App: Epoch 266 New NBR 2
+148264977	ID:2	App: Epoch 266 finished Num NBR 1
+148283594	ID:2	App: Epoch 267 New NBR 1
+148583610	ID:1	App: Epoch 266 finished Num NBR 1
+148593293	ID:1	App: Epoch 267 New NBR 2
+148818199	ID:2	App: Epoch 267 finished Num NBR 1
+148836793	ID:2	App: Epoch 268 New NBR 1
+149136772	ID:1	App: Epoch 267 finished Num NBR 1
+149146424	ID:1	App: Epoch 268 New NBR 2
+149371361	ID:2	App: Epoch 268 finished Num NBR 1
+149389919	ID:2	App: Epoch 269 New NBR 1
+149689933	ID:1	App: Epoch 268 finished Num NBR 1
+149699581	ID:1	App: Epoch 269 New NBR 2
+149924522	ID:2	App: Epoch 269 finished Num NBR 1
+149943080	ID:2	App: Epoch 270 New NBR 1
+150243095	ID:1	App: Epoch 269 finished Num NBR 1
+150252741	ID:1	App: Epoch 270 New NBR 2
+150477685	ID:2	App: Epoch 270 finished Num NBR 1
+150496245	ID:2	App: Epoch 271 New NBR 1
+150796258	ID:1	App: Epoch 270 finished Num NBR 1
+150805902	ID:1	App: Epoch 271 New NBR 2
+151030847	ID:2	App: Epoch 271 finished Num NBR 1
+151049402	ID:2	App: Epoch 272 New NBR 1
+151349419	ID:1	App: Epoch 271 finished Num NBR 1
+151359190	ID:1	App: Epoch 272 New NBR 2
+151584008	ID:2	App: Epoch 272 finished Num NBR 1
+151602645	ID:2	App: Epoch 273 New NBR 1
+151902581	ID:1	App: Epoch 272 finished Num NBR 1
+151912306	ID:1	App: Epoch 273 New NBR 2
+152137170	ID:2	App: Epoch 273 finished Num NBR 1
+152155731	ID:2	App: Epoch 274 New NBR 1
+152455743	ID:1	App: Epoch 273 finished Num NBR 1
+152465387	ID:1	App: Epoch 274 New NBR 2
+152690331	ID:2	App: Epoch 274 finished Num NBR 1
+152708887	ID:2	App: Epoch 275 New NBR 1
+153008904	ID:1	App: Epoch 274 finished Num NBR 1
+153018552	ID:1	App: Epoch 275 New NBR 2
+153243493	ID:2	App: Epoch 275 finished Num NBR 1
+153262050	ID:2	App: Epoch 276 New NBR 1
+153562066	ID:1	App: Epoch 275 finished Num NBR 1
+153571711	ID:1	App: Epoch 276 New NBR 2
+153796655	ID:2	App: Epoch 276 finished Num NBR 1
+153815215	ID:2	App: Epoch 277 New NBR 1
+154115227	ID:1	App: Epoch 276 finished Num NBR 1
+154124906	ID:1	App: Epoch 277 New NBR 2
+154349816	ID:2	App: Epoch 277 finished Num NBR 1
+154368452	ID:2	App: Epoch 278 New NBR 1
+154668389	ID:1	App: Epoch 277 finished Num NBR 1
+154678117	ID:1	App: Epoch 278 New NBR 2
+154902978	ID:2	App: Epoch 278 finished Num NBR 1
+154921536	ID:2	App: Epoch 279 New NBR 1
+155221551	ID:1	App: Epoch 278 finished Num NBR 1
+155231196	ID:1	App: Epoch 279 New NBR 2
+155456140	ID:2	App: Epoch 279 finished Num NBR 1
+155474699	ID:2	App: Epoch 280 New NBR 1
+155774712	ID:1	App: Epoch 279 finished Num NBR 1
+155784356	ID:1	App: Epoch 280 New NBR 2
+156009300	ID:2	App: Epoch 280 finished Num NBR 1
+156027856	ID:2	App: Epoch 281 New NBR 1
+156327873	ID:1	App: Epoch 280 finished Num NBR 1
+156337521	ID:1	App: Epoch 281 New NBR 2
+156562462	ID:2	App: Epoch 281 finished Num NBR 1
+156581018	ID:2	App: Epoch 282 New NBR 1
+156881034	ID:1	App: Epoch 281 finished Num NBR 1
+156890680	ID:1	App: Epoch 282 New NBR 2
+157115624	ID:2	App: Epoch 282 finished Num NBR 1
+157134181	ID:2	App: Epoch 283 New NBR 1
+157434196	ID:1	App: Epoch 282 finished Num NBR 1
+157443842	ID:1	App: Epoch 283 New NBR 2
+157668785	ID:2	App: Epoch 283 finished Num NBR 1
+157687381	ID:2	App: Epoch 284 New NBR 1
+157987358	ID:1	App: Epoch 283 finished Num NBR 1
+157997007	ID:1	App: Epoch 284 New NBR 2
+158221947	ID:2	App: Epoch 284 finished Num NBR 1
+158240503	ID:2	App: Epoch 285 New NBR 1
+158540550	ID:1	App: Epoch 284 finished Num NBR 1
+158550165	ID:1	App: Epoch 285 New NBR 2
+158775132	ID:2	App: Epoch 285 finished Num NBR 1
+158793695	ID:2	App: Epoch 286 New NBR 1
+159093771	ID:1	App: Epoch 285 finished Num NBR 1
+159103356	ID:1	App: Epoch 286 New NBR 2
+159328362	ID:2	App: Epoch 286 finished Num NBR 1
+159346919	ID:2	App: Epoch 287 New NBR 1
+159646995	ID:1	App: Epoch 286 finished Num NBR 1
+159656582	ID:1	App: Epoch 287 New NBR 2
+159881584	ID:2	App: Epoch 287 finished Num NBR 1
+159900202	ID:2	App: Epoch 288 New NBR 1
+160200218	ID:1	App: Epoch 287 finished Num NBR 1
+160209864	ID:1	App: Epoch 288 New NBR 2
+160434807	ID:2	App: Epoch 288 finished Num NBR 1
+160453455	ID:2	App: Epoch 289 New NBR 1
+160753440	ID:1	App: Epoch 288 finished Num NBR 1
+160763098	ID:1	App: Epoch 289 New NBR 2
+160988030	ID:2	App: Epoch 289 finished Num NBR 1
+161006586	ID:2	App: Epoch 290 New NBR 1
+161306633	ID:1	App: Epoch 289 finished Num NBR 1
+161316279	ID:1	App: Epoch 290 New NBR 2
+161541223	ID:2	App: Epoch 290 finished Num NBR 1
+161559778	ID:2	App: Epoch 291 New NBR 1
+161859856	ID:1	App: Epoch 290 finished Num NBR 1
+161869441	ID:1	App: Epoch 291 New NBR 2
+162094384	ID:2	App: Epoch 291 finished Num NBR 1
+162113001	ID:2	App: Epoch 292 New NBR 1
+162413079	ID:1	App: Epoch 291 finished Num NBR 1
+162422606	ID:1	App: Epoch 292 New NBR 2
+162647546	ID:2	App: Epoch 292 finished Num NBR 1
+162666289	ID:2	App: Epoch 293 New NBR 1
+162966302	ID:1	App: Epoch 292 finished Num NBR 1
+162975844	ID:1	App: Epoch 293 New NBR 2
+163200707	ID:2	App: Epoch 293 finished Num NBR 1
+163219506	ID:2	App: Epoch 294 New NBR 1
+163519524	ID:1	App: Epoch 293 finished Num NBR 1
+163528924	ID:1	App: Epoch 294 New NBR 2
+163753869	ID:2	App: Epoch 294 finished Num NBR 1
+163772701	ID:2	App: Epoch 295 New NBR 1
+164072686	ID:1	App: Epoch 294 finished Num NBR 1
+164082091	ID:1	App: Epoch 295 New NBR 2
+164307031	ID:2	App: Epoch 295 finished Num NBR 1
+164325835	ID:2	App: Epoch 296 New NBR 1
+164625847	ID:1	App: Epoch 295 finished Num NBR 1
+164635249	ID:1	App: Epoch 296 New NBR 2
+164860192	ID:2	App: Epoch 296 finished Num NBR 1
+164878992	ID:2	App: Epoch 297 New NBR 1
+165179009	ID:1	App: Epoch 296 finished Num NBR 1
+165188413	ID:1	App: Epoch 297 New NBR 2
+165413354	ID:2	App: Epoch 297 finished Num NBR 1
+165432153	ID:2	App: Epoch 298 New NBR 1
+165732171	ID:1	App: Epoch 297 finished Num NBR 1
+165741656	ID:1	App: Epoch 298 New NBR 2
+165966516	ID:2	App: Epoch 298 finished Num NBR 1
+165985405	ID:2	App: Epoch 299 New NBR 1
+166285332	ID:1	App: Epoch 298 finished Num NBR 1
+166294736	ID:1	App: Epoch 299 New NBR 2
+166519677	ID:2	App: Epoch 299 finished Num NBR 1
+166538477	ID:2	App: Epoch 300 New NBR 1
+166838494	ID:1	App: Epoch 299 finished Num NBR 1
+166847897	ID:1	App: Epoch 300 New NBR 2
+167072840	ID:2	App: Epoch 300 finished Num NBR 1
+167091639	ID:2	App: Epoch 301 New NBR 1
+167391657	ID:1	App: Epoch 300 finished Num NBR 1
+167401059	ID:1	App: Epoch 301 New NBR 2
+167626002	ID:2	App: Epoch 301 finished Num NBR 1
+167644806	ID:2	App: Epoch 302 New NBR 1
+167944818	ID:1	App: Epoch 301 finished Num NBR 1
+167954220	ID:1	App: Epoch 302 New NBR 2
+168179163	ID:2	App: Epoch 302 finished Num NBR 1
+168197963	ID:2	App: Epoch 303 New NBR 1
+168497980	ID:1	App: Epoch 302 finished Num NBR 1
+168507382	ID:1	App: Epoch 303 New NBR 2
+168732325	ID:2	App: Epoch 303 finished Num NBR 1
+168751214	ID:2	App: Epoch 304 New NBR 1
+169051141	ID:1	App: Epoch 303 finished Num NBR 1
+169060634	ID:1	App: Epoch 304 New NBR 2
+169285486	ID:2	App: Epoch 304 finished Num NBR 1
+169304289	ID:2	App: Epoch 305 New NBR 1
+169604303	ID:1	App: Epoch 304 finished Num NBR 1
+169613704	ID:1	App: Epoch 305 New NBR 2
+169838648	ID:2	App: Epoch 305 finished Num NBR 1
+169857448	ID:2	App: Epoch 306 New NBR 1
+170157465	ID:1	App: Epoch 305 finished Num NBR 1
+170166867	ID:1	App: Epoch 306 New NBR 2
+170391810	ID:2	App: Epoch 306 finished Num NBR 1
+170410608	ID:2	App: Epoch 307 New NBR 1
+170710626	ID:1	App: Epoch 306 finished Num NBR 1
+170720031	ID:1	App: Epoch 307 New NBR 2
+170944971	ID:2	App: Epoch 307 finished Num NBR 1
+170963773	ID:2	App: Epoch 308 New NBR 1
+171263788	ID:1	App: Epoch 307 finished Num NBR 1
+171273192	ID:1	App: Epoch 308 New NBR 2
+171498133	ID:2	App: Epoch 308 finished Num NBR 1
+171516971	ID:2	App: Epoch 309 New NBR 1
+171816949	ID:1	App: Epoch 308 finished Num NBR 1
+171826442	ID:1	App: Epoch 309 New NBR 2
+172051294	ID:2	App: Epoch 309 finished Num NBR 1
+172070101	ID:2	App: Epoch 310 New NBR 1
+172370111	ID:1	App: Epoch 309 finished Num NBR 1
+172379517	ID:1	App: Epoch 310 New NBR 2
+172604457	ID:2	App: Epoch 310 finished Num NBR 1
+172623259	ID:2	App: Epoch 311 New NBR 1
+172923274	ID:1	App: Epoch 310 finished Num NBR 1
+172932679	ID:1	App: Epoch 311 New NBR 2
+173157619	ID:2	App: Epoch 311 finished Num NBR 1
+173176419	ID:2	App: Epoch 312 New NBR 1
+173476459	ID:1	App: Epoch 311 finished Num NBR 1
+173485837	ID:1	App: Epoch 312 New NBR 2
+173710780	ID:2	App: Epoch 312 finished Num NBR 1
+173729611	ID:2	App: Epoch 313 New NBR 1
+174029689	ID:1	App: Epoch 312 finished Num NBR 1
+174039002	ID:1	App: Epoch 313 New NBR 2
+174263942	ID:2	App: Epoch 313 finished Num NBR 1
+174282866	ID:2	App: Epoch 314 New NBR 1
+174582911	ID:1	App: Epoch 313 finished Num NBR 1
+174592252	ID:1	App: Epoch 314 New NBR 2
+174817104	ID:2	App: Epoch 314 finished Num NBR 1
+174836190	ID:2	App: Epoch 315 New NBR 1
+175136134	ID:1	App: Epoch 314 finished Num NBR 1
+175145322	ID:1	App: Epoch 315 New NBR 2
+175370265	ID:2	App: Epoch 315 finished Num NBR 1
+175389340	ID:2	App: Epoch 316 New NBR 1
+175689356	ID:1	App: Epoch 315 finished Num NBR 1
+175698487	ID:1	App: Epoch 316 New NBR 2
+175923427	ID:2	App: Epoch 316 finished Num NBR 1
+175942534	ID:2	App: Epoch 317 New NBR 1
+176242549	ID:1	App: Epoch 316 finished Num NBR 1
+176251647	ID:1	App: Epoch 317 New NBR 2
+176476588	ID:2	App: Epoch 317 finished Num NBR 1
+176495694	ID:2	App: Epoch 318 New NBR 1
+176795710	ID:1	App: Epoch 317 finished Num NBR 1
+176804807	ID:1	App: Epoch 318 New NBR 2
+177029750	ID:2	App: Epoch 318 finished Num NBR 1
+177048857	ID:2	App: Epoch 319 New NBR 1
+177348872	ID:1	App: Epoch 318 finished Num NBR 1
+177357973	ID:1	App: Epoch 319 New NBR 2
+177582912	ID:2	App: Epoch 319 finished Num NBR 1
+177602018	ID:2	App: Epoch 320 New NBR 1
+177902033	ID:1	App: Epoch 319 finished Num NBR 1
+177911127	ID:1	App: Epoch 320 New NBR 2
+178136100	ID:2	App: Epoch 320 finished Num NBR 1
+178155230	ID:2	App: Epoch 321 New NBR 1
+178455191	ID:1	App: Epoch 320 finished Num NBR 1
+178464318	ID:1	App: Epoch 321 New NBR 2
+178689322	ID:2	App: Epoch 321 finished Num NBR 1
+178708337	ID:2	App: Epoch 322 New NBR 1
+179008353	ID:1	App: Epoch 321 finished Num NBR 1
+179017602	ID:1	App: Epoch 322 New NBR 2
+179242545	ID:2	App: Epoch 322 finished Num NBR 1
+179261502	ID:2	App: Epoch 323 New NBR 1
+179561514	ID:1	App: Epoch 322 finished Num NBR 1
+179570824	ID:1	App: Epoch 323 New NBR 2
+179795768	ID:2	App: Epoch 323 finished Num NBR 1
+179814660	ID:2	App: Epoch 324 New NBR 1

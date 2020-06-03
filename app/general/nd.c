@@ -291,10 +291,12 @@ void end_rx_slot(struct rtimer *t, uint8_t *mode){
     }
   }else{
     //Turn off the radio and start the TX slots
+    //To avoid problems start the transmission in the middle of the slot
+    //rtimer_set(&timer_end_rx_slot,RTIMER_NOW()+SLOT_DURATION/2,0,(rtimer_callback_t)start_tx_slot,mode);
+    
     NETSTACK_RADIO.off();
-    rtimer_set(&timer_end_rx_slot,RTIMER_NOW()+SLOT_DURATION/2,0,(rtimer_callback_t)start_tx_slot,mode);
+    start_tx_slot(NULL,mode);
 
-    //start_tx_slot(NULL,mode);
   }
 }
 
@@ -361,7 +363,7 @@ void send_beacon(struct rtimer *t, uint8_t *mode){
     }
   }else{
     //Schedule the end of the TX slot
-    rtimer_set(&timer_end_tx_slot,RTIMER_NOW()+remaining_tx_slot/2,0,(rtimer_callback_t)end_tx_slot,mode);
+    rtimer_set(&timer_end_tx_slot,RTIMER_NOW()+remaining_tx_slot,0,(rtimer_callback_t)end_tx_slot,mode);
   }
   //Send the beacon
   NETSTACK_RADIO.send(&payload, sizeof(payload));

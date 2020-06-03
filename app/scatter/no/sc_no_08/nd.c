@@ -49,7 +49,7 @@ static uint8_t slots = TOTAL_SLOTS;
 static uint16_t epoch_number =1;
 static uint8_t tot_neigh = 0;
 /*---------------------------------------------------------------------------*/
-static uint8_t discovered_nodes[MAX_NBR] = {0};
+static uint8_t discovered_nodes[MAX_NBR+1] = {0};
 /*---------------------------------------------------------------------------*/
 static uint8_t payload;
 /*---------------------------------------------------------------------------*/
@@ -131,12 +131,12 @@ nd_recv(void){
     uint8_t node;
     memcpy(&node, packetbuf_dataptr(), sizeof(node));
     //Check if it's a valid node not yet discovered
-    if(node != 0 && !discovered_nodes[node]){
+    if(node > 0 && node <= MAX_NBR && !discovered_nodes[node]){
       new_discovery(epoch_number, node);
     }else{
       PRINTF("DEBUG: Neighbour already discovered or collision\n");
     }
-  } 
+  }
 }
 
 
@@ -191,15 +191,15 @@ void start_tx_slot(struct rtimer *t, uint8_t *mode){
   /*** collision avoidance **/
   // Reset the random indicator used to keep track of the amount spent waiting
   send_info.random=0; 
-  if (*mode == ND_BURST){
+  //if (*mode == ND_BURST){
     send_beacon_random(NULL,&send_info);
-  }else{
+  /*}else{
     //Fetch next random delay
     send_info.random = rnd_list[rnd_counter++];
     remaining_tx_slot -= send_info.random;
     PRINTF("begin slot and scheduling in %d\n",send_info.random);
     rtimer_set(&timer_next_beacon,RTIMER_NOW()+send_info.random,0,(rtimer_callback_t)send_beacon_random,&send_info);
-  }
+  }*/
 
   #else
   send_beacon(NULL,mode);
@@ -291,8 +291,10 @@ void end_rx_slot(struct rtimer *t, uint8_t *mode){
     }
   }else{
     //Turn off the radio and start the TX slots
+    //To avoid problems start the transmission in the middle of the slot
+    rtimer_set(&timer_end_rx_slot,RTIMER_NOW()+SLOT_DURATION/2,0,(rtimer_callback_t)start_tx_slot,mode);
     NETSTACK_RADIO.off();
-    start_tx_slot(NULL,mode);
+
   }
 }
 
@@ -359,7 +361,7 @@ void send_beacon(struct rtimer *t, uint8_t *mode){
     }
   }else{
     //Schedule the end of the TX slot
-    rtimer_set(&timer_end_tx_slot,RTIMER_NOW()+remaining_tx_slot,0,(rtimer_callback_t)end_tx_slot,mode);
+    rtimer_set(&timer_end_tx_slot,RTIMER_NOW()+remaining_tx_slot/2,0,(rtimer_callback_t)end_tx_slot,mode);
   }
   //Send the beacon
   NETSTACK_RADIO.send(&payload, sizeof(payload));

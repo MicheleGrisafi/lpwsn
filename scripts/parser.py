@@ -71,7 +71,7 @@ def analyse(disLog, dutyLog):
     totalEpochs = len(detailedDiscovery) - 10
     for epoch,nodes in detailedDiscovery.items():
         if epoch > 5 and epoch < len(detailedDiscovery) - 5:
-            print("Epoch: " + str(epoch) + "nodes: ")
+            print("Epoch: " + str(epoch) + " disLog: " + discoveryLog)
             print(nodes["total"])
             totMean+=mean(nodes["total"])
             totDev+=stdev(nodes["total"])
