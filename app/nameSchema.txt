@@ -1,1 +1,6 @@
-mode_collisionAvoidance_slotsNumber_beaconInterval(ms)
+mode_collisionAvoidance_slotsXepoch_beaconInterval(ms)
+
+mode --> Burst (br) or Scatter (sc)
+collisionAvoidance --> activated (ca) or not (no)
+slotsXepoch --> number of slots per epoch [4,8,12,16,20,24,28]
+beaconInterval --> interval between beacon transmission, only for Burst [3,5,10,15,20]

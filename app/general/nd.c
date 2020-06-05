@@ -212,7 +212,7 @@ void start_tx_slot(struct rtimer *t, uint8_t *mode){
  * \param mode The mode in which the protocol is operating: either ND_BURST or ND_SCATTER
  */
 void end_tx_slot(struct rtimer *t, uint8_t *mode){
-  //PRINTF("DEBUG: End TX slot\n");
+  PRINTF("DEBUG: End TX slot\n");
   //Decrease the slot counter to keep track of the epoch
   slots--;
   //Allow the reception
