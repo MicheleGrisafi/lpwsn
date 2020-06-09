@@ -1,6 +1,6 @@
 #!/usr/local/bin/bash
 if [ $# -lt 1 ]; then
-    printf "Syntax Error: $0 fast[0|1] [folder_pattern] [discAvgWeight] [discDevWeight] [dutyWeight] [prefNode] [prefNodeWeight]\n"
+    printf "Syntax Error: $0 fast[0|1] [folder_pattern(all)] [discAvgWeight] [discDevWeight] [dutyWeight] [prefNode] [prefNodeWeight]\n"
     exit 1
 fi
 fast=$1
@@ -11,7 +11,7 @@ dutW=$5
 prefNode=$6
 prefNodeW=$7
 
-if [ -z "$pattern" ]; then
+if [ -z "$pattern" ] || [ "$pattern" = "all" ]; then
     pattern="*"
     echo "All modes"
 fi
@@ -25,6 +25,7 @@ echo "" > results.txt
 for d in logs/${pattern}/; do
     set=$(basename $d)
     echo "LogSet: $set"
+    #echo "python3 parser.py $set $fast $avgW $devW $dutW $prefNode $prefNodeW"
     python3 parser.py $set $fast $avgW $devW $dutW $prefNode $prefNodeW >> results.txt
     #results[$set]=$(python3 parser.py $set $fast $avgW $devW $dutW $prefNode $prefNodeW | grep 'Avg Perf' | cut -d " " -f 3)
     results[$set]=$(cat results.txt | grep 'Avg Perf' | tail -1 | cut -d " " -f 3)

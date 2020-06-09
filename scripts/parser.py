@@ -30,6 +30,7 @@ prefNod = None
 prefNodWeight = None
 
 if len(sys.argv) > 3:
+    print("Parser called with avgWeight: " + sys.argv[3] + " stdWeight " + sys.argv[4] + " dutyWeight " + sys.argv[5]) 
     discoveryAvgWeight = int(sys.argv[3])
     discoveryDevWeight = int(sys.argv[4])
     dutycycleWeight = int(sys.argv[5])
@@ -37,6 +38,10 @@ if len(sys.argv) > 3:
 if len(sys.argv) > 6:
     prefNod = int(sys.argv[6])
     prefNodWeight = int(sys.argv[7])
+    print("Perffered nodes: " + str(prefNod) + " with weight: " + str(prefNodWeight))
+    if prefNod != 10 and prefNod != 2 and prefNod != 50 and prefNod != 30 and prefNod != 20 and prefNod != 5:
+        print("Invalid number of preferred nodes")
+        sys.exit(1)
 
 
 def analyse(disLog, dutyLog):
@@ -71,8 +76,8 @@ def analyse(disLog, dutyLog):
     totalEpochs = len(detailedDiscovery) - 10
     for epoch,nodes in detailedDiscovery.items():
         if epoch > 5 and epoch < len(detailedDiscovery) - 5:
-            print("Epoch: " + str(epoch) + " disLog: " + discoveryLog)
-            print(nodes["total"])
+            #print("Epoch: " + str(epoch) + " disLog: " + discoveryLog)
+            #print(nodes["total"])
             totMean+=mean(nodes["total"])
             totDev+=stdev(nodes["total"])
             #print("Array: {}\nVar:{}".format(nodes["total"],variance(nodes["total"])))
